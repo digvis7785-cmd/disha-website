@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Disha Numerology & Vastu Consultancy | Pune</title>
+<meta name="description" content="Disha Numerology & Vastu Consultancy, Pune. Expert Numerology readings, Vastu Shastra consultations, Name Correction & Number Analysis."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  /* ── BRAND TEAL-NAVY (from uploaded swatch) ── */
+  --bg:         #1A3D4F;   /* primary background */
+  --bg2:        #153342;   /* deeper bg for alternates */
+  --bg3:        #1F4A5E;   /* lighter bg for cards/sections */
+  --bg4:        #245266;   /* card hover / elevated surfaces */
+  --bg-card:    #1E4356;   /* card background */
+  --bg-input:   #163040;   /* form input bg */
+
+  /* ── SAFFRON ACCENT (pops beautifully on teal) ── */
+  --saffron:    #F0912A;
+  --saffron2:   #E07A18;
+  --saffron3:   #FBBD74;
+  --saffron4:   rgba(240,145,42,0.15);
+  --saffron5:   rgba(240,145,42,0.08);
+
+  /* ── GOLD ── */
+  --gold:       #D4A843;
+  --gold2:      #EFC96A;
+  --gold3:      rgba(212,168,67,0.15);
+
+  /* ── LOTUS / CORAL ── */
+  --lotus:      #E8738A;
+  --lotus2:     rgba(232,115,138,0.15);
+
+  /* ── TEXT on dark bg ── */
+  --text1:      #F0EDE8;   /* primary text — warm white */
+  --text2:      #C8C0B4;   /* secondary text */
+  --text3:      #9A8E82;   /* muted text */
+  --text4:      #6B6058;   /* very muted */
+
+  /* ── BORDERS on dark bg ── */
+  --border:     rgba(240,145,42,0.18);
+  --border2:    rgba(240,145,42,0.32);
+  --border3:    rgba(255,255,255,0.1);
+  --border4:    rgba(255,255,255,0.06);
+
+  --shadow:     0 4px 24px rgba(0,0,0,0.3);
+  --shadow2:    0 12px 48px rgba(0,0,0,0.4);
+  --shadow3:    0 20px 64px rgba(0,0,0,0.45);
+  --radius:     12px;
+}
+
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text1);overflow-x:hidden;line-height:1.7}
+
+/* ── LOADER ── */
+
+
+
+50%{transform:scale(1.12);box-shadow:0 8px 36px rgba(240,145,42,0.6)}}
+
+
+50%{opacity:1}}
+
+/* ── SCROLL REVEAL ── */
+.rev{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.rev.on{opacity:1;transform:none}
+.rl{opacity:0;transform:translateX(-24px);transition:opacity 0.65s ease,transform 0.65s ease}
+.rr{opacity:0;transform:translateX(24px);transition:opacity 0.65s ease,transform 0.65s ease}
+.rl.on,.rr.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+/* Safety: if JS fails, still show content */
+.no-js .rev,.no-js .rl,.no-js .rr{opacity:1;transform:none}
+
+/* ── NAVIGATION ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(21,51,66,0.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;
+  transition:box-shadow 0.3s;
+}
+nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.4)}
+
+/* ── NAV LOGO ── */
+.logo{display:flex;align-items:center;gap:13px;text-decoration:none;cursor:pointer}
+.logo-mark{
+  width:44px;height:44px;border-radius:10px;
+  background:linear-gradient(145deg,var(--saffron),var(--saffron2));
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  box-shadow:0 3px 14px rgba(240,145,42,0.4);
+  flex-shrink:0;
+}
+.logo-mark::before{content:'';position:absolute;inset:5px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.35)}
+.logo-mark::after{content:'';position:absolute;inset:12px;border-radius:50%;border:1px solid rgba(255,255,255,0.2)}
+.logo-sym{font-size:20px;position:relative;z-index:1;line-height:1}
+.logo-text{line-height:1.25}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--text1);display:block}
+.logo-name em{font-style:italic;color:var(--saffron)}
+.logo-sub{font-size:10px;font-weight:500;color:var(--text3);letter-spacing:1.8px;text-transform:uppercase;display:block}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--text2);text-decoration:none;cursor:pointer;transition:color 0.2s;position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--saffron);border-radius:1px;transform:scaleX(0);transition:transform 0.22s}
+.nav-links a:hover{color:var(--saffron)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-book{background:var(--saffron)!important;color:#fff!important;padding:9px 20px!important;border-radius:6px;font-weight:600!important;transition:background 0.2s,transform 0.2s!important}
+.nav-book::after{display:none!important}
+.nav-book:hover{background:var(--saffron2)!important;transform:translateY(-1px)!important}
+
+/* ── SECTION BASE ── */
+section{padding:96px 5%}
+.bg-alt{background:var(--bg2)}
+.bg-light{background:var(--bg3)}
+
+/* ── SECTION HEADER ── */
+.sh{text-align:center;margin-bottom:60px}
+.stag{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--saffron3);font-weight:600;margin-bottom:12px;padding:5px 16px;border-radius:100px;background:var(--saffron5);border:1px solid var(--border2)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.5vw,52px);font-weight:600;color:var(--text1);line-height:1.1}
+h2 em{font-style:italic;color:var(--saffron)}
+.sh p{font-size:15px;color:var(--text2);line-height:1.85;max-width:480px;margin:14px auto 0;font-weight:400}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;padding:110px 5% 70px;
+  background:var(--bg);
+  display:flex;align-items:center;position:relative;overflow:hidden;
+}
+.hero-watermark{
+  position:absolute;right:-60px;top:50%;transform:translateY(-50%);
+  width:min(580px,52vw);height:min(580px,52vw);
+  pointer-events:none;animation:wm-spin 90s linear infinite;
+  opacity:0.07;
+}
+@keyframes wm-spin{to{transform:translateY(-50%) rotate(360deg)}}
+#hero::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--saffron),var(--gold),var(--lotus))}
+.hero-content{position:relative;max-width:640px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:var(--saffron5);border:1px solid var(--border2);padding:7px 16px;border-radius:100px;margin-bottom:28px;animation:fadein-down 0.7s ease both}
+@keyframes fadein-down{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+.hero-pulse{width:8px;height:8px;border-radius:50%;background:var(--saffron);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(240,145,42,0.5)}50%{box-shadow:0 0 0 8px rgba(240,145,42,0)}}
+.hero-eyebrow span{font-size:12px;font-weight:500;color:var(--saffron3);letter-spacing:0.8px}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,7vw,82px);font-weight:700;color:var(--text1);line-height:1.04;margin-bottom:8px;animation:fadein-up 0.85s ease 0.15s both}
+@keyframes fadein-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+h1 em{font-style:italic;color:var(--saffron);font-weight:400}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.4vw,24px);font-weight:400;font-style:italic;color:var(--gold2);margin-bottom:20px;animation:fadein-up 0.85s ease 0.28s both}
+.hero-desc{font-size:16px;color:var(--text2);line-height:1.85;max-width:510px;margin-bottom:36px;font-weight:400;animation:fadein-up 0.85s ease 0.38s both}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadein-up 0.85s ease 0.48s both}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--saffron);color:#fff;font-size:13px;font-weight:600;padding:14px 28px;border-radius:6px;text-decoration:none;letter-spacing:0.5px;transition:all 0.22s;cursor:pointer;border:none;box-shadow:0 4px 18px rgba(240,145,42,0.4)}
+.btn-primary:hover{background:var(--saffron2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(240,145,42,0.5)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text1);font-size:13px;font-weight:500;padding:13px 26px;border-radius:6px;border:1.5px solid var(--border3);text-decoration:none;letter-spacing:0.5px;transition:all 0.22s;cursor:pointer}
+.btn-secondary:hover{border-color:var(--saffron);color:var(--saffron);background:var(--saffron5)}
+.hero-stats{display:flex;gap:40px;margin-top:52px;padding-top:28px;border-top:1px solid var(--border3);flex-wrap:wrap;animation:fadein-up 0.85s ease 0.56s both}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:var(--saffron);line-height:1}
+.stat-label{font-size:11px;font-weight:500;color:var(--text3);letter-spacing:1.2px;text-transform:uppercase;margin-top:4px}
+
+/* ── LOGO CONCEPTS ── */
+#logo-section{background:var(--bg2)}
+.logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.lc{background:var(--bg-card);border:1.5px solid var(--border);border-radius:var(--radius);padding:40px 24px 30px;text-align:center;position:relative;transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;overflow:hidden}
+.lc:hover{transform:translateY(-6px);box-shadow:var(--shadow3);border-color:var(--saffron)}
+.lc-ribbon{position:absolute;top:16px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:4px 14px;border-radius:100px;white-space:nowrap}
+.ribbon-rec{background:var(--saffron);color:#fff}
+.ribbon-gold{background:var(--gold3);color:var(--gold2);border:1px solid var(--gold)}
+.ribbon-lotus{background:var(--lotus2);color:var(--lotus);border:1px solid var(--lotus)}
+
+/* Logo 1 — Circle */
+.logo1-outer{width:100px;height:100px;border-radius:50%;background:linear-gradient(145deg,var(--saffron),var(--saffron2));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(240,145,42,0.45);position:relative;margin:28px auto 16px}
+.logo1-outer::before{content:'';position:absolute;inset:6px;border-radius:50%;border:2px solid rgba(255,255,255,0.35)}
+.logo1-outer::after{content:'';position:absolute;inset:16px;border-radius:50%;border:1px dashed rgba(255,255,255,0.25)}
+.logo1-sym{font-size:38px;position:relative;z-index:1;line-height:1}
+.logo1-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--text1);margin-bottom:4px}
+.logo1-name em{font-style:italic;color:var(--saffron)}
+.logo1-bar{width:44px;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold));border-radius:2px;margin:8px auto 10px}
+.logo1-tagline{font-size:11px;font-weight:500;color:var(--text2);letter-spacing:1.8px;text-transform:uppercase;margin-bottom:4px}
+.logo1-sub{font-size:10px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase}
+
+/* Logo 2 — Horizontal */
+.logo2-wrap{display:flex;align-items:center;justify-content:center;gap:14px;margin:28px auto 16px;padding:18px 16px;background:var(--bg3);border-radius:10px;border:1px solid var(--border)}
+.logo2-icon{width:52px;height:52px;border-radius:8px;background:linear-gradient(145deg,var(--gold),var(--saffron));display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(212,168,67,0.4);position:relative;flex-shrink:0}
+.logo2-icon::before{content:'';position:absolute;inset:4px;border-radius:4px;border:1px solid rgba(255,255,255,0.3)}
+.logo2-icon span{font-size:24px;position:relative;z-index:1}
+.logo2-tg{text-align:left}
+.logo2-devanagari{font-size:11px;color:var(--gold2);font-weight:600;letter-spacing:0.5px;margin-bottom:1px}
+.logo2-nametext{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--text1);line-height:1.1}
+.logo2-nametext em{font-style:italic;color:var(--gold2)}
+.logo2-sub{font-size:10px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+
+/* Logo 3 — Lotus minimal */
+.logo3-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;margin:28px auto 16px}
+.logo3-circle{width:76px;height:76px;border-radius:50%;border:2.5px solid var(--lotus);display:flex;align-items:center;justify-content:center;position:relative;background:var(--bg3)}
+.logo3-circle::before{content:'';position:absolute;inset:7px;border-radius:50%;border:1px dashed rgba(232,115,138,0.4)}
+.logo3-circle span{font-size:30px;position:relative;z-index:1}
+.logo3-name-row{display:flex;align-items:center;gap:10px}
+.logo3-vline{width:1.5px;height:30px;background:var(--lotus);opacity:0.6}
+.logo3-nblock{text-align:left}
+.logo3-main{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--text1);line-height:1}
+.logo3-main em{font-style:italic;color:var(--lotus)}
+.logo3-below{font-size:10px;color:var(--text3);letter-spacing:1.8px;text-transform:uppercase;margin-top:2px}
+.logo3-langs{display:flex;gap:7px;justify-content:center;margin-top:4px}
+.logo3-langs span{font-size:11px;color:var(--lotus);font-weight:500;padding:3px 10px;border:1px solid rgba(232,115,138,0.3);border-radius:100px;background:var(--lotus2)}
+
+.lc-caption{font-size:13px;color:var(--text2);line-height:1.7;margin-top:12px;font-weight:400;border-top:1px solid var(--border4);padding-top:12px}
+.lc-use{font-size:11px;color:var(--saffron3);font-weight:600;letter-spacing:0.5px;margin-top:5px}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:center}
+.about-visual{background:var(--bg-card);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow2)}
+.about-header{background:linear-gradient(145deg,var(--saffron),var(--saffron2));padding:36px 28px;text-align:center;position:relative;overflow:hidden}
+.about-header::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;border:2px solid rgba(255,255,255,0.12)}
+.about-header::after{content:'';position:absolute;bottom:-20px;left:-20px;width:80px;height:80px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.08)}
+.ah-icon{font-size:50px;margin-bottom:10px;position:relative;z-index:1}
+.ah-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff;position:relative;z-index:1}
+.ah-role{font-size:11px;color:rgba(255,255,255,0.8);letter-spacing:2px;text-transform:uppercase;margin-top:4px;position:relative;z-index:1}
+.about-body{padding:28px}
+.av-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{font-size:12px;font-weight:500;padding:6px 14px;border-radius:100px;cursor:default}
+.chip-s{background:var(--saffron5);color:var(--saffron3);border:1px solid var(--border2)}
+.chip-g{background:var(--gold3);color:var(--gold2);border:1px solid rgba(212,168,67,0.3)}
+.chip-l{background:var(--lotus2);color:var(--lotus);border:1px solid rgba(232,115,138,0.3)}
+.chip-n{background:var(--border4);color:var(--text2);border:1px solid var(--border3)}
+.av-contact>div{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2);padding:9px 0;border-bottom:1px solid var(--border4)}
+.av-contact>div:last-child{border-bottom:none}
+.av-contact strong{color:var(--text3);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:0.8px;min-width:72px}
+.about-text h3{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.5vw,44px);font-weight:600;color:var(--text1);line-height:1.18;margin-bottom:16px}
+.about-text h3 em{font-style:italic;color:var(--saffron)}
+.about-text p{font-size:15px;color:var(--text2);line-height:1.9;margin-bottom:14px}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.pillar{display:flex;align-items:flex-start;gap:12px;padding:14px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;transition:border-color 0.2s,background 0.2s}
+.pillar:hover{border-color:var(--saffron);background:var(--saffron5)}
+.pico{width:34px;height:34px;min-width:34px;border-radius:8px;background:var(--saffron5);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:15px}
+.pt{font-size:13px;font-weight:600;color:var(--text1)}
+.pd{font-size:12px;color:var(--text3);margin-top:1px}
+
+/* ── SERVICES ── */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.svc-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:var(--radius);padding:32px 24px;position:relative;overflow:hidden;transition:all 0.3s}
+.svc-card:hover{border-color:var(--saffron);box-shadow:var(--shadow3);transform:translateY(-5px)}
+.svc-accent{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform 0.35s}
+.svc-card:hover .svc-accent{transform:scaleX(1)}
+.svc-ico{width:54px;height:54px;border-radius:12px;background:var(--saffron5);border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px;transition:background 0.3s,transform 0.3s}
+.svc-card:hover .svc-ico{background:var(--saffron);transform:scale(1.08)}
+.svc-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--text1);margin-bottom:10px}
+.svc-desc{font-size:14px;color:var(--text2);line-height:1.8}
+.svc-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--saffron3);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;margin-top:18px;cursor:pointer;transition:gap 0.2s}
+.svc-link:hover{gap:10px}
+.lang-bar{display:flex;justify-content:center;gap:10px;margin-top:40px;flex-wrap:wrap}
+.lang-pill{padding:8px 20px;border-radius:100px;font-size:13px;font-weight:500;border:1.5px solid var(--border2);background:var(--saffron5);color:var(--saffron3);cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.lang-pill:hover{background:rgba(240,145,42,0.2);border-color:var(--saffron);transform:translateY(-1px)}
+.lang-pill.lang-active{background:var(--saffron);color:#fff;border-color:var(--saffron);box-shadow:0 3px 12px rgba(240,145,42,0.35)}
+
+/* ── PROCESS ── */
+.process-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.process-line{position:absolute;top:40px;left:12%;right:12%;height:1.5px;background:linear-gradient(90deg,var(--saffron),var(--gold),var(--lotus));opacity:0.35;z-index:0}
+.pstep{text-align:center;padding:0 16px;position:relative;z-index:1}
+.pstep-circle{width:80px;height:80px;border-radius:50%;background:var(--bg-card);border:2px solid var(--saffron);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 4px 16px rgba(240,145,42,0.2);transition:all 0.3s;position:relative}
+.pstep-circle::before{content:'';position:absolute;inset:6px;border-radius:50%;background:var(--saffron5)}
+.pstep:hover .pstep-circle{background:var(--saffron);border-color:var(--saffron3);box-shadow:0 8px 24px rgba(240,145,42,0.4)}
+.pstep:hover .pstep-circle::before{background:rgba(255,255,255,0.12)}
+.pstep:hover .pstep-n{color:#fff}
+.pstep-n{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--saffron);position:relative;z-index:1;transition:color 0.3s}
+.pstep-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--text1);margin-bottom:8px}
+.pstep-desc{font-size:13px;color:var(--text2);line-height:1.8}
+
+/* ── BLOG ── */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.blog-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all 0.3s;cursor:pointer}
+.blog-card:hover{border-color:var(--saffron);box-shadow:var(--shadow3);transform:translateY(-5px)}
+.blog-thumb{height:150px;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative;overflow:hidden}
+.blog-thumb::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.15)}
+.blog-body{padding:20px}
+.blog-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--saffron3);margin-bottom:8px;display:block}
+.blog-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--text1);line-height:1.35;margin-bottom:8px}
+.blog-excerpt{font-size:13px;color:var(--text2);line-height:1.8}
+.blog-meta{display:flex;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid var(--border4);font-size:11px}
+.blog-date{color:var(--text3)}
+.blog-read{color:var(--saffron3);font-weight:600}
+
+/* ── TESTIMONIALS ── */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.tcard{background:var(--bg-card);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px 24px;transition:all 0.3s}
+.tcard:hover{border-color:var(--saffron);box-shadow:var(--shadow);transform:translateY(-3px)}
+.tstars{color:var(--gold2);font-size:16px;letter-spacing:2px;margin-bottom:14px}
+.ttext{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--text1);line-height:1.75;margin-bottom:18px}
+.tauthor{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--border4)}
+.tavatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,var(--saffron),var(--saffron2));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:#fff}
+.tname{font-size:14px;font-weight:600;color:var(--text1)}
+.tcity{font-size:12px;color:var(--text3)}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px}
+.cinfo h3{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;color:var(--text1);line-height:1.2;margin-bottom:14px}
+.cinfo h3 em{font-style:italic;color:var(--saffron)}
+.cinfo>p{font-size:15px;color:var(--text2);line-height:1.85;margin-bottom:28px}
+.cdetail{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--border4)}
+.cdetail:last-of-type{border-bottom:none}
+.cico{width:44px;height:44px;min-width:44px;border-radius:10px;background:var(--saffron);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 3px 12px rgba(240,145,42,0.35)}
+.clabel{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);font-weight:600}
+.cval{font-size:14px;color:var(--text1);font-weight:500;margin-top:2px}
+.wa-btn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-size:13px;font-weight:600;padding:13px 26px;border-radius:8px;text-decoration:none;margin-top:22px;box-shadow:0 4px 16px rgba(37,211,102,0.3);transition:all 0.2s}
+.wa-btn:hover{background:#20b858;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.4)}
+.cform{background:var(--bg-card);border:1.5px solid var(--border);border-radius:var(--radius);padding:38px;box-shadow:var(--shadow2)}
+.cform h4{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--text1);margin-bottom:24px}
+.fg{margin-bottom:16px}
+.fg label{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);font-weight:600;display:block;margin-bottom:6px}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--bg-input);border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;font-size:14px;color:var(--text1);font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.2s,background 0.2s}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--text4)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--saffron);background:var(--bg2)}
+.fg select option{background:var(--bg2);color:var(--text1)}
+.fg textarea{height:90px;resize:none}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* ── GUIDE SECTION ── */
+#guide{background:var(--bg2)}
+.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.gcard{background:var(--bg-card);border:1.5px solid var(--border);border-radius:var(--radius);padding:32px 28px}
+.gcard-tag{display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:14px}
+.gtag-edit{background:var(--saffron5);color:var(--saffron3);border:1px solid var(--border2)}
+.gtag-domain{background:var(--gold3);color:var(--gold2);border:1px solid rgba(212,168,67,0.3)}
+.gcard h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--text1);margin-bottom:20px;line-height:1.2}
+.gcard h3 em{font-style:italic;color:var(--saffron)}
+.gstep{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+.gnum{width:28px;height:28px;min-width:28px;border-radius:50%;background:var(--saffron);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px;box-shadow:0 2px 8px rgba(240,145,42,0.35)}
+.gtext{font-size:14px;color:var(--text2);line-height:1.75}
+.gtext strong{color:var(--text1);font-weight:600}
+.gnote{background:var(--saffron5);border-left:3px solid var(--saffron);border-radius:0 8px 8px 0;padding:14px 16px;font-size:13px;color:var(--text2);line-height:1.75;margin-top:18px}
+.gnote strong{color:var(--saffron3);font-weight:600}
+
+/* ── FOOTER ── */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:52px 5% 28px}
+.ftop{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid var(--border4);margin-bottom:24px}
+.fbname{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--text1);margin-bottom:10px}
+.fbname em{font-style:italic;color:var(--saffron)}
+.fbdesc{font-size:13px;color:var(--text3);line-height:1.8;max-width:220px;margin-top:6px}
+.fbcontact{font-size:12px;color:var(--text4);margin-top:14px;line-height:2.2}
+.fcol h5{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text3);font-weight:600;margin-bottom:14px}
+.fcol a{display:block;font-size:13px;color:var(--text3);text-decoration:none;margin-bottom:9px;cursor:pointer;transition:color 0.2s}
+.fcol a:hover{color:var(--saffron3)}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.fcopy{font-size:12px;color:var(--text4)}
+
+/* ── FLOATS ── */
+.wa-float{position:fixed;bottom:80px;right:24px;z-index:500;width:50px;height:50px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,0.45);transition:transform 0.3s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:24px;height:24px;fill:white}
+#btt{position:fixed;bottom:24px;right:24px;z-index:500;width:44px;height:44px;background:var(--saffron);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(240,145,42,0.4);opacity:0;transform:translateY(8px);transition:all 0.3s}
+#btt.show{opacity:1;transform:none}
+#btt:hover{background:var(--saffron2);transform:translateY(-2px)}
+#btt svg{width:18px;height:18px;fill:white}
+
+@media(max-width:900px){
+  .about-grid,.contact-grid,.guide-grid{grid-template-columns:1fr;gap:36px}
+  .process-wrap{grid-template-columns:1fr 1fr}
+  .ftop{grid-template-columns:1fr 1fr}
+  .logo-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .hero-stats{gap:24px}
+  .process-line{display:none}
+  .process-wrap{grid-template-columns:1fr 1fr}
+  .fg-row{grid-template-columns:1fr}
+  .ftop{grid-template-columns:1fr}
+  section{padding:72px 5%}
+}
+
+/* ── MOBILE HAMBURGER ── */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:transparent}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text1);border-radius:2px;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{
+  display:none;position:fixed;top:70px;left:0;right:0;z-index:999;
+  background:rgba(21,51,66,0.98);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  flex-direction:column;padding:12px 0 20px;
+  animation:slide-down 0.25s ease;
+}
+@keyframes slide-down{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  font-size:15px;font-weight:500;color:var(--text1);
+  text-decoration:none;padding:14px 5%;
+  border-bottom:1px solid var(--border4);cursor:pointer;
+  transition:color 0.2s,background 0.2s;display:block;
+}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a:hover{color:var(--saffron);background:var(--saffron5)}
+.mobile-menu .mob-book{
+  margin:12px 5% 0;padding:14px 20px;
+  background:var(--saffron);color:#fff!important;
+  border-radius:6px;text-align:center;font-weight:600!important;
+  border-bottom:none!important;
+}
+.mobile-menu .mob-book:hover{background:var(--saffron2)!important}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .lang-switcher{display:flex}
+}
+
+/* ── BLOG MODAL ── */
+#blog-overlay{position:fixed;inset:0;z-index:3000;background:rgba(10,25,35,0.95);backdrop-filter:blur(10px);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:30px 16px}
+#blog-overlay.open{display:flex}
+.blog-modal{background:#1F4A5E;border:1.5px solid rgba(240,145,42,0.3);border-radius:16px;max-width:740px;width:100%;margin:auto;overflow:hidden;animation:bm-in 0.35s cubic-bezier(.16,1,.3,1)}
+@keyframes bm-in{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.bm-thumb{height:200px;display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden;flex-shrink:0}
+.bm-thumb::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.2)}
+.bm-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.55);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background 0.2s}
+.bm-close:hover{background:#F0912A}
+.bm-body{padding:32px 36px 44px}
+.bm-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#FBBD74;margin-bottom:8px;display:block}
+.bm-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,34px);font-weight:700;color:#F0EDE8;line-height:1.2;margin-bottom:6px}
+.bm-meta{font-size:12px;color:#9A8E82;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.bm-content h2{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#F0EDE8;margin:26px 0 10px}
+.bm-content h2 em{font-style:italic;color:#F0912A}
+.bm-content p{font-size:15px;color:#C8C0B4;line-height:1.9;margin-bottom:14px}
+.bm-content ul{margin:0 0 14px 18px}
+.bm-content li{font-size:15px;color:#C8C0B4;line-height:1.9;margin-bottom:5px}
+.bm-content .hl{background:rgba(240,145,42,0.1);border-left:3px solid #F0912A;padding:14px 18px;border-radius:0 8px 8px 0;margin:18px 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#F0EDE8;line-height:1.6}
+.bm-cta{margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.07);text-align:center}
+.bm-cta p{font-size:14px;color:#9A8E82;margin-bottom:14px}
+@media(max-width:600px){.bm-body{padding:22px 18px 36px}}
+
+/* ── LANGUAGE SWITCHER ── */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1.5px solid var(--border2);
+  border-radius: 100px;
+  overflow: hidden;
+  background: var(--bg2);
+  margin-left: 16px;
+}
+.lang-btn {
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--text3);
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.lang-btn.active {
+  background: var(--saffron);
+  color: #fff;
+  border-radius: 100px;
+}
+.lang-btn:hover:not(.active) {
+  color: var(--saffron3);
+}
+
+/* Mobile lang switcher */
+.mobile-lang-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border: 1.5px solid var(--border2);
+  border-radius: 100px;
+  overflow: hidden;
+  background: var(--bg2);
+  margin: 12px 5% 0;
+}
+.mobile-lang-btn {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--text3);
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+  text-align: center;
+}
+.mobile-lang-btn.active {
+  background: var(--saffron);
+  color: #fff;
+  border-radius: 100px;
+}
+
+/* Hide/show by language */
+.mr { display: none; }
+.en { display: block; }
+body.marathi .mr { display: block; }
+body.marathi .en { display: none; }
+/* inline elements */
+span.mr { display: none; }
+span.en { display: inline; }
+body.marathi span.mr { display: inline; }
+body.marathi span.en { display: none; }
+</style>
+</head>
+<body>
+
+<!-- FLOATS -->
+<a class="wa-float" href="https://wa.me/917219612011?text=Namaste%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.94.563 3.75 1.543 5.27L2 22l4.896-1.494C8.327 21.462 10.123 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.848 0-3.565-.551-5.01-1.5l-.36-.216-3.733 1.14 1.153-3.638-.232-.376C2.571 14.085 2 13.096 2 12 2 7.582 6.582 3 12 3s10 4.582 10 9-4.582 9-10 9z"/></svg>
+</a>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+</button>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="logo" onclick="goTo('hero')">
+    <div class="logo-mark">
+      <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <!-- outer ring -->
+        <circle cx="22" cy="22" r="19" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.2"/>
+        <!-- middle ring -->
+        <circle cx="22" cy="22" r="13" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="0.8" stroke-dasharray="3 2"/>
+        <!-- Om path -->
+        <text x="22" y="27" text-anchor="middle" font-size="17" fill="white" font-family="serif" font-weight="bold" opacity="0.95">ॐ</text>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span class="logo-name"><em>Disha</em> Consultancy</span>
+      <span class="logo-sub">Numerology & Vastu · Pune</span>
+    </div>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="lang-switcher">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-mr" onclick="setLang('mr')">मराठी</button>
+  </div>
+  <div class="nav-links">
+    <a onclick="goTo('about')"><span class="en">About</span><span class="mr">आमच्याबद्दल</span></a>
+    <a onclick="goTo('services')"><span class="en">Services</span><span class="mr">सेवा</span></a>
+    <a onclick="goTo('process')"><span class="en">Process</span><span class="mr">प्रक्रिया</span></a>
+    <a onclick="goTo('blog')"><span class="en">Blog</span><span class="mr">लेख</span></a>
+    <a onclick="goTo('testimonials')"><span class="en">Testimonials</span><span class="mr">प्रशंसापत्रे</span></a>
+    <a class="nav-book" onclick="goTo('contact')"><span class="en">Book a Session</span><span class="mr">सत्र बुक करा</span></a>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="mobileGoTo('about')"><span class="en">About</span><span class="mr">आमच्याबद्दल</span></a>
+  <a onclick="mobileGoTo('services')"><span class="en">Services</span><span class="mr">सेवा</span></a>
+  <a onclick="mobileGoTo('process')"><span class="en">How It Works</span><span class="mr">कसे कार्य करते</span></a>
+  <a onclick="goTo('blog')"><span class="en">Blog & Articles</span><span class="mr">लेख</span></a>
+  <a onclick="mobileGoTo('testimonials')"><span class="en">Testimonials</span><span class="mr">प्रशंसापत्रे</span></a>
+  <a onclick="mobileGoTo('contact')"><span class="en">Contact Us</span><span class="mr">संपर्क करा</span></a>
+  <a class="mob-book" onclick="mobileGoTo('contact')">🙏 <span class="en">Book a Session</span><span class="mr">सत्र बुक करा</span></a>
+  <div class="mobile-lang-switcher">
+    <button class="mobile-lang-btn active" id="mob-btn-en" onclick="setLang('en')">English</button>
+    <button class="mobile-lang-btn" id="mob-btn-mr" onclick="setLang('mr')">मराठी</button>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <svg class="hero-watermark" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="250" cy="250" r="240" fill="none" stroke="#F0912A" stroke-width="1.5"/>
+    <circle cx="250" cy="250" r="200" fill="none" stroke="#F0912A" stroke-width="1"/>
+    <circle cx="250" cy="250" r="160" fill="none" stroke="#D4A843" stroke-width="1.5"/>
+    <circle cx="250" cy="250" r="120" fill="none" stroke="#F0912A" stroke-width="1"/>
+    <circle cx="250" cy="250" r="80"  fill="none" stroke="#E8738A" stroke-width="1.5"/>
+    <circle cx="250" cy="250" r="40"  fill="none" stroke="#F0912A" stroke-width="1"/>
+    <line x1="10"  y1="250" x2="490" y2="250" stroke="#F0912A" stroke-width="0.8"/>
+    <line x1="250" y1="10"  x2="250" y2="490" stroke="#F0912A" stroke-width="0.8"/>
+    <line x1="75"  y1="75"  x2="425" y2="425" stroke="#D4A843" stroke-width="0.6"/>
+    <line x1="425" y1="75"  x2="75"  y2="425" stroke="#D4A843" stroke-width="0.6"/>
+    <polygon points="250,20 470,370 30,370"  fill="none" stroke="#E8738A" stroke-width="0.8"/>
+    <polygon points="250,480 470,130 30,130" fill="none" stroke="#E8738A" stroke-width="0.8"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><div class="hero-pulse"></div><span><span class="en">Certified Expert · Pune, Maharashtra</span><span class="mr">प्रमाणित तज्ञ · पुणे, महाराष्ट्र</span></span></div>
+    <h1><span class="en">Align Your Numbers<br>&amp; <em>Your Space</em></span><span class="mr">तुमचे अंक आणि<br><em>वास्तू सुसंगत करा</em></span></h1>
+    <p class="hero-sub"><span class="en">Where Ancient Wisdom Meets Modern Destiny</span><span class="mr">जिथे प्राचीन ज्ञान आधुनिक नशिबाला भेटते</span></p>
+    <p class="hero-desc"><span class="en">Unlock the transformative power of Numerology and Vastu Shastra to bring harmony, prosperity, and purpose into every dimension of your life — personal and professional.</span><span class="mr">न्यूमेरॉलॉजी आणि वास्तू शास्त्राची परिवर्तनकारी शक्ती उघड करा — तुमच्या वैयक्तिक आणि व्यावसायिक जीवनाच्या प्रत्येक पैलूत सुसंवाद, समृद्धी आणि उद्देश आणा.</span></p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="goTo('contact')">🙏 <span class="en">Book a Session</span><span class="mr">सत्र बुक करा</span></button>
+      <button class="btn-secondary" onclick="goTo('services')"><span class="en">Explore Services →</span><span class="mr">सेवा पाहा →</span></button>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num" data-val="100" data-suffix="+">100+</div><div class="stat-label"><span class="en">Clients Transformed</span><span class="mr">समाधानी ग्राहक</span></div></div>
+      <div><div class="stat-num" data-val="7"   data-suffix="+">7+</div><div class="stat-label"><span class="en">Years Experience</span><span class="mr">वर्षांचा अनुभव</span></div></div>
+      <div><div class="stat-num">4</div><div class="stat-label"><span class="en">Core Services</span><span class="mr">मुख्य सेवा</span></div></div>
+      <div><div class="stat-num">3</div><div class="stat-label"><span class="en">Languages</span><span class="mr">भाषा</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-header">
+        <div class="ah-icon">
+        <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="30" cy="30" r="21" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="3 2"/>
+          <text x="30" y="38" text-anchor="middle" font-size="28" fill="white" font-family="Georgia,serif" font-weight="bold">ॐ</text>
+        </svg>
+      </div>
+        <div class="ah-name"><span class="en">Disha Consultancy</span><span class="mr">दिशा कन्सल्टन्सी</span></div>
+        <div class="ah-role"><span class="en">Numerology & Vastu Expert · Pune</span><span class="mr">न्यूमेरॉलॉजी व वास्तू तज्ञ · पुणे</span></div>
+      </div>
+      <div class="about-body">
+        <div class="av-chips">
+          <span class="chip chip-s"><span class="en">Certified Numerologist</span><span class="mr">प्रमाणित न्यूमेरॉलॉजिस्ट</span></span>
+          <span class="chip chip-g"><span class="en">Vastu Shastra Expert</span><span class="mr">वास्तू शास्त्र तज्ञ</span></span>
+          <span class="chip chip-n"><span class="en">7+ Years Experience</span><span class="mr">७+ वर्षांचा अनुभव</span></span>
+          <span class="chip chip-l"><span class="en">100+ Clients</span><span class="mr">१००+ ग्राहक</span></span>
+          <span class="chip chip-n"><span class="en">Online & In-Person</span><span class="mr">ऑनलाइन व प्रत्यक्ष</span></span>
+        </div>
+        <div class="av-contact">
+          <div><strong>Phone</strong> +91 72196 12011</div>
+          <div><strong>Email</strong> dishanumerovaastu@gmail.com</div>
+          <div><strong>Location</strong> Pune, Maharashtra</div>
+          <div><strong>Sessions</strong> Online & In-Person</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-text">
+      <h3><span class="en">Guiding You Towards a<br><em>Life in Harmony</em></span><span class="mr">तुम्हाला<br><em>सुसंवादी जीवनाकडे</em> नेण्यासाठी</span></h3>
+      <p><span class="en">At Disha Numerology and Vastu Consultancy, we believe every number carries a vibration and every space holds an energy. When both align, life flows with greater ease, clarity, and abundance.</span><span class="mr">दिशा न्यूमेरॉलॉजी आणि वास्तू कन्सल्टन्सीमध्ये आमचा विश्वास आहे की प्रत्येक संख्येत एक कंपन असते आणि प्रत्येक जागेत एक ऊर्जा असते. जेव्हा दोन्ही जुळतात, तेव्हा जीवन अधिक सहजतेने, स्पष्टतेने आणि समृद्धीने वाहते.</span></p>
+      <p><span class="en">With deep expertise in Vedic Numerology and traditional Vastu Shastra, we offer personalised consultations for individuals and businesses across Pune and all of India.</span><span class="mr">वैदिक न्यूमेरॉलॉजी आणि पारंपारिक वास्तू शास्त्रातील सखोल ज्ञानाने, आम्ही पुणे आणि संपूर्ण भारतातील व्यक्ती आणि व्यवसायांसाठी वैयक्तिक सल्ला देतो.</span></p>
+      <div class="pillars">
+        <div class="pillar"><div class="pico">🔢</div><div><div class="pt"><span class="en">Personalised Analysis</span><span class="mr">वैयक्तिक विश्लेषण</span></div><div class="pd"><span class="en">Tailored to your birth details</span><span class="mr">जन्म तपशीलांनुसार</span></div></div></div>
+        <div class="pillar"><div class="pico">🛡️</div><div><div class="pt"><span class="en">Trusted Guidance</span><span class="mr">विश्वासार्ह मार्गदर्शन</span></div><div class="pd"><span class="en">100+ satisfied clients</span><span class="mr">१००+ समाधानी ग्राहक</span></div></div></div>
+        <div class="pillar"><div class="pico">📋</div><div><div class="pt"><span class="en">Written Reports</span><span class="mr">लिखित अहवाल</span></div><div class="pd"><span class="en">Detailed, actionable insights</span><span class="mr">सविस्तर, उपयुक्त माहिती</span></div></div></div>
+        <div class="pillar"><div class="pico">🌐</div><div><div class="pt"><span class="en">Flexible Sessions</span><span class="mr">लवचिक सत्रे</span></div><div class="pd"><span class="en">Remote or in-person</span><span class="mr">दूरस्थ किंवा प्रत्यक्ष</span></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services" class="bg-alt">
+  <div class="sh"><span class="stag"><span class="en">What We Offer</span><span class="mr">आमच्या सेवा</span></span><h2><span class="en">Our <em>Services</em></span><span class="mr">आमच्या <em>सेवा</em></span></h2><p><span class="en">Each service is a personalised journey of discovery, delivered with precision and genuine care.</span><span class="mr">प्रत्येक सेवा ही शोधाची एक वैयक्तिक यात्रा आहे, अचूकतेने आणि खऱ्या काळजीने दिली जाते.</span></p></div>
+  <div class="svc-grid">
+    <div class="svc-card"><div class="svc-accent"></div><div class="svc-ico">🔢</div><div class="svc-title"><span class="en">Numerology Reading</span><span class="mr">न्यूमेरॉलॉजी वाचन</span></div><div class="svc-desc"><span class="en">A comprehensive analysis of your Life Path, Destiny, Soul Urge, and Personality numbers. Discover your strengths, challenges, and the energies shaping your unique journey.</span><span class="mr">तुमच्या लाइफ पाथ, डेस्टिनी, सोल अर्ज आणि व्यक्तिमत्व संख्यांचे सर्वसमावेशक विश्लेषण. तुमची शक्ती, आव्हाने आणि तुमच्या अनोख्या प्रवासाला आकार देणाऱ्या ऊर्जा जाणून घ्या.</span></div><a class="svc-link" onclick="goTo('contact')"><span class="en">Book Now →</span><span class="mr">आत्ता बुक करा →</span></a></div>
+    <div class="svc-card"><div class="svc-accent"></div><div class="svc-ico">🏠</div><div class="svc-title"><span class="en">Vastu Shastra Consultation</span><span class="mr">वास्तू शास्त्र सल्लामसलत</span></div><div class="svc-desc"><span class="en">A thorough evaluation of your home or office using ancient Vastu principles — identifying energy imbalances and providing practical remedies to restore harmony and prosperity.</span><span class="mr">प्राचीन वास्तू तत्त्वांचा वापर करून तुमच्या घराचे किंवा कार्यालयाचे सखोल मूल्यांकन — ऊर्जा असंतुलन ओळखणे आणि सुसंवाद व समृद्धी पुनर्स्थापित करण्यासाठी व्यावहारिक उपाय देणे.</span></div><a class="svc-link" onclick="goTo('contact')"><span class="en">Book Now →</span><span class="mr">आत्ता बुक करा →</span></a></div>
+    <div class="svc-card"><div class="svc-accent"></div><div class="svc-ico">✨</div><div class="svc-title"><span class="en">Name Correction</span><span class="mr">नाव सुधारणा</span></div><div class="svc-desc"><span class="en">Your name carries a powerful vibration. We analyse its numerological value and suggest corrections for alignment with your destiny number — for individuals and businesses alike.</span><span class="mr">तुमच्या नावात एक शक्तिशाली कंपन असते. आम्ही त्याचे संख्याशास्त्रीय मूल्य विश्लेषण करतो आणि तुमच्या नशीब संख्येशी जुळणीसाठी सुधारणा सुचवतो.</span></div><a class="svc-link" onclick="goTo('contact')"><span class="en">Book Now →</span><span class="mr">आत्ता बुक करा →</span></a></div>
+    <div class="svc-card"><div class="svc-accent"></div><div class="svc-ico">📱</div><div class="svc-title"><span class="en">Mobile / Vehicle Number Analysis</span><span class="mr">मोबाइल / वाहन क्रमांक विश्लेषण</span></div><div class="svc-desc"><span class="en">Numbers you use daily — mobile, vehicle, flat, or business registration — silently influence your fortune. We analyse and suggest the most auspicious numbers for you.</span><span class="mr">तुम्ही दररोज वापरता त्या संख्या — मोबाइल, वाहन, फ्लॅट किंवा व्यवसाय नोंदणी — तुमच्या नशिबावर प्रभाव टाकतात. आम्ही सर्वात शुभ संख्या सुचवतो.</span></div><a class="svc-link" onclick="goTo('contact')"><span class="en">Book Now →</span><span class="mr">आत्ता बुक करा →</span></a></div>
+  </div>
+  <div class="lang-bar">
+    <button class="lang-pill" onclick="selectLang('English')" id="lang-en"><span class="en">🇮🇳 English</span><span class="mr">🇮🇳 इंग्रजी</span></button>
+    <button class="lang-pill" onclick="selectLang('Hindi')" id="lang-hi">हिन्दी</button>
+    <button class="lang-pill" onclick="selectLang('Marathi')" id="lang-mr">मराठी</button>
+  </div>
+</section>
+
+<!-- ══ PROCESS ══ -->
+<section id="process" class="bg-light">
+  <div class="sh"><span class="stag"><span class="en">How It Works</span><span class="mr">कसे कार्य करते</span></span><h2><span class="en">Your Path to <em>Clarity</em></span><span class="mr">तुमचा <em>स्पष्टतेचा</em> मार्ग</span></h2><p><span class="en">A simple four-step journey from first enquiry to lasting transformation.</span><span class="mr">पहिल्या चौकशीपासून कायमस्वरूपी परिवर्तनापर्यंत एक सोपी चार-चरण यात्रा.</span></p></div>
+  <div class="process-wrap">
+    <div class="process-line"></div>
+    <div class="pstep"><div class="pstep-circle"><div class="pstep-n">01</div></div><div class="pstep-title"><span class="en">Enquiry</span><span class="mr">चौकशी</span></div><div class="pstep-desc"><span class="en">Reach out via WhatsApp or our booking form with your name, date of birth, and areas of concern.</span><span class="mr">WhatsApp किंवा बुकिंग फॉर्मद्वारे तुमचे नाव, जन्मतारीख आणि चिंतेचे क्षेत्र सांगा.</span></div></div>
+    <div class="pstep"><div class="pstep-circle"><div class="pstep-n">02</div></div><div class="pstep-title"><span class="en">Analysis</span><span class="mr">विश्लेषण</span></div><div class="pstep-desc"><span class="en">We perform a detailed numerological and/or Vastu analysis using classical, time-tested methods.</span><span class="mr">आम्ही शास्त्रीय, सिद्ध पद्धती वापरून सविस्तर न्यूमेरॉलॉजी आणि/किंवा वास्तू विश्लेषण करतो.</span></div></div>
+    <div class="pstep"><div class="pstep-circle"><div class="pstep-n">03</div></div><div class="pstep-title"><span class="en">Consultation</span><span class="mr">सल्लामसलत</span></div><div class="pstep-desc"><span class="en">A personal session — online or in Pune — where we walk through all findings and recommendations.</span><span class="mr">एक वैयक्तिक सत्र — ऑनलाइन किंवा पुण्यात — जिथे आम्ही सर्व निष्कर्ष आणि शिफारसींवर चर्चा करतो.</span></div></div>
+    <div class="pstep"><div class="pstep-circle"><div class="pstep-n">04</div></div><div class="pstep-title"><span class="en">Your Report</span><span class="mr">तुमचा अहवाल</span></div><div class="pstep-desc"><span class="en">Receive a written report with actionable remedies and guidance for your daily life.</span><span class="mr">दैनंदिन जीवनासाठी कृतीयोग्य उपाय आणि मार्गदर्शनासह लिखित अहवाल मिळवा.</span></div></div>
+  </div>
+</section>
+
+<!-- ══ BLOG ══ -->
+<section id="blog" class="bg-alt">
+  <div class="sh"><span class="stag"><span class="en">Wisdom & Insights</span><span class="mr">ज्ञान व अंतर्दृष्टी</span></span><h2><span class="en">Articles & <em>Guidance</em></span><span class="mr">लेख आणि <em>मार्गदर्शन</em></span></h2><p><span class="en">Explore our growing library on Numerology, Vastu Shastra, and ancient wisdom for modern living.</span><span class="mr">न्यूमेरॉलॉजी, वास्तू शास्त्र आणि आधुनिक जीवनासाठी प्राचीन ज्ञानावरील आमचे लेख वाचा.</span></p></div>
+  <div class="blog-grid" id="mainBlogGrid"></div>
+  <div style="text-align:center;margin-top:40px;" style="text-align:center;margin-top:20px;">
+    <button class="btn-primary" onclick="goTo('blog')" style="border:none;cursor:pointer;">📖 View All Articles</button>
+  </div>
+  <div style="text-align:center;margin-top:36px;">
+    <button class="btn-secondary" id="showMoreBtn" onclick="showMoreArticles()" style="border:2px solid var(--border3);padding:13px 28px;border-radius:6px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.5px;">
+      📖 Show More Articles (12 more)
+    </button>
+  </div>
+  <!-- EXTRA ARTICLES (hidden initially) -->
+  <div class="blog-grid" id="extraBlogGrid" style="display:none;margin-top:24px;"></div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials">
+  <div class="sh"><span class="stag"><span class="en">Client Stories</span><span class="mr">ग्राहकांचे अनुभव</span></span><h2><span class="en">Words of <em>Transformation</em></span><span class="mr"><em>परिवर्तनाचे</em> शब्द</span></h2><p><span class="en">Real experiences from clients across Pune and all of India.</span><span class="mr">पुणे आणि संपूर्ण भारतातील ग्राहकांचे वास्तविक अनुभव.</span></p></div>
+  <div class="tgrid">
+    <div class="tcard"><div class="tstars">★★★★★</div><div class="ttext">"After the name correction suggested by Disha Consultancy, I noticed a remarkable shift in my career within just a few months. Truly life-changing guidance."</div><div class="tauthor"><div class="tavatar">RS</div><div><div class="tname">Rahul S.</div><div class="tcity"><span class="en">IT Professional, Pune</span><span class="mr">आयटी व्यावसायिक, पुणे</span></div></div></div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><div class="ttext"><span class="en">"The Vastu consultation for our new home was eye-opening. The simple remedies made a wonderful difference — our home feels genuinely peaceful and positive now."</span><span class="mr">"आमच्या नवीन घरासाठी वास्तू सल्लामसलत डोळे उघडणारी होती. साध्या उपायांनी अद्भुत फरक पडला — आमचे घर आता खरोखरच शांत आणि सकारात्मक वाटते."</span></div><div class="tauthor"><div class="tavatar">PM</div><div><div class="tname">Priya M.</div><div class="tcity"><span class="en">Homemaker, Pune</span><span class="mr">गृहिणी, पुणे</span></div></div></div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><div class="ttext">"I was sceptical initially, but the numerology reading was so accurate. It helped me make a crucial business decision with real confidence and clarity."</div><div class="tauthor"><div class="tavatar">AK</div><div><div class="tname">Amit K.</div><div class="tcity"><span class="en">Business Owner, Nashik</span><span class="mr">व्यवसायी, नाशिक</span></div></div></div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><div class="ttext"><span class="en">"My vehicle number analysis was incredibly detailed. Changed the registration as suggested and felt a positive shift in my daily life within weeks."</span><span class="mr">माझ्या वाहन क्रमांकाचे विश्लेषण अत्यंत सविस्तर होते. सुचवल्याप्रमाणे नोंदणी बदलली.</span></div><div class="tauthor"><div class="tavatar">SJ</div><div><div class="tname">Sneha J.</div><div class="tcity"><span class="en">Entrepreneur, Mumbai</span><span class="mr">उद्योजक, मुंबई</span></div></div></div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><div class="ttext">"The online consultation was seamless and thorough. I received a written report I still refer to regularly. Highly recommend to anyone seeking clarity."</div><div class="tauthor"><div class="tavatar">VR</div><div><div class="tname">Vijay R.</div><div class="tcity"><span class="en">Software Engineer, Bengaluru</span><span class="mr">सॉफ्टवेअर इंजिनिअर, बेंगळुरू</span></div></div></div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><div class="ttext">"Consulted for our new office Vastu before moving in. The practical advice made our workspace wonderfully positive and our team more productive."</div><div class="tauthor"><div class="tavatar">NK</div><div><div class="tname">Neha K.</div><div class="tcity"><span class="en">Architect, Pune</span><span class="mr">आर्किटेक्ट, पुणे</span></div></div></div></div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="bg-alt">
+  <div class="sh"><span class="stag"><span class="en">Get In Touch</span><span class="mr">संपर्क करा</span></span><h2><span class="en">Begin Your <em>Journey</em></span><span class="mr">तुमची <em>यात्रा</em> सुरू करा</span></h2></div>
+  <div class="contact-grid">
+    <div class="cinfo">
+      <h3><span class="en">Let's Find Your<br><em>Path Together</em></span><span class="mr">चला एकत्र<br><em>तुमचा मार्ग</em> शोधूया</span></h3>
+      <p><span class="en">Whether you seek clarity in your personal life or want to harmonise your business space — reach out. Your transformation starts with a single conversation.</span><span class="mr">तुम्हाला वैयक्तिक जीवनात स्पष्टता हवी असो किंवा व्यावसायिक जागा सुसंवादी करायची असो — संपर्क करा. तुमचे परिवर्तन एकाच संभाषणाने सुरू होते.</span></p>
+      <div class="cdetail"><div class="cico">📞</div><div><div class="clabel"><span class="en">Phone / WhatsApp</span><span class="mr">फोन / WhatsApp</span></div><div class="cval">+91 72196 12011</div></div></div>
+      <div class="cdetail"><div class="cico">✉️</div><div><div class="clabel"><span class="en">Email</span><span class="mr">ईमेल</span></div><div class="cval">dishanumerovaastu@gmail.com</div></div></div>
+      <div class="cdetail"><div class="cico">📍</div><div><div class="clabel"><span class="en">Location</span><span class="mr">स्थान</span></div><div class="cval"><span class="en">Pune, Maharashtra — Online & In-Person</span><span class="mr">पुणे, महाराष्ट्र — ऑनलाइन व प्रत्यक्ष</span></div></div></div>
+      <a class="wa-btn" href="https://wa.me/917219612011?text=Namaste%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Disha%20Numerology%20%26%20Vastu%20Consultancy." target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.94.563 3.75 1.543 5.27L2 22l4.896-1.494C8.327 21.462 10.123 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.848 0-3.565-.551-5.01-1.5l-.36-.216-3.733 1.14 1.153-3.638-.232-.376C2.571 14.085 2 13.096 2 12 2 7.582 6.582 3 12 3s10 4.582 10 9-4.582 9-10 9z"/></svg>
+        <span class="en">Chat on WhatsApp</span><span class="mr">WhatsApp वर संपर्क करा</span>
+      </a>
+    </div>
+    <div class="cform">
+      <h4><span class="en">Request a Consultation</span><span class="mr">सल्लामसलत विनंती करा</span></h4>
+      <div id="consultForm">
+      <div class="fg-row">
+        <div class="fg"><label><span class="en">Full Name</span><span class="mr">पूर्ण नाव</span></label><input type="text" name="name" placeholder="Your full name" required/></div>
+        <div class="fg"><label><span class="en">Phone Number</span><span class="mr">फोन नंबर</span></label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/></div>
+      </div>
+      <div class="fg"><label><span class="en">Email Address</span><span class="mr">ईमेल पत्ता</span></label><input type="email" name="email" placeholder="your@email.com" required/></div>
+      <div class="fg"><label><span class="en">Date of Birth</span><span class="mr">जन्मतारीख</span></label><input type="date" name="dob"/></div>
+      <div class="fg"><label><span class="en">Service Interested In</span><span class="mr">इच्छित सेवा</span></label>
+        <select name="service" required><option value="">Select a service...</option><option>Numerology Reading</option><option>Vastu Shastra Consultation</option><option>Name Correction</option><option>Mobile / Vehicle Number Analysis</option><option>Multiple Services</option></select>
+      </div>
+      <div class="fg" id="lang-note-wrap" style="display:none">
+        <label>Preferred Language</label>
+        <input type="text" id="lang-note-field" name="language" readonly style="background:var(--saffron5);border-color:var(--saffron);color:var(--saffron3);font-weight:500"/>
+      </div>
+      <div class="fg"><label><span class="en">Your Message</span><span class="mr">तुमचा संदेश</span></label><textarea name="message" placeholder="Tell us briefly about what you seek guidance on..." required></textarea></div>
+      <button class="btn-primary" id="submitBtn" type="button" onclick="submitForm()" style="width:100%;justify-content:center;font-size:14px;"><span class="en">Send Enquiry 🙏</span><span class="mr">चौकशी पाठवा 🙏</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="ftop">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <defs><radialGradient id="gf" cx="40%" cy="35%" r="60%"><stop offset="0%" stop-color="#F5A848"/><stop offset="100%" stop-color="#C84020"/></radialGradient></defs>
+          <circle cx="16" cy="16" r="15" fill="url(#gf)"/>
+          <circle cx="16" cy="16" r="11.5" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="0.8"/>
+          <text x="16" y="20.5" text-anchor="middle" font-size="11" fill="white" font-family="Georgia,serif" font-weight="bold">ॐ</text>
+        </svg>
+        <div class="fbname"><em>Disha</em> Consultancy</div>
+      </div>
+      <div class="fbdesc"><span class="en">Ancient wisdom for a harmonious modern life. Numerology & Vastu Shastra consultations in Pune — online and in-person, in English, Hindi, and Marathi.</span><span class="mr">सुसंवादी आधुनिक जीवनासाठी प्राचीन ज्ञान. पुण्यात न्यूमेरॉलॉजी आणि वास्तू शास्त्र सल्लामसलत — इंग्रजी, हिंदी आणि मराठीत.</span></div>
+      <div class="fbcontact"><span class="en">📍 Pune, Maharashtra, India</span><span class="mr">📍 पुणे, महाराष्ट्र, भारत</span><br>📞 +91 72196 12011<br>✉️ dishanumerovaastu@gmail.com</div>
+    </div>
+    <div class="fcol"><h5><span class="en">Services</span><span class="mr">सेवा</span></h5><a onclick="goTo('services')">Numerology Reading</a><a onclick="goTo('services')">Vastu Consultation</a><a onclick="goTo('services')">Name Correction</a><a onclick="goTo('services')">Number Analysis</a></div>
+    <div class="fcol"><h5><span class="en">Quick Links</span><span class="mr">द्रुत दुवे</span></h5><a onclick="goTo('about')"><span class="en">About Us</span><span class="mr">आमच्याबद्दल</span></a><a onclick="goTo('process')"><span class="en">How It Works</span><span class="mr">कसे कार्य करते</span></a><a onclick="goTo('blog')"><span class="en">Articles & Blog</span><span class="mr">लेख</span></a><a onclick="goTo('testimonials')"><span class="en">Testimonials</span><span class="mr">प्रशंसापत्रे</span></a></div>
+    <div class="fcol"><h5><span class="en">Contact</span><span class="mr">संपर्क</span></h5><a href="mailto:dishanumerovaastu@gmail.com"><span class="en">Email Us</span><span class="mr">ईमेल करा</span></a><a href="https://wa.me/917219612011" target="_blank"><span class="en">WhatsApp Us</span><span class="mr">WhatsApp करा</span></a><a onclick="goTo('contact')"><span class="en">Book a Session</span><span class="mr">सत्र बुक करा</span></a></div>
+  </div>
+  <div class="fbot">
+    <div class="fcopy"><span class="en">© 2025 Disha Numerology & Vastu Consultancy, Pune. All rights reserved.</span><span class="mr">© २०२५ दिशा न्यूमेरॉलॉजी व वास्तू कन्सल्टन्सी, पुणे. सर्व हक्क राखीव.</span></div>
+    <div class="fcopy">Crafted with 🕉️ for Disha Consultancy</div>
+  </div>
+</footer>
+
+<script>
+// ── NAVIGATION ──
+// ── LANGUAGE SWITCHER ──
+function setLang(lang){
+  var body = document.body;
+  var btnEn = document.getElementById('btn-en');
+  var btnMr = document.getElementById('btn-mr');
+  var mobBtnEn = document.getElementById('mob-btn-en');
+  var mobBtnMr = document.getElementById('mob-btn-mr');
+
+  if(lang === 'mr'){
+    body.classList.add('marathi');
+    body.classList.remove('english');
+    if(btnEn){ btnEn.classList.remove('active'); }
+    if(btnMr){ btnMr.classList.add('active'); }
+    if(mobBtnEn){ mobBtnEn.classList.remove('active'); }
+    if(mobBtnMr){ mobBtnMr.classList.add('active'); }
+    localStorage.setItem('disha-lang', 'mr');
+  } else {
+    body.classList.remove('marathi');
+    body.classList.add('english');
+    if(btnEn){ btnEn.classList.add('active'); }
+    if(btnMr){ btnMr.classList.remove('active'); }
+    if(mobBtnEn){ mobBtnEn.classList.add('active'); }
+    if(mobBtnMr){ mobBtnMr.classList.remove('active'); }
+    localStorage.setItem('disha-lang', 'en');
+  }
+  if(typeof blogData !== 'undefined'){ renderBlogCards(); }
+}
+
+// Render blog cards based on current language
+function renderBlogCards(){
+  var grid = document.getElementById('mainBlogGrid');
+  if(!grid) return;
+  var isMr = document.body.classList.contains('marathi');
+  var html = '';
+  for(var i = 0; i < 6; i++){
+    var a = blogData[i];
+    if(!a) continue;
+    var tag = (isMr && a.tag_mr) ? a.tag_mr : a.tag;
+    var title = (isMr && a.title_mr) ? a.title_mr : a.title;
+    var content = (isMr && a.content_mr) ? a.content_mr : a.content;
+    var excerpt = content.replace(/<[^>]+>/g, '').substring(0, 140);
+    var readMore = isMr ? 'लेख वाचा →' : 'Read Article →';
+    var dateStr = a.date.split(' ·')[0];
+    var minStr = a.date.split('·')[1] ? '·' + a.date.split('·')[1] : '';
+    html += '<div class="blog-card" onclick="openBlog(' + i + ')" style="cursor:pointer">' +
+      '<div class="blog-thumb" style="' + a.bg + '">' + a.emoji + '</div>' +
+      '<div class="blog-body">' +
+        '<span class="blog-tag">' + tag + '</span>' +
+        '<div class="blog-title">' + title + '</div>' +
+        '<div class="blog-excerpt">' + excerpt + '...</div>' +
+        '<div class="blog-meta">' +
+          '<span class="blog-date">' + dateStr + minStr + '</span>' +
+          '<span class="blog-read">' + readMore + '</span>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+  grid.innerHTML = html;
+}
+
+// Init call moved to end of script after blogData
+
+function goTo(id){
+  var e = document.getElementById(id);
+  if(e){ e.scrollIntoView({behavior:'smooth'}); }
+}
+
+// ── NAV SCROLL EFFECT ──
+var mainNav = document.getElementById('mainNav');
+window.onscroll = function(){
+  if(window.scrollY > 60){
+    mainNav.classList.add('scrolled');
+    document.getElementById('btt').classList.add('show');
+  } else {
+    mainNav.classList.remove('scrolled');
+    document.getElementById('btt').classList.remove('show');
+  }
+};
+
+// ── MOBILE MENU ──
+function toggleMenu(){
+  var menu = document.getElementById('mobileMenu');
+  var ham = document.getElementById('hamburger');
+  if(menu.classList.contains('open')){
+    menu.classList.remove('open');
+    ham.classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    menu.classList.add('open');
+    ham.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function mobileGoTo(id){
+  var menu = document.getElementById('mobileMenu');
+  var ham = document.getElementById('hamburger');
+  menu.classList.remove('open');
+  ham.classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(function(){ goTo(id); }, 100);
+}
+
+// ── LANGUAGE SELECTION (service section pills) ──
+function selectLang(lang){
+  // Update active pill styling
+  var pills = document.querySelectorAll('.lang-pill');
+  for(var i=0; i<pills.length; i++){ pills[i].classList.remove('lang-active'); }
+  var map = {English:'lang-en', Hindi:'lang-hi', Marathi:'lang-mr'};
+  var el = document.getElementById(map[lang]);
+  if(el){ el.classList.add('lang-active'); }
+  // Fill preferred language field in form
+  var wrap = document.getElementById('lang-note-wrap');
+  var field = document.getElementById('lang-note-field');
+  if(wrap && field){
+    var labels = {
+      English: 'English — I prefer to consult in English',
+      Hindi: 'Hindi — मुझे हिन्दी में परामर्श चाहिए',
+      Marathi: 'Marathi — मला मराठीत सल्ला हवा आहे'
+    };
+    field.value = labels[lang] || lang;
+    wrap.style.display = 'block';
+  }
+  // If Marathi selected, also switch site language
+  if(lang === 'Marathi'){ setLang('mr'); }
+  setTimeout(function(){ goTo('contact'); }, 300);
+}
+
+// ── COUNTER ANIMATION ──
+var counterDone = false;
+function runCounters(){
+  if(counterDone) return;
+  counterDone = true;
+  var els = document.querySelectorAll('.stat-num[data-val]');
+  for(var i=0; i<els.length; i++){
+    (function(el){
+      var target = parseInt(el.getAttribute('data-val'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      var current = 0;
+      var inc = target / 50;
+      var timer = setInterval(function(){
+        current += inc;
+        if(current >= target){
+          el.textContent = target + suffix;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(current) + suffix;
+        }
+      }, 28);
+    })(els[i]);
+  }
+}
+window.addEventListener('scroll', function(){
+  var stats = document.querySelector('.hero-stats');
+  if(stats){
+    var rect = stats.getBoundingClientRect();
+    if(rect.top < window.innerHeight){ runCounters(); }
+  }
+});
+
+// ── FORM SUBMIT ──
+function submitForm(){
+  var btn = document.getElementById('submitBtn');
+  var form = document.getElementById('consultForm');
+  var inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+  var ok = true;
+  for(var i=0; i<inputs.length; i++){
+    if(!inputs[i].value.trim()){
+      inputs[i].style.borderColor = '#E8738A';
+      ok = false;
+    } else {
+      inputs[i].style.borderColor = '';
+    }
+  }
+  if(!ok){
+    btn.textContent = 'Please fill all required fields';
+    btn.style.background = '#8B3020';
+    setTimeout(function(){ btn.textContent = 'Send Enquiry'; btn.style.background = ''; }, 2500);
+    return;
+  }
+  var name = form.querySelector('[name="name"]').value;
+  var phone = form.querySelector('[name="phone"]').value;
+  var email = form.querySelector('[name="email"]').value;
+  var dob = form.querySelector('[name="dob"]').value;
+  var service = form.querySelector('[name="service"]').value;
+  var message = form.querySelector('[name="message"]').value;
+  var lang = form.querySelector('[name="language"]') ? form.querySelector('[name="language"]').value : 'English';
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  var data = {
+    name: name, phone: phone, email: email,
+    "Date of Birth": dob, "Service": service,
+    "Preferred Language": lang, message: message,
+    "_subject": "New Consultation Request from " + name + " - Disha Numerology",
+    "_replyto": email
+  };
+
+  fetch('https://formspree.io/f/xbdwawra', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify(data)
+  }).then(function(r){
+    if(r.ok){
+      form.innerHTML =
+        '<div style="text-align:center;padding:40px 20px;">' +
+        '<div style="font-size:52px;margin-bottom:16px">&#x1F64F;</div>' +
+        '<div style="font-family:Cormorant Garamond,serif;font-size:28px;font-weight:600;color:var(--text1);margin-bottom:8px">Thank You, ' + name + '!</div>' +
+        '<div style="font-family:Cormorant Garamond,serif;font-size:18px;font-style:italic;color:var(--gold2);margin-bottom:16px">Your enquiry has been received</div>' +
+        '<div style="width:40px;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold));border-radius:2px;margin:0 auto 20px"></div>' +
+        '<p style="font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:24px">We will get back to you within <strong>24 hours</strong>.</p>' +
+        '<a href="https://wa.me/917219612011" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-size:13px;font-weight:600;padding:13px 24px;border-radius:8px;text-decoration:none;">WhatsApp Us Now</a>' +
+        '</div>';
+    } else {
+      btn.textContent = 'Error. Please try WhatsApp.';
+      btn.style.background = '#8B3020';
+      btn.disabled = false;
+    }
+  }).catch(function(){
+    btn.textContent = 'Error. Please try again.';
+    btn.style.background = '#8B3020';
+    btn.disabled = false;
+  });
+}
+
+// ── BLOG DATA ──
+// ── NAVIGATION ──
+// ── LANGUAGE SWITCHER ──
+function setLang(lang){
+  var body = document.body;
+  var btnEn = document.getElementById('btn-en');
+  var btnMr = document.getElementById('btn-mr');
+  var mobBtnEn = document.getElementById('mob-btn-en');
+  var mobBtnMr = document.getElementById('mob-btn-mr');
+
+  if(lang === 'mr'){
+    body.classList.add('marathi');
+    body.classList.remove('english');
+    if(btnEn){ btnEn.classList.remove('active'); }
+    if(btnMr){ btnMr.classList.add('active'); }
+    if(mobBtnEn){ mobBtnEn.classList.remove('active'); }
+    if(mobBtnMr){ mobBtnMr.classList.add('active'); }
+    localStorage.setItem('disha-lang', 'mr');
+  } else {
+    body.classList.remove('marathi');
+    body.classList.add('english');
+    if(btnEn){ btnEn.classList.add('active'); }
+    if(btnMr){ btnMr.classList.remove('active'); }
+    if(mobBtnEn){ mobBtnEn.classList.add('active'); }
+    if(mobBtnMr){ mobBtnMr.classList.remove('active'); }
+    localStorage.setItem('disha-lang', 'en');
+  }
+  renderBlogCards();
+}
+
+// Render blog cards based on current language
+function renderBlogCards(){
+  var grid = document.getElementById('mainBlogGrid');
+  if(!grid) return;
+  var isMr = document.body.classList.contains('marathi');
+  var html = '';
+  for(var i = 0; i < 6; i++){
+    var a = blogData[i];
+    if(!a) continue;
+    var tag = (isMr && a.tag_mr) ? a.tag_mr : a.tag;
+    var title = (isMr && a.title_mr) ? a.title_mr : a.title;
+    var content = (isMr && a.content_mr) ? a.content_mr : a.content;
+    var excerpt = content.replace(/<[^>]+>/g, '').substring(0, 140);
+    var readMore = isMr ? 'लेख वाचा →' : 'Read Article →';
+    var dateStr = a.date.split(' ·')[0];
+    var minStr = a.date.split('·')[1] ? '·' + a.date.split('·')[1] : '';
+    html += '<div class="blog-card" onclick="openBlog(' + i + ')" style="cursor:pointer">' +
+      '<div class="blog-thumb" style="' + a.bg + '">' + a.emoji + '</div>' +
+      '<div class="blog-body">' +
+        '<span class="blog-tag">' + tag + '</span>' +
+        '<div class="blog-title">' + title + '</div>' +
+        '<div class="blog-excerpt">' + excerpt + '...</div>' +
+        '<div class="blog-meta">' +
+          '<span class="blog-date">' + dateStr + minStr + '</span>' +
+          '<span class="blog-read">' + readMore + '</span>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+  grid.innerHTML = html;
+}
+
+// Init call moved to end of script after blogData
+
+function goTo(id){
+  var e = document.getElementById(id);
+  if(e){ e.scrollIntoView({behavior:'smooth'}); }
+}
+
+// ── NAV SCROLL EFFECT ──
+var mainNav = document.getElementById('mainNav');
+window.onscroll = function(){
+  if(window.scrollY > 60){
+    mainNav.classList.add('scrolled');
+    document.getElementById('btt').classList.add('show');
+  } else {
+    mainNav.classList.remove('scrolled');
+    document.getElementById('btt').classList.remove('show');
+  }
+};
+
+// ── MOBILE MENU ──
+function toggleMenu(){
+  var menu = document.getElementById('mobileMenu');
+  var ham = document.getElementById('hamburger');
+  if(menu.classList.contains('open')){
+    menu.classList.remove('open');
+    ham.classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    menu.classList.add('open');
+    ham.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function mobileGoTo(id){
+  var menu = document.getElementById('mobileMenu');
+  var ham = document.getElementById('hamburger');
+  menu.classList.remove('open');
+  ham.classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(function(){ goTo(id); }, 100);
+}
+
+// ── LANGUAGE SELECTION (service section pills) ──
+function selectLang(lang){
+  // Update active pill styling
+  var pills = document.querySelectorAll('.lang-pill');
+  for(var i=0; i<pills.length; i++){ pills[i].classList.remove('lang-active'); }
+  var map = {English:'lang-en', Hindi:'lang-hi', Marathi:'lang-mr'};
+  var el = document.getElementById(map[lang]);
+  if(el){ el.classList.add('lang-active'); }
+  // Fill preferred language field in form
+  var wrap = document.getElementById('lang-note-wrap');
+  var field = document.getElementById('lang-note-field');
+  if(wrap && field){
+    var labels = {
+      English: 'English — I prefer to consult in English',
+      Hindi: 'Hindi — मुझे हिन्दी में परामर्श चाहिए',
+      Marathi: 'Marathi — मला मराठीत सल्ला हवा आहे'
+    };
+    field.value = labels[lang] || lang;
+    wrap.style.display = 'block';
+  }
+  // If Marathi selected, also switch site language
+  if(lang === 'Marathi'){ setLang('mr'); }
+  setTimeout(function(){ goTo('contact'); }, 300);
+}
+
+// ── COUNTER ANIMATION ──
+var counterDone = false;
+function runCounters(){
+  if(counterDone) return;
+  counterDone = true;
+  var els = document.querySelectorAll('.stat-num[data-val]');
+  for(var i=0; i<els.length; i++){
+    (function(el){
+      var target = parseInt(el.getAttribute('data-val'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      var current = 0;
+      var inc = target / 50;
+      var timer = setInterval(function(){
+        current += inc;
+        if(current >= target){
+          el.textContent = target + suffix;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(current) + suffix;
+        }
+      }, 28);
+    })(els[i]);
+  }
+}
+window.addEventListener('scroll', function(){
+  var stats = document.querySelector('.hero-stats');
+  if(stats){
+    var rect = stats.getBoundingClientRect();
+    if(rect.top < window.innerHeight){ runCounters(); }
+  }
+});
+
+// ── FORM SUBMIT ──
+function submitForm(){
+  var btn = document.getElementById('submitBtn');
+  var form = document.getElementById('consultForm');
+  var inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+  var ok = true;
+  for(var i=0; i<inputs.length; i++){
+    if(!inputs[i].value.trim()){
+      inputs[i].style.borderColor = '#E8738A';
+      ok = false;
+    } else {
+      inputs[i].style.borderColor = '';
+    }
+  }
+  if(!ok){
+    btn.textContent = 'Please fill all required fields';
+    btn.style.background = '#8B3020';
+    setTimeout(function(){ btn.textContent = 'Send Enquiry'; btn.style.background = ''; }, 2500);
+    return;
+  }
+  var name = form.querySelector('[name="name"]').value;
+  var phone = form.querySelector('[name="phone"]').value;
+  var email = form.querySelector('[name="email"]').value;
+  var dob = form.querySelector('[name="dob"]').value;
+  var service = form.querySelector('[name="service"]').value;
+  var message = form.querySelector('[name="message"]').value;
+  var lang = form.querySelector('[name="language"]') ? form.querySelector('[name="language"]').value : 'English';
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  var data = {
+    name: name, phone: phone, email: email,
+    "Date of Birth": dob, "Service": service,
+    "Preferred Language": lang, message: message,
+    "_subject": "New Consultation Request from " + name + " - Disha Numerology",
+    "_replyto": email
+  };
+
+  fetch('https://formspree.io/f/xbdwawra', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify(data)
+  }).then(function(r){
+    if(r.ok){
+      form.innerHTML =
+        '<div style="text-align:center;padding:40px 20px;">' +
+        '<div style="font-size:52px;margin-bottom:16px">&#x1F64F;</div>' +
+        '<div style="font-family:Cormorant Garamond,serif;font-size:28px;font-weight:600;color:var(--text1);margin-bottom:8px">Thank You, ' + name + '!</div>' +
+        '<div style="font-family:Cormorant Garamond,serif;font-size:18px;font-style:italic;color:var(--gold2);margin-bottom:16px">Your enquiry has been received</div>' +
+        '<div style="width:40px;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold));border-radius:2px;margin:0 auto 20px"></div>' +
+        '<p style="font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:24px">We will get back to you within <strong>24 hours</strong>.</p>' +
+        '<a href="https://wa.me/917219612011" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-size:13px;font-weight:600;padding:13px 24px;border-radius:8px;text-decoration:none;">WhatsApp Us Now</a>' +
+        '</div>';
+    } else {
+      btn.textContent = 'Error. Please try WhatsApp.';
+      btn.style.background = '#8B3020';
+      btn.disabled = false;
+    }
+  }).catch(function(){
+    btn.textContent = 'Error. Please try again.';
+    btn.style.background = '#8B3020';
+    btn.disabled = false;
+  });
+}
+
+// ── BLOG DATA ──
+const blogData=[
+  // ── EXISTING 6 ──
+  {tag:"Numerology",date:"May 2025 · 5 min read",title:"What Your Life Path Number Reveals About Your Destiny",
+   bg:"linear-gradient(135deg,#D4620A,#B03020)",emoji:"🔢",
+   content:`<p>Your Life Path Number is the single most important number in your numerology chart. Calculated from your date of birth, it describes the nature of your journey — your core strengths, challenges, and opportunities.</p>
+   <div class="hl">"Your Life Path Number is not a limitation. It is a compass — it shows you the direction, not the destination."</div>
+   <h2>How to Calculate Your <em>Life Path Number</em></h2>
+   <p>Add all digits of your full date of birth and reduce to a single digit. Example — born 15th August 1990: Day 1+5=6, Month=8, Year 1+9+9+0=19→1+9=10→1+0=1. Total: 6+8+1=15→1+5=<strong>6</strong>. Your Life Path is 6.</p>
+   <h2>What Each Number <em>Means</em></h2>
+   <p><strong>1 — The Leader:</strong> Independent, pioneering, driven. Born to lead and innovate.</p>
+   <p><strong>2 — The Diplomat:</strong> Sensitive, cooperative, intuitive. Thrives in partnerships.</p>
+   <p><strong>3 — The Creator:</strong> Expressive, joyful, artistic. Born to communicate and inspire.</p>
+   <p><strong>4 — The Builder:</strong> Disciplined, reliable, hardworking. Creates lasting foundations.</p>
+   <p><strong>5 — The Explorer:</strong> Free-spirited, adaptable, adventurous. Craves freedom and variety.</p>
+   <p><strong>6 — The Nurturer:</strong> Caring, responsible, family-oriented. A natural healer and guide.</p>
+   <p><strong>7 — The Seeker:</strong> Analytical, spiritual, introspective. Drawn to wisdom and truth.</p>
+   <p><strong>8 — The Achiever:</strong> Ambitious, powerful, business-minded. Built for material success.</p>
+   <p><strong>9 — The Humanitarian:</strong> Compassionate, wise, selfless. Here to serve the greater good.</p>
+   <h2>Why This <em>Matters</em></h2>
+   <p>Understanding your Life Path Number helps you make decisions in alignment with your natural energy — explaining why certain careers feel right, why some relationships are effortless, and why certain life periods feel like pushing against the current. At Disha Consultancy, a full reading analyses your Life Path, Destiny, Soul Urge, and Personal Year cycles for a complete picture.</p>`,
+   tag_mr:"अंकशास्त्र",
+   title_mr:"तुमचा लाइफ पाथ नंबर तुमच्या नशिबाबद्दल काय सांगतो",
+   content_mr:`<p>तुमचा लाइफ पाथ नंबर हा तुमच्या संपूर्ण अंकशास्त्र चार्टमधील सर्वात महत्त्वाचा अंक आहे. तुमच्या जन्मतारखेवरून मोजला जातो आणि तुमच्या जीवन प्रवासाचे स्वरूप, मूळ शक्ती, आव्हाने आणि संधी सांगतो.</p><div class="hl">"तुमचा लाइफ पाथ नंबर मर्यादा नाही. तो एक होकायंत्र आहे — दिशा दाखवतो, मंजिल नाही."</div><h2>प्रत्येक अंकाचा <em>अर्थ</em></h2><p><strong>१ — नेता:</strong> स्वतंत्र, अग्रगामी. नेतृत्वासाठी जन्मलेले.</p><p><strong>२ — राजनयिक:</strong> संवेदनशील, सहकारी. भागीदारीत भरभराट होते.</p><p><strong>३ — निर्माता:</strong> अभिव्यक्तिशील, आनंदी. संवादासाठी जन्मलेले.</p><p><strong>४ — बांधणारा:</strong> शिस्तबद्ध, विश्वासार्ह. चिरस्थायी पाया उभारतो.</p><p><strong>५ — अन्वेषक:</strong> मुक्त-उत्साही, साहसी. स्वातंत्र्य हवे असते.</p><p><strong>६ — पालनकर्ता:</strong> काळजी घेणारा, कौटुंबिक. नैसर्गिक उपचारक.</p><p><strong>७ — शोधक:</strong> आध्यात्मिक, विश्लेषणात्मक. ज्ञानाकडे आकर्षित.</p><p><strong>८ — साधक:</strong> महत्त्वाकांक्षी, शक्तिशाली. भौतिक यशासाठी.</p><p><strong>९ — मानवतावादी:</strong> दयाळू, शहाणा. सेवेसाठी येथे आहे.</p>`},
+
+  {tag:"Vastu Shastra",date:"April 2025 · 7 min read",title:"5 Vastu Corrections You Can Make in Your Home Today",
+   bg:"linear-gradient(135deg,#B8860B,#D4620A)",emoji:"🏠",
+   content:`<p>Most people think Vastu Shastra requires major construction changes. The reality is that most imbalances can be corrected with simple, inexpensive adjustments you can make today.</p>
+   <div class="hl">"Vastu is not about fear. It is about inviting the right energies into your space and your life."</div>
+   <h2>1. Clear Your <em>Main Entrance</em></h2>
+   <p>The main entrance is where energy enters your home. Keep it well-lit, clean, and clutter-free. A dim or blocked entrance blocks opportunity. Place a small lamp, keep the area spotless, and consider a nameplate with your name in the correct numerological spelling.</p>
+   <h2>2. Fix the <em>North-East Corner</em></h2>
+   <p>The North-East (Ishan Kona) is the most sacred corner. Keep it light, open, and clean. Never place heavy furniture, toilets, or clutter here. A small prayer space or fresh flowers in this direction activates it beautifully.</p>
+   <h2>3. Reposition Your <em>Sleeping Direction</em></h2>
+   <p>Sleeping with your head pointing South or East is ideal. Sleeping with your head towards North disturbs the body's magnetic alignment. Simply rotating your bed can significantly improve sleep quality.</p>
+   <h2>4. Keep the <em>Kitchen in Order</em></h2>
+   <p>Ideally the kitchen should be in the South-East. The person cooking should face East. Keep the stove clean — a broken stove or leaking taps represent lost wealth in Vastu.</p>
+   <h2>5. Remove <em>Broken Objects</em></h2>
+   <p>Broken clocks, cracked mirrors, non-functional electronics, and wilted plants carry stagnant energy. Remove or repair anything broken — this single step often creates an immediate positive shift in your home's atmosphere.</p>`,
+   tag_mr:"वास्तू शास्त्र",
+   title_mr:"आज तुम्ही घरात करू शकता असे ५ वास्तू बदल",
+   content_mr:`<p>बहुतेक लोकांना वाटते वास्तूसाठी मोठ्या बांधकाम बदलांची गरज आहे. वास्तव हे आहे की बहुतेक असंतुलने साध्या, स्वस्त बदलांनी आज दुरुस्त करता येतात.</p><div class="hl">"वास्तू भीतीबद्दल नाही. ती योग्य ऊर्जा आमंत्रित करण्याबद्दल आहे."</div><h2>१. मुख्य प्रवेशद्वार <em>स्वच्छ ठेवा</em></h2><p>मुख्य प्रवेशद्वार नेहमी चांगले प्रकाशित, स्वच्छ आणि अडथळामुक्त ठेवा. एक छोटा दिवा लावा.</p><h2>२. ईशान कोन <em>दुरुस्त करा</em></h2><p>ईशान्य दिशा हलकी, खुला आणि स्वच्छ ठेवा. येथे जड फर्निचर किंवा गोंधळ ठेवू नका.</p><h2>३. झोपण्याची <em>दिशा बदला</em></h2><p>दक्षिण किंवा पूर्वेकडे डोके ठेवून झोपा. उत्तरेकडे डोके ठेवून झोपणे टाळा.</p><h2>४. स्वयंपाकघर <em>व्यवस्थित ठेवा</em></h2><p>तुटलेली चूल किंवा गळणारे नळ वास्तूमध्ये संपत्तीचा ऱ्हास दर्शवतात. त्वरित दुरुस्त करा.</p><h2>५. तुटलेल्या वस्तू <em>काढून टाका</em></h2><p>तुटलेली घड्याळे, क्रॅक झालेले आरसे आणि कोमेजलेली झाडे स्थिर ऊर्जा वाहतात. काढून टाका.</p>`},
+
+  {tag:"Name Correction",date:"March 2025 · 6 min read",title:"Why the Spelling of Your Name Can Change Your Fortune",
+   bg:"linear-gradient(135deg,#C0396A,#B03020)",emoji:"✨",
+   content:`<p>In Vedic Numerology, every letter carries a specific numerical value and vibration. When the letters of your name are added together, they produce a Destiny Number — and this must be in harmony with your Life Path Number for life to flow with ease and abundance.</p>
+   <div class="hl">"A name is not just what people call you. It is the vibration you broadcast to the universe every single day."</div>
+   <h2>How Name Numbers <em>Work</em></h2>
+   <p>Each letter has a numerical value (A=1, B=2, C=3, etc.). Your full birth name produces a Destiny Number; your commonly used name produces an Expression Number. Both influence the opportunities you attract, how others perceive you, and the energy you carry daily.</p>
+   <h2>When Name and Life Path <em>Conflict</em></h2>
+   <p>When your name number clashes with your Life Path Number, life feels like an uphill battle. You may work harder than others for the same results, face recurring obstacles, or feel persistently misunderstood. This is not bad luck — it is a vibrational misalignment that can be corrected.</p>
+   <h2>What Name Correction <em>Involves</em></h2>
+   <p>Name correction does not always mean a legal name change. Often a small spelling adjustment — adding or removing a letter, changing a vowel — shifts the total into harmony.</p>
+   <ul><li>We analyse your full birth name and commonly used name</li><li>We calculate your Life Path and Destiny Numbers</li><li>We identify the conflict and suggest the minimal change needed</li><li>We provide the corrected spelling in English, Hindi, and Marathi</li><li>We guide you on how to start using the new name effectively</li></ul>
+   <p>Many clients report noticeable shifts — new opportunities, improved relationships, better business results — within weeks of consistently using their corrected name.</p>`,
+   tag_mr:"नाव सुधारणा",
+   title_mr:"तुमच्या नावाचे स्पेलिंग तुमचे नशीब कसे बदलू शकते",
+   content_mr:`<p>वैदिक अंकशास्त्रात, प्रत्येक अक्षरात एक विशिष्ट संख्यात्मक मूल्य आणि कंपन असते. तुमच्या नावाच्या अक्षरांची बेरीज एक डेस्टिनी नंबर देते जो तुमच्या लाइफ पाथ नंबरशी जुळणे आवश्यक आहे.</p><div class="hl">"नाव फक्त ओळख नाही. ती विश्वाला दररोज पाठवलेली कंपन आहे."</div><h2>नाव नंबर <em>कसे कार्य करतात</em></h2><p>तुमच्या पूर्ण जन्म नावाने डेस्टिनी नंबर मिळतो. नेहमी वापरल्या जाणाऱ्या नावाने एक्स्प्रेशन नंबर मिळतो. दोन्ही तुमच्या संधींवर आणि दैनंदिन ऊर्जेवर प्रभाव टाकतात.</p><h2>नाव सुधारणेत <em>काय समाविष्ट आहे</em></h2><ul><li>पूर्ण जन्म नाव आणि सामान्य नाव विश्लेषण</li><li>लाइफ पाथ आणि डेस्टिनी नंबर गणना</li><li>किमान आवश्यक बदल सूचना</li><li>इंग्रजी, हिंदी आणि मराठीत सुधारित स्पेलिंग</li></ul>`},
+
+  {tag:"Number Analysis",date:"February 2025 · 4 min read",title:"Is Your Mobile Number Working For You or Against You?",
+   bg:"linear-gradient(135deg,#1B6B45,#0D4A2E)",emoji:"📱",
+   content:`<p>Most people choose a mobile number based on availability. What they don't realise is that this number — used dozens of times every day — carries a vibration that constantly influences their energy, communication, and opportunities.</p>
+   <div class="hl">"Every number you use regularly becomes part of your energetic signature. Your mobile number is one of the most powerful."</div>
+   <h2>How to Calculate Your <em>Mobile Number Value</em></h2>
+   <p>Add all 10 digits of your mobile number and reduce to a single digit. Example: 9876543210 → 9+8+7+6+5+4+3+2+1+0 = 45 → 4+5 = <strong>9</strong>. Your mobile value is 9.</p>
+   <h2>What Each Value <em>Means</em></h2>
+   <p><strong>1:</strong> Leadership energy — ideal for entrepreneurs and decision makers.</p>
+   <p><strong>2:</strong> Partnership energy — good for relationship-based professions.</p>
+   <p><strong>3:</strong> Communication energy — excellent for sales, teaching, creative work.</p>
+   <p><strong>4:</strong> Stability energy — good for routine-based work but can slow growth.</p>
+   <p><strong>5:</strong> Change and movement — good for travel or variety-based roles.</p>
+   <p><strong>6:</strong> Nurturing energy — excellent for healthcare, counselling, family businesses.</p>
+   <p><strong>7:</strong> Spiritual and analytical — good for researchers and spiritual practitioners.</p>
+   <p><strong>8:</strong> Wealth and power — excellent for business and finance.</p>
+   <p><strong>9:</strong> Universal energy — connects you to the widest range of people.</p>
+   <h2>When to Consider <em>Changing Your Number</em></h2>
+   <p>If your mobile number value conflicts with your Life Path Number, you may experience frequent miscommunications or missed opportunities. A consultation helps determine whether your current number is working with you — and if not, which values to look for when choosing a new one.</p>`,
+   tag_mr:"अंक विश्लेषण",
+   title_mr:"तुमचा मोबाइल नंबर तुमच्यासाठी काम करतो का विरुद्ध?",
+   content_mr:`<p>बहुतेक लोक उपलब्धतेनुसार मोबाइल नंबर निवडतात. परंतु हा नंबर दररोज डझनभर वेळा वापरला जातो आणि ऊर्जा, संवाद आणि संधींवर सतत प्रभाव टाकतो.</p><div class="hl">"तुम्ही नियमित वापरता प्रत्येक संख्या तुमच्या ऊर्जेचा भाग बनते. तुमचा मोबाइल नंबर सर्वात शक्तिशाली आहे."</div><h2>मोबाइल नंबर मूल्य <em>कसे मोजाल</em></h2><p>१० अंकी नंबरचे सर्व अंक जोडा. उदाहरण: ९८७६५४३२१० = ४५ → ४+५ = <strong>९</strong>.</p><h2>प्रत्येक मूल्याचा <em>अर्थ</em></h2><p><strong>१:</strong> नेतृत्व ऊर्जा. <strong>३:</strong> संवाद ऊर्जा. <strong>५:</strong> बदल आणि हालचाल. <strong>६:</strong> पालन ऊर्जा. <strong>८:</strong> संपत्ती आणि शक्ती. <strong>९:</strong> सार्वत्रिक ऊर्जा.</p>`},
+
+  {tag:"Business Numerology",date:"January 2025 · 8 min read",title:"Choosing the Right Name for Your Business Using Numerology",
+   bg:"linear-gradient(135deg,#7B3F00,#A05010)",emoji:"🏢",
+   content:`<p>Your business name is far more than a brand identifier. In Numerology, it is a living vibration that either aligns with abundance and growth — or works against it.</p>
+   <div class="hl">"A business name is the first impression your company makes on the universe. Make it count."</div>
+   <h2>Why Business Name Numerology <em>Matters</em></h2>
+   <p>Every time your business name is spoken, written, or searched, its vibrational frequency is activated. If that frequency aligns with prosperity and the owner's Life Path Number, the business naturally attracts the right clients, partners, and opportunities.</p>
+   <h2>The Most Auspicious <em>Business Numbers</em></h2>
+   <p><strong>1:</strong> Original, pioneering, strong brand identity. Ideal for startups and innovative companies.</p>
+   <p><strong>5:</strong> Versatile and attractive to a wide audience. Good for retail, media, and services.</p>
+   <p><strong>6:</strong> Trustworthy and nurturing. Excellent for healthcare, education, and hospitality.</p>
+   <p><strong>8:</strong> The number of material success. Highly auspicious for finance, real estate, and luxury brands.</p>
+   <p><strong>9:</strong> Universal reach. Good for businesses that serve the community or operate nationally.</p>
+   <h2>How We Analyse Your <em>Business Name</em></h2>
+   <ul><li>Calculate the numerical value of your proposed business name</li><li>Check alignment with the founder's Life Path and Destiny Numbers</li><li>Analyse the founding date for additional compatibility</li><li>Suggest name variations that improve vibrational alignment</li><li>Provide guidance on auspicious dates for registration or launch</li></ul>`,
+   tag_mr:"व्यावसायिक अंकशास्त्र",
+   title_mr:"अंकशास्त्र वापरून व्यवसायासाठी योग्य नाव कसे निवडाल",
+   content_mr:`<p>तुमचे व्यवसायाचे नाव फक्त ब्रँड नाही. अंकशास्त्रात, ते एक जिवंत कंपन आहे जे समृद्धीशी जुळते किंवा त्याच्या विरुद्ध काम करते.</p><div class="hl">"व्यवसायाचे नाव विश्वावर तुमची पहिली छाप आहे. ते महत्त्वाचे बनवा."</div><h2>सर्वात शुभ <em>व्यावसायिक संख्या</em></h2><p><strong>१:</strong> स्टार्टअप्ससाठी आदर्श. <strong>५:</strong> विविध प्रेक्षकांसाठी. <strong>६:</strong> आरोग्यसेवा, शिक्षणासाठी. <strong>८:</strong> वित्त, रिअल इस्टेटसाठी अत्यंत शुभ. <strong>९:</strong> समुदाय सेवेसाठी.</p><h2>आम्ही <em>काय विश्लेषण करतो</em></h2><ul><li>व्यवसायाच्या नावाचे संख्यात्मक मूल्य</li><li>मालकाच्या लाइफ पाथ नंबरशी जुळणी</li><li>व्यवसाय स्थापनेच्या तारखेची सुसंगतता</li><li>शुभ नोंदणी किंवा शुभारंभ तारखांचे मार्गदर्शन</li></ul>`},
+
+  {tag:"Vastu Shastra",date:"December 2024 · 5 min read",title:"The North-East Corner: The Most Sacred Direction in Vastu",
+   bg:"linear-gradient(135deg,#8B6508,#6B4A05)",emoji:"🧭",
+   content:`<p>Of all eight directions in Vastu Shastra, the North-East — known as Ishan Kona (ईशान कोण) — is considered the most sacred and powerful. It is associated with the element of Water, the deity Ishana (a form of Shiva), and the energies of wisdom, health, and spiritual growth.</p>
+   <div class="hl">"The North-East is the gateway through which divine energy enters your home. Keep it pure, open, and reverent."</div>
+   <h2>Why the North-East is <em>So Important</em></h2>
+   <p>The North-East receives the first light of the morning sun — gentle, life-giving energy that nourishes the mind and spirit. When this corner is clear and activated, it enhances clarity of thought, financial stability, and family harmony.</p>
+   <h2>What Belongs in the <em>North-East</em></h2>
+   <ul><li>Prayer room or meditation space — the most auspicious placement</li><li>Fresh flowers or a small indoor plant</li><li>A bowl of clean water, changed daily</li><li>Light and open space — North-East facing windows are highly beneficial</li><li>Children's study area — enhances concentration and learning</li></ul>
+   <h2>What Must Never Be in the <em>North-East</em></h2>
+   <ul><li>Toilet or bathroom — the most damaging Vastu defect</li><li>Kitchen or stove — fire in the water zone creates conflict and health issues</li><li>Heavy furniture, storage, or clutter</li><li>Staircase — blocks the flow of positive energy</li><li>Shoe rack or dustbin</li></ul>
+   <h2>Remedies if Your North-East is <em>Compromised</em></h2>
+   <p>If your toilet or kitchen is in the North-East, structural changes are ideal but not always possible. Specific Vastu remedies — crystals, copper vessels, particular colours, and yantra — can significantly reduce the negative impact. A personalised consultation gives you exact remedies suited to your specific floor plan.</p>`,
+   tag_mr:"वास्तू शास्त्र",
+   title_mr:"ईशान्य दिशा: वास्तूमधील सर्वात पवित्र दिशा",
+   content_mr:`<p>वास्तू शास्त्रातील आठ दिशांपैकी, ईशान्य दिशा — ईशान कोण — सर्वात पवित्र मानला जातो. तो जल तत्त्व, ईशान देवता आणि ज्ञान, आरोग्य व आध्यात्मिक वाढीच्या ऊर्जेशी संबंधित आहे.</p><div class="hl">"ईशान्य दिशा हे दैवी ऊर्जेचे प्रवेशद्वार आहे. ते शुद्ध, खुले आणि पूजनीय ठेवा."</div><h2>ईशान्य दिशेत <em>काय असावे</em></h2><ul><li>प्रार्थना खोली किंवा ध्यान जागा</li><li>ताजी फुले किंवा इनडोअर वनस्पती</li><li>स्वच्छ पाण्याची वाटी, दररोज बदलावी</li></ul><h2>ईशान्य दिशेत <em>कधीही नसावे</em></h2><ul><li>शौचालय किंवा बाथरूम</li><li>स्वयंपाकघर किंवा चूल</li><li>जड फर्निचर, साठवण किंवा गोंधळ</li></ul>`},
+
+  // ── NEW ARTICLES ──
+  {tag:"Numerology",date:"April 2026 · 6 min read",title:"Your Personal Year Number: What 2025 Has in Store for You",
+   bg:"linear-gradient(135deg,#1A5276,#2E86C1)",emoji:"📅",
+   content:`<p>In Numerology, time is not random. Every year carries a specific vibration called your Personal Year Number — and understanding it gives you a powerful advantage in planning your career moves, relationships, and personal decisions.</p>
+   <div class="hl">"You cannot control time, but you can align with it. Your Personal Year Number tells you exactly what kind of energy is available to you this year."</div>
+   <h2>How to Calculate Your <em>Personal Year Number</em></h2>
+   <p>Add your birth day + birth month + the current year, then reduce to a single digit. Example — born 10th March, calculating for 2025: 1+0 (day) + 3 (month) + 2+0+2+5 (year) = 13 → 1+3 = <strong>4</strong>. Personal Year is 4 for 2025.</p>
+   <h2>What Each Personal Year <em>Means</em></h2>
+   <p><strong>Personal Year 1:</strong> New beginnings, fresh starts, planting seeds. Ideal for launching ventures, relocating, or starting new relationships. Bold action is rewarded this year.</p>
+   <p><strong>Personal Year 2:</strong> Patience, partnerships, and cooperation. This is a year of waiting and nurturing rather than forcing. Relationships deepen. Avoid major solo decisions.</p>
+   <p><strong>Personal Year 3:</strong> Creativity, expression, and joy. Social connections flourish. Excellent for artists, communicators, and anyone in public-facing roles. Express yourself freely.</p>
+   <p><strong>Personal Year 4:</strong> Hard work, discipline, and building foundations. This is a year of effort — not shortcuts. Investments made now pay dividends for years ahead.</p>
+   <p><strong>Personal Year 5:</strong> Change, freedom, and unexpected turns. Travel, career shifts, and new experiences abound. Embrace flexibility — rigidity causes frustration this year.</p>
+   <p><strong>Personal Year 6:</strong> Family, responsibility, and service. Home life takes centre stage. Ideal for marriage, having children, or renovating your living space.</p>
+   <p><strong>Personal Year 7:</strong> Reflection, spirituality, and inner growth. Pull back from the world and deepen your understanding of yourself. This is not a year for external achievement.</p>
+   <p><strong>Personal Year 8:</strong> Power, money, and recognition. Your efforts from previous years begin paying off. Business deals, promotions, and financial gains are strongly supported.</p>
+   <p><strong>Personal Year 9:</strong> Completion, release, and closure. Let go of what no longer serves you. Clear the space — physically, emotionally, and professionally — for the new cycle beginning next year.</p>
+   <h2>How to Use This <em>Practically</em></h2>
+   <p>Knowing your Personal Year Number helps you time your decisions wisely. Starting a business in a Personal Year 1 is far more supported than starting one in a Personal Year 9. Getting married in a Personal Year 6 aligns with the natural energy of love and commitment. A full consultation at Disha Numerology maps out your Personal Year, Personal Month, and Personal Day cycles for a complete roadmap of the year ahead.</p>`,
+   tag_mr:"अंकशास्त्र",
+   title_mr:"तुमचा वैयक्तिक वर्ष अंक: तुमच्यासाठी काय आहे",
+   content_mr:`<p>अंकशास्त्रात, प्रत्येक वर्षात एक विशिष्ट कंपन असते ज्याला वैयक्तिक वर्ष अंक म्हणतात. हे समजून घेतल्यास करिअर, नातेसंबंध आणि वैयक्तिक निर्णयांसाठी शक्तिशाली फायदा होतो.</p><div class="hl">"तुम्ही वेळ नियंत्रित करू शकत नाही, पण त्याच्याशी जुळवून घेऊ शकता."</div><h2>वैयक्तिक वर्ष अंक <em>कसा मोजाल</em></h2><p>जन्म दिवस + जन्म महिना + चालू वर्ष जोडा. उदाहरण: १० मार्च, २०२५ साठी: १+०+३+२+०+२+५=१३→१+३=<strong>४</strong>.</p><h2>प्रत्येक वर्षाचा <em>अर्थ</em></h2><p><strong>वर्ष १:</strong> नवीन सुरुवात — धाडसी कृती करा. <strong>वर्ष ४:</strong> कठोर परिश्रम, पाया उभारणी. <strong>वर्ष ८:</strong> यश, मान्यता, आर्थिक लाभ. <strong>वर्ष ९:</strong> पूर्णता, जुने सोडून द्या.</p>`},
+
+  {tag:"Vastu Shastra",date:"March 2026 · 6 min read",title:"Vastu for Your Office: Attract Prosperity and Productivity",
+   bg:"linear-gradient(135deg,#1E8449,#145A32)",emoji:"💼",
+   content:`<p>Most people focus on Vastu for their homes, but the energy of your workplace is equally — if not more — important for your financial well-being. Whether you work from home or in a dedicated office, applying Vastu principles to your workspace can dramatically improve focus, client flow, and overall prosperity.</p>
+   <div class="hl">"Your office is where your ambitions take physical form. When its energy is aligned, success flows naturally."</div>
+   <h2>The Ideal <em>Office Direction</em></h2>
+   <p>The North and North-East directions are considered most auspicious for business. If possible, position your office in the North or East wing of your building. The North is governed by Kuber — the deity of wealth — making it the most favourable direction for financial activity.</p>
+   <h2>Where to Place Your <em>Desk</em></h2>
+   <p>Sit facing East or North while working. This energises the mind and invites opportunity. Never sit with your back to the main entrance — you will miss opportunities that come your way. Avoid sitting directly under a beam, which creates pressure and mental heaviness.</p>
+   <h2>The <em>Cash Box and Safe</em></h2>
+   <p>Place your cash box, locker, or safe in the South-West corner of your office, with the door opening towards the North. This is the direction of Kuber and is known to retain and multiply wealth. Never keep your safe in the North-East or South-East corners.</p>
+   <h2>Colours for <em>Office Prosperity</em></h2>
+   <p>Green represents growth and is excellent for offices. White brings clarity and focus. Light blue promotes calm communication. Avoid red and black as primary colours in a workspace — they increase aggression and heaviness respectively.</p>
+   <h2>Plants and <em>Energy Activators</em></h2>
+   <ul><li>Money plant in the South-East corner — activates financial energy</li><li>Bamboo plant in the East — promotes health and growth</li><li>Crystal bowl in the North-East — enhances mental clarity</li><li>Keep the reception area bright and welcoming — it is the face of your business energy</li></ul>
+   <h2>What to Avoid in Your <em>Office</em></h2>
+   <ul><li>Clutter, especially on the desk — it blocks clear thinking</li><li>Broken equipment left unrepaired — it signals stagnation to the universe</li><li>Photographs of conflict, struggle, or sadness on office walls</li><li>Toilets adjacent to or above the main cabin or cash area</li></ul>`,
+   tag_mr:"वास्तू शास्त्र",
+   title_mr:"कार्यालयासाठी वास्तू: समृद्धी आणि उत्पादकता आकर्षित करा",
+   content_mr:`<p>बहुतेक लोक घरासाठी वास्तूवर लक्ष केंद्रित करतात, परंतु कार्यस्थळाची ऊर्जा तुमच्या आर्थिक कल्याणासाठी तितकीच महत्त्वाची आहे.</p><div class="hl">"तुमच्या कार्यालयाची ऊर्जा जेव्हा जुळलेली असते, तेव्हा यश नैसर्गिकरित्या येते."</div><h2>आदर्श <em>कार्यालय दिशा</em></h2><p>उत्तर आणि ईशान्य दिशा व्यवसायासाठी सर्वात शुभ. उत्तर कुबेरावर शासित आहे — संपत्तीचे देवता.</p><h2>टेबल <em>कुठे ठेवाल</em></h2><p>काम करताना पूर्व किंवा उत्तरेकडे तोंड करून बसा. मुख्य प्रवेशद्वाराकडे पाठ करून कधीही बसू नका.</p><h2>कार्यालयातील <em>ऊर्जा सक्रियकर्ते</em></h2><ul><li>आग्नेय कोपऱ्यात मनी प्लँट</li><li>पूर्वेत बांबूचे झाड</li><li>ईशान्य दिशेत क्रिस्टल बाउल</li></ul>`},
+
+  {tag:"Numerology",date:"February 2026 · 5 min read",title:"The Power of Number 8: Why It Is the Number of Wealth and Karma",
+   bg:"linear-gradient(135deg,#6C3483,#4A235A)",emoji:"♾️",
+   content:`<p>Of all the single-digit numbers in Numerology, 8 is the most misunderstood and the most powerful. It is the number of material mastery, authority, and karmic justice. People with a strong 8 energy in their charts are here to achieve — but on the universe's terms, not their own.</p>
+   <div class="hl">"The number 8 does not reward shortcuts. It rewards those who build with integrity, patience, and vision."</div>
+   <h2>The Shape of <em>Infinity</em></h2>
+   <p>Turn the number 8 on its side and you get the infinity symbol — and this is no coincidence. The 8 represents the eternal flow between the material and spiritual worlds. Those under its influence are constantly being asked to balance earthly ambition with higher purpose.</p>
+   <h2>8 as a Life Path Number — <em>Strengths</em></h2>
+   <ul><li>Natural authority and leadership — people instinctively look to you for direction</li><li>Exceptional business acumen and financial intelligence</li><li>Capacity for long-term vision and strategic thinking</li><li>Resilience — the ability to recover from setbacks stronger than before</li><li>Magnetism — you attract resources, people, and opportunities at scale</li></ul>
+   <h2>8 as a Life Path Number — <em>Challenges</em></h2>
+   <ul><li>Tendency to become controlling or domineering</li><li>Difficulty delegating — wanting to handle everything personally</li><li>Risk of becoming so focused on material success that relationships suffer</li><li>Karmic lessons around power — what you gain through manipulation will be lost</li></ul>
+   <h2>The Karmic <em>Lesson of 8</em></h2>
+   <p>More than any other number, 8 is deeply karmic. What you give out — in business, relationships, and intentions — returns to you multiplied. Those who use their power ethically and generously are rewarded abundantly. Those who cut corners or treat others unjustly often find their gains suddenly reversed. The 8 is not punishing — it is simply precise.</p>
+   <h2>Is 8 Lucky for <em>Business?</em></h2>
+   <p>In many Asian cultures, 8 is considered the luckiest number for business. In Vedic Numerology, it is powerful but must be handled with awareness. A business name, registration date, or opening date that reduces to 8 can be extraordinarily successful — provided the foundation is built on honesty and genuine value.</p>`,
+   tag_mr:"अंकशास्त्र",
+   title_mr:"अंक ८ ची शक्ती: संपत्ती आणि कर्माचा अंक",
+   content_mr:`<p>अंकशास्त्रातील सर्व एकल-अंकांपैकी, ८ सर्वात गैरसमजलेला आणि सर्वात शक्तिशाली आहे. तो भौतिक प्रभुत्व, अधिकार आणि कार्मिक न्यायाचा अंक आहे.</p><div class="hl">"अंक ८ शॉर्टकट पुरस्कृत करत नाही. सचोटी, धैर्य आणि दृष्टीने बांधणाऱ्यांना पुरस्कृत करतो."</div><h2>अनंताचे <em>आकार</em></h2><p>अंक ८ बाजूला वळवा आणि अनंत चिन्ह मिळते. ८ भौतिक आणि आध्यात्मिक जगांमधील शाश्वत प्रवाह दर्शवतो.</p><h2>८ लाइफ पाथ म्हणून — <em>शक्ती</em></h2><ul><li>नैसर्गिक अधिकार आणि नेतृत्व</li><li>असाधारण व्यावसायिक बुद्धिमत्ता</li><li>दीर्घकालीन दृष्टी आणि धोरणात्मक विचार</li><li>लवचिकता — अडचणींमधून मजबूत परत येणे</li></ul>`},
+
+  {tag:"Vastu Shastra",date:"January 2026 · 7 min read",title:"Vastu for the Bedroom: Sleep Better and Strengthen Relationships",
+   bg:"linear-gradient(135deg,#784212,#5D3010)",emoji:"🛏️",
+   content:`<p>The bedroom is the most intimate and energetically significant room in any home. It is where you rest, rejuvenate, and connect with your partner. When the bedroom's Vastu is aligned, you sleep more deeply, wake with more energy, and your closest relationships naturally strengthen.</p>
+   <div class="hl">"The bedroom is where the body heals and the soul restores. Its energy shapes your health, mood, and relationships more than any other room."</div>
+   <h2>The Ideal <em>Bedroom Location</em></h2>
+   <p>The South-West corner of the home is the most auspicious location for the master bedroom. It is governed by the Earth element and promotes stability, longevity, and restful sleep. Avoid placing the master bedroom in the North-East (too much spiritual energy for sleep) or South-East (fire energy creates restlessness).</p>
+   <h2>The <em>Sleeping Direction</em></h2>
+   <p>This is one of the most impactful Vastu corrections you can make without any cost. Place your bed so that your head points South or East while sleeping. South promotes deep, restorative sleep and is strongly recommended. East enhances mental clarity and spiritual energy. Never sleep with your head pointing North — it creates health issues over time due to conflict with the Earth's magnetic field.</p>
+   <h2>Bed <em>Placement</em></h2>
+   <ul><li>Keep the bed slightly away from the wall — not pushed into a corner — to allow energy to flow around it</li><li>Avoid placing the bed directly under a beam — it creates subconscious pressure and disturbed sleep</li><li>Do not place the bed in a direct line with the door — this is called the "coffin position" in many traditions and disrupts restful sleep</li><li>Ensure both sides of the bed are accessible — this promotes equality and harmony between partners</li></ul>
+   <h2>Mirrors in the <em>Bedroom</em></h2>
+   <p>This is one of the most common Vastu mistakes. Avoid mirrors that reflect the bed — they are said to introduce a "third energy" into the relationship, causing restlessness and discord. If you have a wardrobe with a mirror facing the bed, keep it covered at night or reposition the wardrobe.</p>
+   <h2>Colours for the <em>Bedroom</em></h2>
+   <p>Soft pinks, light blues, and warm creams are ideal for the bedroom. They promote love, calm, and rest. Avoid red (too stimulating), black (too heavy), and white alone (too clinical). For couples wishing to strengthen their bond, a soft rose or peach on the South-West wall is considered deeply auspicious.</p>
+   <h2>Electronics in the <em>Bedroom</em></h2>
+   <p>Television, computers, and mobile phones in the bedroom introduce electromagnetic stress and disrupt sleep. If a TV must be in the bedroom, cover the screen when not in use. Charge mobile phones outside the bedroom whenever possible — the electromagnetic field disturbs the body's natural healing during sleep.</p>`,
+   tag_mr:"वास्तू शास्त्र",
+   title_mr:"शयनकक्षासाठी वास्तू: चांगली झोप आणि मजबूत नातेसंबंध",
+   content_mr:`<p>शयनकक्ष हा घरातील सर्वात अंतरंग आणि ऊर्जेच्या दृष्टीने महत्त्वाचा खोली आहे. जेव्हा वास्तू जुळलेले असते, तेव्हा अधिक खोलपणे झोपता आणि जवळचे नातेसंबंध नैसर्गिकरित्या मजबूत होतात.</p><div class="hl">"शयनकक्ष हे ठिकाण आहे जिथे शरीर बरे होते. त्याची ऊर्जा तुमच्या आरोग्य आणि नातेसंबंधांवर आकार देते."</div><h2>झोपण्याची <em>दिशा</em></h2><p>दक्षिण किंवा पूर्वेकडे डोके ठेवून झोपा. उत्तरेकडे डोके ठेवून कधीही झोपू नका — ते आरोग्य समस्या निर्माण करते.</p><h2>शयनकक्षातील <em>आरसे</em></h2><p>बेडचे प्रतिबिंब दाखवणारे आरसे टाळा — ते नातेसंबंधात अस्वस्थता आणतात. रात्री झाका.</p>`},
+
+  {tag:"Numerology",date:"July 2024 · 5 min read",title:"Numerology and Marriage: How to Check Compatibility Before You Commit",
+   bg:"linear-gradient(135deg,#C0396A,#8E1A48)",emoji:"💑",
+   content:`<p>In Vedic tradition, marriage is considered a sacred and lifelong union — not just between two individuals, but between two life paths, two energies, and two destinies. Numerology offers one of the most precise and practical tools for understanding relationship compatibility before taking this life-changing step.</p>
+   <div class="hl">"Compatibility in Numerology is not about finding someone identical to you. It is about finding someone whose numbers complement and elevate yours."</div>
+   <h2>The Most Important <em>Numbers for Compatibility</em></h2>
+   <p><strong>Life Path Number:</strong> This is the primary indicator of relationship compatibility. Some Life Path combinations are naturally harmonious; others require conscious effort and mutual understanding.</p>
+   <p><strong>Destiny Number:</strong> Reveals what each person is here to achieve. When two Destiny Numbers align, the couple naturally supports each other's growth and purpose.</p>
+   <p><strong>Soul Urge Number:</strong> Reveals the deepest inner desires and emotional needs. Compatibility at this level determines whether two people feel truly understood by each other.</p>
+   <h2>Naturally Compatible <em>Life Path Combinations</em></h2>
+   <ul><li><strong>1 and 5:</strong> Both love independence and adventure — they inspire each other</li><li><strong>2 and 6:</strong> Both are nurturing and relationship-focused — deep emotional bond</li><li><strong>3 and 9:</strong> Creative and humanitarian — they share a love of beauty and meaning</li><li><strong>4 and 8:</strong> Both are builders — together they create lasting material and personal stability</li><li><strong>7 and 7:</strong> Deeply spiritual — they understand each other's need for solitude and reflection</li></ul>
+   <h2>Combinations That Require <em>Extra Awareness</em></h2>
+   <ul><li><strong>1 and 1:</strong> Two leaders who must consciously take turns following</li><li><strong>4 and 5:</strong> Stability vs. change — requires genuine compromise from both sides</li><li><strong>8 and 6:</strong> Career vs. home — must consciously balance ambition with relationship nurturing</li></ul>
+   <h2>Beyond the Numbers — <em>What a Full Reading Covers</em></h2>
+   <p>A compatibility reading at Disha Consultancy goes beyond basic Life Path matching. We analyse both partners' full numerological charts, identify areas of natural harmony and potential friction, and provide practical guidance on how to honour each other's energies. We also calculate the most auspicious wedding dates based on both charts — because timing, in Numerology, is everything.</p>`,
+   tag_mr:"अंकशास्त्र",
+   title_mr:"अंकशास्त्र आणि विवाह: वचनबद्ध होण्यापूर्वी सुसंगतता तपासा",
+   content_mr:`<p>वैदिक परंपरेत, विवाह हे दोन व्यक्तींमधीलच नाही, तर दोन जीवन मार्गांमधील पवित्र मिलन आहे. अंकशास्त्र हे सुसंगतता समजून घेण्यासाठी सर्वात अचूक साधनांपैकी एक आहे.</p><div class="hl">"सुसंगतता म्हणजे तुमच्यासारखाच कोणी शोधणे नाही. ज्याचे अंक तुमच्याला पूरक आहेत असे कोणी शोधणे आहे."</div><h2>नैसर्गिकरित्या सुसंगत <em>संयोजन</em></h2><ul><li><strong>१ आणि ५:</strong> स्वातंत्र्य आणि साहस — एकमेकांना प्रेरित करतात</li><li><strong>२ आणि ६:</strong> दोघेही पालन करणारे — खोल भावनिक बंध</li><li><strong>३ आणि ९:</strong> सर्जनशील आणि मानवतावादी</li><li><strong>४ आणि ८:</strong> दोघेही बांधणारे — टिकाऊ स्थिरता</li></ul>`},
+
+  {tag:"Vastu Shastra",date:"June 2024 · 6 min read",title:"Vastu for Your Kitchen: Nourish Your Family's Health and Wealth",
+   bg:"linear-gradient(135deg,#E74C3C,#922B21)",emoji:"🍳",
+   content:`<p>In Vastu Shastra, the kitchen is considered one of the three most energetically significant areas of any home — alongside the main entrance and the prayer room. It is the zone of the fire element, governed by Agni, and its alignment directly influences the health, nourishment, and financial well-being of every member of the household.</p>
+   <div class="hl">"A Vastu-aligned kitchen does not just produce food. It produces vitality, harmony, and abundance for the entire family."</div>
+   <h2>The Ideal <em>Kitchen Location</em></h2>
+   <p>The South-East corner of the home is the most auspicious location for the kitchen. This direction is governed by Agni (fire) and aligns naturally with the cooking energy. The second best option is the North-West. Avoid placing the kitchen in the North-East (the sacred water zone — fire here creates serious health and financial problems) or the South-West (the stability zone — fire here creates family conflict).</p>
+   <h2>The Direction to <em>Cook In</em></h2>
+   <p>The person cooking should face East while cooking. East is the direction of the rising sun — the source of life, health, and positive energy. Cooking while facing East is said to infuse the food with vitality. Avoid cooking while facing South — it is considered inauspicious and can introduce negativity into the food and, by extension, into those who consume it.</p>
+   <h2>Placement of the <em>Stove</em></h2>
+   <ul><li>The stove should never be directly visible from the main entrance of the home</li><li>It should not be placed directly under a window — this causes the fire energy to escape</li><li>Keep a minimum distance between the stove and the sink or refrigerator — fire and water elements must not be adjacent</li><li>Never place the stove in the centre of the kitchen — this creates instability in family energy</li></ul>
+   <h2>The <em>Sink and Water</em></h2>
+   <p>The sink — representing the water element — should ideally be placed in the North-East of the kitchen or at least away from the stove. A leaking tap or faucet in the kitchen is considered one of the most potent symbols of financial drain in Vastu. Repair all leaks immediately.</p>
+   <h2>Colours for <em>Kitchen Prosperity</em></h2>
+   <p>Orange, yellow, and red are fire colours and work beautifully in the kitchen — they stimulate appetite and positive energy. Green is also excellent as it represents abundance and nourishment. Avoid black and dark grey in the kitchen — they suppress fire energy and can lead to health issues and financial stagnation.</p>
+   <h2>Common Kitchen <em>Vastu Mistakes</em></h2>
+   <ul><li>Kitchen directly opposite or adjacent to the toilet — the most serious Vastu defect for health</li><li>Broken burners left unrepaired — represents incomplete nourishment and financial loss</li><li>Clutter and expired items in the pantry — stagnant food energy affects the entire household's vitality</li><li>Photographs or deity images near the stove — fire zone is not appropriate for this placement</li></ul>`,
+   tag_mr:"वास्तू शास्त्र",
+   title_mr:"स्वयंपाकघरासाठी वास्तू: कुटुंबाचे आरोग्य आणि संपत्ती वाढवा",
+   content_mr:`<p>वास्तू शास्त्रात, स्वयंपाकघर हे तीन सर्वात ऊर्जेच्या दृष्टीने महत्त्वाच्या क्षेत्रांपैकी एक आहे. ते अग्नी तत्त्वाचा झोन आहे आणि त्याचे संरेखन थेट कुटुंबाचे आरोग्य आणि संपत्ती प्रभावित करते.</p><div class="hl">"वास्तू-संरेखित स्वयंपाकघर फक्त अन्न नाही, कुटुंबासाठी चैतन्य आणि समृद्धी तयार करते."</div><h2>आदर्श <em>स्वयंपाकघर स्थान</em></h2><p>आग्नेय कोपरा सर्वात शुभ आहे. स्वयंपाक करताना पूर्वेकडे तोंड करावे. स्वयंपाकघर ईशान्य दिशेत कधीही ठेवू नका.</p><h2>सामान्य <em>वास्तू चुका</em></h2><ul><li>शौचालयाला लागून असलेले स्वयंपाकघर</li><li>न दुरुस्त केलेले तुटलेले बर्नर किंवा गळणारे नळ</li><li>पेंट्रीमध्ये गोंधळ आणि कालबाह्य वस्तू</li></ul>`},
+
+  {tag:"Numerology",date:"May 2026 · 5 min read",title:"The Destiny Number: Uncovering Your Soul's True Purpose",
+   bg:"linear-gradient(135deg,#1A5276,#0E3460)",emoji:"🌟",
+   content:`<p>While your Life Path Number describes the journey, your Destiny Number — also called the Expression Number — reveals the destination. It is calculated from your full birth name and describes the gifts, talents, and purpose that your soul brought into this lifetime to develop and express.</p>
+   <div class="hl">"Your Destiny Number is not what life hands you. It is what you are here to become — the highest expression of your unique gifts."</div>
+   <h2>How to Calculate Your <em>Destiny Number</em></h2>
+   <p>Assign numerical values to every letter in your full birth name (as written on your birth certificate) using the Pythagorean system: A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, L=3, M=4, N=5, O=6, P=7, Q=8, R=9, S=1, T=2, U=3, V=4, W=5, X=6, Y=7, Z=8. Add all values and reduce to a single digit.</p>
+   <h2>What Each Destiny Number <em>Reveals</em></h2>
+   <p><strong>Destiny 1:</strong> You are here to lead, innovate, and blaze trails. Your purpose is to develop independence, courage, and originality — and to inspire others to do the same.</p>
+   <p><strong>Destiny 2:</strong> You are here to unite, mediate, and bring harmony. Your gifts lie in sensitivity, diplomacy, and the ability to see all sides of a situation.</p>
+   <p><strong>Destiny 3:</strong> You are here to create, communicate, and inspire joy. Whether through art, words, performance, or teaching — your purpose is to uplift and bring beauty to the world.</p>
+   <p><strong>Destiny 4:</strong> You are here to build, organise, and create lasting systems. Your gifts are practicality, reliability, and the patience to construct what others only dream about.</p>
+   <p><strong>Destiny 5:</strong> You are here to experience, adapt, and embrace freedom. You teach others that life is meant to be lived fully and that change is not to be feared but celebrated.</p>
+   <p><strong>Destiny 6:</strong> You are here to nurture, heal, and serve. Your gifts are compassion, responsibility, and the ability to create beauty and harmony in your environment and relationships.</p>
+   <p><strong>Destiny 7:</strong> You are here to seek, analyse, and illuminate truth. Whether through science, philosophy, or spirituality — you are a seeker whose discoveries benefit all of humanity.</p>
+   <p><strong>Destiny 8:</strong> You are here to master the material world with wisdom and integrity. Your gifts are vision, authority, and the capacity to achieve at the highest levels while inspiring others.</p>
+   <p><strong>Destiny 9:</strong> You are here to serve, heal, and complete. Your gifts are wisdom, compassion, and an understanding of the full spectrum of human experience — which you use in service to the greater good.</p>
+   <h2>When Life Path and Destiny <em>Align</em></h2>
+   <p>The most fulfilled people are those whose Life Path and Destiny Numbers are in harmony or complement each other. When these two numbers are in conflict, a person often feels torn between who they are naturally and who they feel they are meant to become. A full numerological reading at Disha Consultancy explores this dynamic in depth and provides practical guidance on how to bridge the gap.</p>`,
+   tag_mr:"अंकशास्त्र",
+   title_mr:"डेस्टिनी नंबर: तुमच्या आत्म्याचा खरा उद्देश उघड करणे",
+   content_mr:`<p>लाइफ पाथ नंबर प्रवास वर्णन करतो, तर डेस्टिनी नंबर मंजिल प्रकट करतो. तो पूर्ण जन्म नावावरून मोजला जातो आणि या जन्मात आणलेल्या देणग्या व उद्देश वर्णन करतो.</p><div class="hl">"तुमचा डेस्टिनी नंबर जीवन तुम्हाला काय देते ते नाही. तुम्ही काय बनण्यासाठी येथे आहात ते आहे."</div><h2>प्रत्येक डेस्टिनी नंबर <em>काय प्रकट करतो</em></h2><p><strong>डेस्टिनी १:</strong> नेतृत्व आणि नवोन्मेषासाठी.</p><p><strong>डेस्टिनी ३:</strong> सर्जनशीलता आणि प्रेरणेसाठी.</p><p><strong>डेस्टिनी ६:</strong> पालन आणि सेवेसाठी.</p><p><strong>डेस्टिनी ८:</strong> शहाणपण आणि सचोटीने भौतिक यशासाठी.</p><p><strong>डेस्टिनी ९:</strong> सेवा, बरे करणे आणि पूर्णतेसाठी.</p>`},
+
+  {tag:"Vastu Shastra",date:"November 2025 · 6 min read",title:"The Main Entrance in Vastu: Your Home's Gateway to Fortune",
+   bg:"linear-gradient(135deg,#B7770D,#8A5A0A)",emoji:"🚪",
+   content:`<p>In Vastu Shastra, the main entrance of your home is considered the most important architectural feature — more significant than any interior room. It is called the Dwaar or Mukha — literally the "mouth" of the house — through which all energy, opportunity, and abundance enters. A well-placed and well-maintained entrance can transform the fortunes of an entire household.</p>
+   <div class="hl">"The main entrance is the first conversation your home has with the universe. Make it welcoming, bright, and clear."</div>
+   <h2>The Most Auspicious <em>Entrance Directions</em></h2>
+   <p><strong>North-facing entrance:</strong> Governed by Kuber, the deity of wealth. Considered one of the most auspicious directions for prosperity and financial growth. Residents tend to experience steady financial improvement.</p>
+   <p><strong>East-facing entrance:</strong> Governed by the rising sun. Brings health, vitality, social recognition, and new opportunities. Excellent for those in public life, business, and the professions.</p>
+   <p><strong>North-East facing entrance:</strong> The Ishan corner — divine blessings, wisdom, and spiritual growth. One of the most auspicious placements of all.</p>
+   <p><strong>West-facing entrance:</strong> Brings stability and moderate prosperity. Not negative, but less dynamic than North or East.</p>
+   <p><strong>South-facing entrance:</strong> Often misunderstood — it is not inherently bad if other Vastu conditions are met. However, it requires specific remedies to balance its more intense energy.</p>
+   <h2>What Makes an Entrance <em>Vastu-Positive</em></h2>
+   <ul><li>Well-lit at all times — darkness at the entrance blocks incoming energy and opportunity</li><li>Clean and clutter-free — a blocked entrance is a blocked life</li><li>The door should open inward and swing clockwise — this invites energy in</li><li>No crack in the threshold or broken door frame — repair immediately</li><li>A nameplate with the correct numerological spelling of the family name</li><li>Auspicious symbols — Om, Swastik, or Laxmi footprints — at the threshold</li></ul>
+   <h2>Common Entrance <em>Vastu Mistakes</em></h2>
+   <ul><li>A toilet immediately visible upon entering — this is one of the most serious Vastu defects</li><li>A staircase directly facing the main door — energy enters and immediately rises away from the home</li><li>A wall directly in front of the entrance with no window — blocks the flow of energy</li><li>Shoe racks placed inside the entrance — footwear carries external energy and should be kept outside or in a covered rack away from the main threshold</li><li>A mirror directly facing the main door — reflects incoming positive energy back out</li></ul>
+   <h2>Simple <em>Remedies</em> for a Challenged Entrance</h2>
+   <p>If your entrance direction is not ideal or has some of the defects listed above, all is not lost. Vastu remedies — including the placement of specific plants, colours, lights, and symbols — can significantly correct and enhance the energy of any entrance. A personalised Vastu consultation from Disha Consultancy will give you a precise remedy plan tailored to your specific home layout and life goals.</p>`,
+   tag_mr:"वास्तू शास्त्र",
+   title_mr:"वास्तूतील मुख्य प्रवेशद्वार: नशिबाचे प्रवेशद्वार",
+   content_mr:`<p>वास्तू शास्त्रात, मुख्य प्रवेशद्वार सर्वात महत्त्वाचे वास्तुशिल्पीय वैशिष्ट्य मानले जाते. याद्वारे सर्व ऊर्जा, संधी आणि समृद्धी प्रवेश करते.</p><div class="hl">"मुख्य प्रवेशद्वार हे तुमच्या घराचे विश्वाशी पहिले संभाषण आहे. ते स्वागत करणारे बनवा."</div><h2>सर्वात शुभ <em>प्रवेशद्वार दिशा</em></h2><p><strong>उत्तर-मुखी:</strong> कुबेरावर शासित — समृद्धीसाठी उत्तम. <strong>पूर्व-मुखी:</strong> आरोग्य, चैतन्य आणि नवीन संधी. <strong>ईशान्य दिशा मुखी:</strong> दैवी आशीर्वाद आणि ज्ञान.</p><h2>प्रवेशद्वार <em>वास्तू-सकारात्मक</em> काय बनवते</h2><ul><li>नेहमी चांगले प्रकाशित असावे</li><li>स्वच्छ आणि अडथळामुक्त</li><li>दरवाजा आतमध्ये उघडला पाहिजे</li><li>उंबरठ्यावर कोणताही क्रॅक नसावा</li></ul>`},
+
+  {tag:"Numerology",date:"October 2025 · 4 min read",title:"Lucky Numbers in Daily Life: How to Use Numerology Practically",
+   bg:"linear-gradient(135deg,#117A65,#0B5345)",emoji:"🍀",
+   content:`<p>Numerology is not just a tool for big life decisions — it is a practical guide you can apply every single day to make more aligned choices, from the dates you select for important meetings to the floors you choose to live on. Here is how to bring numerological awareness into your daily life.</p>
+   <div class="hl">"You are surrounded by numbers every moment of every day. Learning to read them is like learning to read the universe's own language."</div>
+   <h2>Choosing Auspicious <em>Dates</em></h2>
+   <p>Every date carries a vibration. To find the vibration of any date, simply add all its digits. For example, 14th November 2025 = 1+4+1+1+2+0+2+5 = 16 → 1+6 = 7. This date carries a 7 energy — ideal for study, research, and spiritual activities, but not for launching a business or signing contracts (which favour 1, 8, or 6 dates).</p>
+   <h2>Your <em>House Number</em></h2>
+   <p>The numerological value of your house number influences the energy of your home. Add all digits of your address number until you reach a single digit. A house number of 6 supports family harmony and nurturing. A house number of 8 supports material success. A house number of 4 promotes stability but can feel heavy or limiting. If your house number is not supporting your goals, specific Vastu and numerological remedies can help balance its energy.</p>
+   <h2>Vehicle <em>Registration Numbers</em></h2>
+   <p>Your vehicle number is with you every time you travel. Its vibration influences your safety, the quality of your journeys, and even the deals you close on the road. Before purchasing a new vehicle, calculate the registration number's value and ensure it aligns with your Life Path Number.</p>
+   <h2>Bank Account and <em>Locker Numbers</em></h2>
+   <p>The numbers associated with your financial instruments carry vibrational influence over your wealth. Account numbers that reduce to 8 are considered highly auspicious for wealth accumulation. Those reducing to 4 or 7 can sometimes create obstacles or delays in financial growth.</p>
+   <h2>Passwords, PINs, and <em>Daily Numbers</em></h2>
+   <p>Even the numbers you type daily — your PIN, your phone lock code, your ATM password — carry a subtle but consistent vibration. Choosing these thoughtfully to align with your personal numbers creates a pervasive field of positive numerological energy around your finances and security.</p>
+   <h2>Start with <em>Awareness</em></h2>
+   <p>You do not need to overhaul your life to benefit from Numerology. Begin by simply noticing the numbers around you — your address, your phone number, the dates of important upcoming events — and calculating their values. Awareness is the first step. A consultation with Disha Numerology can then help you apply these insights in a structured, personalised way that creates real, measurable change in your life.</p>`,
+   tag_mr:"अंकशास्त्र",
+   title_mr:"दैनंदिन जीवनातील भाग्यशाली अंक: अंकशास्त्र व्यावहारिकपणे कसे वापराल",
+   content_mr:`<p>अंकशास्त्र मोठ्या निर्णयांपुरतेच नाही — ते एक व्यावहारिक मार्गदर्शक आहे जे तुम्ही दररोज लागू करू शकता.</p><div class="hl">"तुम्ही संख्यांनी वेढलेले आहात. त्यांना वाचायला शिकणे म्हणजे विश्वाची भाषा शिकणे."</div><h2>शुभ <em>तारखा निवडणे</em></h2><p>महत्त्वाच्या कार्यक्रमांसाठी तारखेचे सर्व अंक जोडा आणि त्याची कंपन तुमच्या उद्देशाशी जुळते का तपासा.</p><h2>तुमचा <em>घर नंबर</em></h2><p>घर नंबराचे अंकशास्त्रीय मूल्य घराची ऊर्जा प्रभावित करते. ६ सुसंवाद, ८ यश, ४ स्थिरता दर्शवते.</p>`},
+
+  {tag:"Vastu Shastra",date:"September 2025 · 5 min read",title:"Water Features in Vastu: When They Bring Wealth and When They Don't",
+   bg:"linear-gradient(135deg,#1A6B8A,#0D4A65)",emoji:"💧",
+   content:`<p>Water features — aquariums, fountains, ponds, and water plants — are among the most powerful Vastu tools available. When placed correctly, they are said to attract wealth, activate positive energy, and improve the overall flow of abundance in a home or office. When placed incorrectly, however, they can have the opposite effect. Understanding the difference is crucial.</p>
+   <div class="hl">"Water is the element of flow, abundance, and life. In Vastu, it is one of the most powerful tools — and one of the most misused."</div>
+   <h2>Where Water Features <em>Work Best</em></h2>
+   <p><strong>North:</strong> The direction of Kuber and water. An aquarium or indoor fountain in the North of your home or office is considered one of the most powerful activators of financial energy in Vastu. The flowing water in the North symbolises the continuous flow of money into your life.</p>
+   <p><strong>North-East:</strong> The Ishan corner is the natural home of the water element. A bowl of clean water, changed daily, or a small indoor fountain here activates wisdom, spiritual clarity, and gentle financial growth.</p>
+   <p><strong>East:</strong> Water in the East supports health, vitality, and social recognition. A small aquarium or water plant works well here.</p>
+   <h2>Where Water Features <em>Cause Problems</em></h2>
+   <p><strong>South-East:</strong> This is the fire zone — governed by Agni. Placing water here creates a direct conflict between the elements, leading to financial instability and health issues. Never place an aquarium or fountain in the South-East.</p>
+   <p><strong>South:</strong> Water in the South is considered highly inauspicious and can lead to losses, legal troubles, and relationship conflict.</p>
+   <p><strong>South-West:</strong> The earth zone — water here destabilises the foundations of the home, both literally and metaphorically. Avoid all water features in this direction.</p>
+   <h2>Aquarium <em>Guidelines</em></h2>
+   <ul><li>Keep the water clean and oxygenated at all times — stagnant water is far worse than no water feature at all</li><li>The ideal number of fish is 9 (eight goldfish and one black fish) — the black fish is said to absorb negative energy</li><li>If a fish dies, replace it immediately — a dead fish in an aquarium is considered very inauspicious</li><li>Keep the aquarium well-lit — darkness in the water zone stagnates the energy</li></ul>
+   <h2>Leaking Water — <em>The Most Important Vastu Warning</em></h2>
+   <p>Any leaking tap, pipe, or plumbing fixture in your home is one of the most potent symbols of financial loss in Vastu. Water leaving your home without being used represents money leaving without creating value. Fix all leaks immediately — this single correction has produced remarkable financial shifts for many of our clients at Disha Consultancy.</p>`,
+   tag_mr:"वास्तू शास्त्र",
+   title_mr:"वास्तूतील जलस्रोत: ते संपत्ती कधी आणतात आणि कधी नाही",
+   content_mr:`<p>जलस्रोत — मत्स्यालय, कारंजे आणि जल वनस्पती — सर्वात शक्तिशाली वास्तू साधनांपैकी आहेत. योग्य ठिकाणी ठेवल्यास संपत्ती आकर्षित करतात; चुकीच्या ठिकाणी विपरीत परिणाम करतात.</p><div class="hl">"पाणी प्रवाह आणि विपुलतेचे तत्त्व आहे. वास्तूमध्ये ते सर्वात शक्तिशाली — आणि सर्वाधिक गैरवापर केलेले साधन आहे."</div><h2>जलस्रोत <em>सर्वोत्तम कुठे काम करतात</em></h2><p><strong>उत्तर:</strong> मत्स्यालय किंवा कारंजे आर्थिक ऊर्जेचा सर्वात शक्तिशाली सक्रियकर्ता.</p><p><strong>ईशान्य दिशा:</strong> स्वच्छ पाण्याची वाटी ज्ञान आणि आध्यात्मिक स्पष्टता सक्रिय करते.</p><h2>गळणारे पाणी — <em>महत्त्वाचा इशारा</em></h2><p>घरातून न वापरता बाहेर जाणारे पाणी हे आर्थिक नुकसानाचे प्रतीक आहे. सर्व गळती त्वरित दुरुस्त करा.</p>`},
+
+  {tag:"Numerology",date:"August 2025 · 6 min read",title:"Numerology for Children: Choosing the Right Name at Birth",
+   bg:"linear-gradient(135deg,#E67E22,#CA6F1E)",emoji:"👶",
+   content:`<p>One of the most profound and lasting gifts a parent can give a child is a name that carries the right vibrational energy for their life journey. In Vedic Numerology, the name given at birth creates a frequency that the child will carry throughout their entire lifetime — shaping their personality, their relationships, their challenges, and ultimately their destiny.</p>
+   <div class="hl">"The name you give your child is their first gift — and their most enduring one. Choose it with the same care you would give to any lifelong blessing."</div>
+   <h2>The Connection Between <em>Birth Date and Name</em></h2>
+   <p>Every child is born with a Life Path Number — determined by their date of birth and unchangeable. The ideal name for that child is one whose Destiny Number harmonises with their Life Path Number. When these two numbers align, the child's outer expression (their name) supports their inner journey (their Life Path), creating a life of greater ease, confidence, and fulfilment.</p>
+   <h2>What to Look for When <em>Choosing a Name</em></h2>
+   <ul><li>Calculate the child's Life Path Number from their date of birth</li><li>Calculate the Destiny Number of each name you are considering</li><li>Choose a name whose Destiny Number complements or harmonises with the Life Path Number</li><li>Consider the sound and rhythm of the name — names that flow easily are naturally more positive</li><li>Ensure the spelling used consistently is the one with the auspicious numerical value</li></ul>
+   <h2>Common Naming <em>Mistakes</em></h2>
+   <p><strong>Naming after a family member without checking compatibility:</strong> A name that was perfect for your grandfather may carry an entirely different vibration for your child, whose Life Path is different.</p>
+   <p><strong>Choosing a name for its meaning alone:</strong> A name may have a beautiful meaning but carry an unfavourable numerical value. Both meaning and numerological value matter.</p>
+   <p><strong>Inconsistent spelling:</strong> Using different spellings in different contexts — legal documents vs. daily use — creates a split vibration. Decide on one spelling and use it consistently everywhere.</p>
+   <h2>Can a Name Be <em>Changed Later?</em></h2>
+   <p>Yes — and this is what name correction is all about. If a child grows up with a name that is numerologically misaligned, a correction can be made at any age. Many parents bring teenagers and young adults to Disha Consultancy after noticing patterns of struggle, social difficulty, or underachievement that cannot be explained by circumstance alone. A name correction, combined with consistent use of the new spelling, often produces remarkable shifts within months.</p>
+   <h2>Our <em>Baby Naming Service</em></h2>
+   <p>At Disha Numerology and Vastu Consultancy, we offer a dedicated baby naming consultation. We analyse the child's birth date, calculate the ideal Destiny Number range for their Life Path, and provide a shortlist of auspicious names — in English, Hindi, and Marathi — complete with their numerical values, meanings, and recommendations for spelling. This is one of the most meaningful consultations we offer, and one that creates a positive ripple effect for a lifetime.</p>`,
+   tag_mr:"अंकशास्त्र",
+   title_mr:"मुलांसाठी अंकशास्त्र: जन्मावेळी योग्य नाव निवडणे",
+   content_mr:`<p>पालक मुलाला देऊ शकणाऱ्या सर्वात गहन भेटींपैकी एक म्हणजे योग्य ऊर्जा वाहणारे नाव. वैदिक अंकशास्त्रात, जन्मावेळी दिलेले नाव संपूर्ण जीवनभर व्यक्तिमत्त्व, नातेसंबंध आणि नशिबाला आकार देते.</p><div class="hl">"तुम्ही तुमच्या मुलाला देणारे नाव ही त्यांची पहिली भेट — आणि सर्वात टिकाऊ. ते काळजीने निवडा."</div><h2>आमची <em>बाळाचे नाव सेवा</em></h2><p>आम्ही जन्मतारीख विश्लेषण करतो, आदर्श डेस्टिनी नंबर श्रेणी मोजतो आणि इंग्रजी, हिंदी आणि मराठीत शुभ नावांची यादी देतो — संख्यात्मक मूल्य, अर्थ आणि शिफारसींसह.</p>`}
+,
+
+  {tag:"Numerology",date:"May 2026 · 5 min read",title:"Numerology Forecast 2026: Key Numbers Shaping This Year",
+   bg:"linear-gradient(135deg,#0B5394,#1155CC)",emoji:"🔭",
+   content:`<p>The year 2026 carries the universal vibration of <strong>1</strong> (2+0+2+6 = 10 → 1+0 = 1) — a number of new beginnings, fresh cycles, and bold initiation. After the completions and closures of 2025 (a universal 9 year), 2026 opens a brand new nine-year cycle for humanity. Understanding this energy can help you make the most powerful decisions of your life this year.</p>
+   <div class="hl">"2026 is a Universal Year 1 — the universe itself is beginning again. Those who plant seeds now will harvest for the next nine years."</div>
+   <h2>What a Universal Year 1 <em>Means for Everyone</em></h2>
+   <p>Regardless of your personal numerology, everyone on Earth is influenced by the universal year energy. In 2026, the collective energy strongly supports new beginnings — new careers, new businesses, new relationships, and new personal identities. What you initiate in 2026 carries an unusually strong momentum that will develop and grow through 2034.</p>
+   <p>This is not a year for hesitation. The universe rewards boldness in a 1 year. If you have been waiting for the right time to start something meaningful, 2026 is sending you a clear signal: <strong>the time is now.</strong></p>
+   <h2>How to Find Your <em>Personal Year in 2026</em></h2>
+   <p>Add your birth day + birth month + 2026, then reduce to a single digit. For example, someone born on 5th July: 5 + 7 + 2+0+2+6 = 22 → 2+2 = <strong>4</strong>. Their Personal Year in 2026 is 4 — a year of building, hard work, and laying foundations. Combining your Personal Year energy with the Universal Year 1 tells the full story of what 2026 holds for you specifically.</p>
+   <h2>The Best Actions to Take in <em>2026 by Personal Year</em></h2>
+   <p><strong>Personal Year 1 in 2026:</strong> Double new beginning energy — an extraordinarily powerful year to launch, start, and initiate. Do not wait.</p>
+   <p><strong>Personal Year 2 in 2026:</strong> Focus on partnerships and collaborations. The universal 1 energy supports new alliances that can last a decade.</p>
+   <p><strong>Personal Year 3 in 2026:</strong> Express your creative gifts publicly. Start a platform, write, teach, or perform — the universal 1 energy amplifies your creative voice.</p>
+   <p><strong>Personal Year 4 in 2026:</strong> Build the foundation for what you want to achieve in this new nine-year cycle. The work you do now creates lasting structures.</p>
+   <p><strong>Personal Year 5 in 2026:</strong> Embrace new freedoms and directions. This is an excellent year for changing careers, relocating, or breaking free from outdated patterns.</p>
+   <p><strong>Personal Year 6 in 2026:</strong> Focus on home, family, and nurturing. Starting a family, renovating your home, or deepening your most important relationships is strongly supported.</p>
+   <p><strong>Personal Year 7 in 2026:</strong> A powerful year for inner development. Invest in education, spirituality, or any practice that deepens your understanding of yourself and your purpose.</p>
+   <p><strong>Personal Year 8 in 2026:</strong> Financial and professional achievement is strongly supported. Launch the business, close the deal, and step into your authority.</p>
+   <p><strong>Personal Year 9 in 2026:</strong> Despite the universal new beginning energy, your personal cycle calls for completion first. Release what no longer serves you — what you let go of now clears the path for extraordinary growth from 2027.</p>
+   <h2>Book a <em>2026 Numerology Forecast</em></h2>
+   <p>At Disha Numerology and Vastu Consultancy, we offer personalised 2026 forecast readings that combine your Personal Year, Personal Month cycles, and key dates for the entire year. This reading gives you a month-by-month roadmap — knowing the best times for action, rest, relationships, and financial decisions in 2026. Contact us to book your 2026 forecast consultation.</p>`,
+   tag_mr:"अंकशास्त्र",
+   title_mr:"अंकशास्त्र अंदाज २०२६: या वर्षाला आकार देणारे महत्त्वाचे अंक",
+   content_mr:`<p>२०२६ वर्ष <strong>१</strong> (२+०+२+६=१०→१+०=१) ची सार्वत्रिक कंपन वाहते — नवीन सुरुवात, ताजे चक्र आणि धाडसी दीक्षाचा अंक. सार्वत्रिक ९ वर्षानंतर, २०२६ एक नवीन नऊ-वर्षांचे चक्र उघडते.</p><div class="hl">"२०२६ हे सार्वत्रिक वर्ष १ आहे. जे आत्ता बिया पेरतात ते पुढील नऊ वर्षे कापणी करतील."</div><h2>तुमचा <em>२०२६ मधील वैयक्तिक वर्ष</em></h2><p>जन्म दिवस + जन्म महिना + २०२६ जोडा. <strong>वर्ष १:</strong> नवीन प्रारंभासाठी आदर्श. <strong>वर्ष ४:</strong> पाया घालण्याचे वर्ष. <strong>वर्ष ८:</strong> आर्थिक यश आणि मान्यता. <strong>वर्ष ९:</strong> पूर्णता आणि जुने सोडून द्या.</p>`},
+
+  {tag:"Vastu Shastra",date:"April 2026 · 6 min read",title:"Vastu for New Homes in 2026: What to Check Before You Move In",
+   bg:"linear-gradient(135deg,#1A5276,#117A65)",emoji:"🏡",
+   content:`<p>Moving into a new home is one of the most significant decisions of your life — and from a Vastu perspective, it is also one of the most consequential. The energy embedded in a home's structure, orientation, and spatial layout will influence your family's health, wealth, relationships, and overall happiness for as long as you live there. A Vastu evaluation before you move in — or before you sign — can save years of unnecessary struggle.</p>
+   <div class="hl">"A home is not just a building. It is an energy field that you and your family live inside every day. Choose it with the same care you would give to choosing a life partner."</div>
+   <h2>The First Things to Check — <em>Before You Even Enter</em></h2>
+   <p><strong>The facing direction:</strong> Stand at the main entrance and use a compass (your phone compass works well) to determine which direction the door faces. North, East, and North-East facing homes are considered most auspicious. Note the facing direction carefully — it is the most fundamental Vastu consideration and cannot be changed after purchase.</p>
+   <p><strong>The shape of the plot:</strong> Square or rectangular plots are ideal in Vastu. Irregularly shaped plots — with missing corners or extended corners — create specific energy imbalances depending on which direction is affected. A missing North-East corner is considered particularly challenging.</p>
+   <p><strong>The surroundings:</strong> Check what is directly in front of and behind the home. A T-junction pointing directly at the main entrance (called a "Veedhi Shula" in Vastu) creates a constant stream of harsh, cutting energy. A temple directly opposite the entrance, while spiritually significant, can also create energetic overwhelm for some families.</p>
+   <h2>Inside the Home — <em>The Essential Vastu Checklist</em></h2>
+   <ul>
+     <li><strong>Main entrance:</strong> Should be well-lit, free of obstructions, and ideally not directly facing a wall, staircase, or toilet</li>
+     <li><strong>Kitchen location:</strong> Ideally South-East. Never North-East or directly adjacent to a toilet</li>
+     <li><strong>Master bedroom:</strong> Ideally South-West. Avoid North-East for sleeping</li>
+     <li><strong>Toilets:</strong> Should never be in the North-East corner. South or North-West placement is acceptable</li>
+     <li><strong>Prayer room:</strong> North-East is ideal. Never place deity images in the bedroom or near a toilet wall</li>
+     <li><strong>Staircase:</strong> Should not be in the North-East or centre of the home</li>
+     <li><strong>Underground water tank:</strong> North or North-East is ideal. Never South-West</li>
+     <li><strong>Overhead water tank:</strong> South-West is ideal — the heaviest point in the home should be here</li>
+   </ul>
+   <h2>Red Flags That Require <em>Expert Assessment</em></h2>
+   <p>Some Vastu defects are serious enough that they warrant either renegotiating the purchase price (to account for remedy costs), requesting structural modifications before possession, or reconsidering the property altogether. These include a toilet in the North-East, a kitchen in the North-East, a T-junction pointing at the main entrance, and a plot with a severely cut North-East corner.</p>
+   <h2>Vastu-Friendly <em>Flat Numbers</em></h2>
+   <p>In apartment buildings, your flat number also carries a numerological vibration. Calculate the total of your flat number and ensure it aligns with your Life Path Number. For example, Flat 304 = 3+0+4 = 7 — ideal for someone with a Life Path 7 who values solitude and spiritual depth, but potentially isolating for a Life Path 1 who needs dynamic energy around them.</p>
+   <h2>Our <em>Pre-Purchase Vastu Consultation</em></h2>
+   <p>Disha Numerology and Vastu Consultancy offers a dedicated pre-purchase or pre-possession Vastu evaluation service. We assess the home's facing direction, room placement, plot shape, and numerological address value — and provide you with a clear report: what is working in your favour, what requires remedies, and what is a genuine concern. This consultation is one of the most valuable investments you can make before committing to a new home.</p>`,
+   tag_mr:"वास्तू शास्त्र",
+   title_mr:"२०२६ मधील नवीन घरांसाठी वास्तू: स्थलांतरित होण्यापूर्वी काय तपासाल",
+   content_mr:`<p>नवीन घरात जाणे हा जीवनातील सर्वात महत्त्वाच्या निर्णयांपैकी एक आहे. घराची ऊर्जा तुमच्या कुटुंबाचे आरोग्य, संपत्ती आणि आनंद तुम्ही तिथे राहत असेपर्यंत प्रभावित करेल.</p><div class="hl">"घर फक्त इमारत नाही. ती ऊर्जा क्षेत्र आहे. ते जीवन साथीदार निवडण्याच्या काळजीने निवडा."</div><h2>घरातील आवश्यक <em>वास्तू चेकलिस्ट</em></h2><ul><li><strong>मुख्य प्रवेशद्वार:</strong> चांगले प्रकाशित, अडथळामुक्त</li><li><strong>स्वयंपाकघर:</strong> आदर्शपणे आग्नेय. उत्तर-पूर्वेत कधीही नाही</li><li><strong>मुख्य शयनकक्ष:</strong> आदर्शपणे नैऋत्य</li><li><strong>शौचालये:</strong> उत्तर-पूर्वेत कधीही नाहीत</li><li><strong>प्रार्थना खोली:</strong> उत्तर-पूर्व आदर्श</li></ul>`}
+
+];
+
+// ── OPEN BLOG ARTICLE ──
+function openBlog(idx){
+  var a = blogData[idx];
+  if(!a){ return; }
+  var ov = document.getElementById('blog-overlay');
+  var th = document.getElementById('bmThumb');
+  var bmTag = document.getElementById('bmTag');
+  var bmTitle = document.getElementById('bmTitle');
+  var bmMeta = document.getElementById('bmMeta');
+  var bmContent = document.getElementById('bmContent');
+  if(!ov || !th){ return; }
+
+  // Check if Marathi mode is active
+  var isMr = document.body.classList.contains('marathi');
+
+  th.setAttribute('style', a.bg + ';height:200px;display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden;flex-shrink:0;');
+  th.innerHTML = '<button class="bm-close" onclick="closeBlog()">&#x2715;</button><span style="position:relative;z-index:1">' + a.emoji + '</span><div style="position:absolute;inset:0;background:rgba(0,0,0,0.2)"></div>';
+
+  // Use Marathi content if available and Marathi mode is on
+  bmTag.textContent = (isMr && a.tag_mr) ? a.tag_mr : a.tag;
+  bmTitle.textContent = (isMr && a.title_mr) ? a.title_mr : a.title;
+  bmMeta.textContent = a.date;
+  bmContent.innerHTML = (isMr && a.content_mr) ? a.content_mr : a.content;
+
+  // Add language indicator
+  var langBadge = '<div style="display:inline-block;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:rgba(240,145,42,0.15);color:var(--saffron3);border:1px solid var(--border2);margin-bottom:16px;">' + (isMr ? 'मराठी' : 'English') + '</div><br>';
+  bmMeta.innerHTML = langBadge + a.date;
+
+  ov.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  ov.scrollTop = 0;
+}
+
+function closeBlog(){
+  var ov = document.getElementById('blog-overlay');
+  ov.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeBlogIfOutside(e){
+  if(e.target === document.getElementById('blog-overlay')){ closeBlog(); }
+}
+
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ closeBlog(); }
+});
+
+// ── SHOW MORE ARTICLES ──
+function showMoreArticles(){
+  var grid = document.getElementById('extraBlogGrid');
+  var btn = document.getElementById('showMoreBtn');
+  if(!grid){ return; }
+  var html = '';
+  var isMr = document.body.classList.contains('marathi');
+  for(var i = 6; i < blogData.length; i++){
+    var a = blogData[i];
+    var tag = (isMr && a.tag_mr) ? a.tag_mr : a.tag;
+    var title = (isMr && a.title_mr) ? a.title_mr : a.title;
+    var content = (isMr && a.content_mr) ? a.content_mr : a.content;
+    var excerpt = content.replace(/<[^>]+>/g, '').substring(0, 140);
+    var readMore = isMr ? 'लेख वाचा &rarr;' : 'Read Article &rarr;';
+    html += '<div class="blog-card" onclick="openBlog(' + i + ')" style="cursor:pointer">' +
+      '<div class="blog-thumb" style="' + a.bg + '">' + a.emoji + '</div>' +
+      '<div class="blog-body">' +
+        '<span class="blog-tag">' + tag + '</span>' +
+        '<div class="blog-title">' + title + '</div>' +
+        '<div class="blog-excerpt">' + excerpt + '...</div>' +
+        '<div class="blog-meta">' +
+          '<span class="blog-date">' + a.date + '</span>' +
+          '<span class="blog-read">' + readMore + '</span>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+  grid.innerHTML = html;
+  grid.style.display = 'grid';
+  if(btn){ btn.style.display = 'none'; }
+  setTimeout(function(){ grid.scrollIntoView({behavior:'smooth', block:'start'}); }, 150);
+}
+
+// ── INIT: runs after all code including blogData is parsed ──
+(function(){
+  var saved = localStorage.getItem('disha-lang');
+  if(saved === 'mr'){ setLang('mr'); } else { renderBlogCards(); }
+})();
+</script>
+
+<!-- ══ BLOG MODAL ══ -->
+<div id="blog-overlay" onclick="closeBlogIfOutside(event)">
+  <div class="blog-modal" id="blogModal">
+    <div class="bm-thumb" id="bmThumb">
+      <button class="bm-close" onclick="closeBlog()">✕</button>
+    </div>
+    <div class="bm-body">
+      <span class="bm-tag" id="bmTag"></span>
+      <div class="bm-title" id="bmTitle"></div>
+      <div class="bm-meta" id="bmMeta"></div>
+      <div class="bm-content" id="bmContent"></div>
+      <div class="bm-cta">
+        <p>Ready to discover what your numbers say about your destiny?</p>
+        <button class="btn-primary" onclick="closeBlog();setTimeout(()=>goTo('contact'),300)" style="border:none;cursor:pointer;">🙏 Book a Personal Consultation</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
