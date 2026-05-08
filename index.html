@@ -91,17 +91,14 @@
 }
 </script>
 
-<!-- ── GOOGLE ANALYTICS (add your ID below when ready) ── -->
-<!-- To activate: replace G-XXXXXXXXXX with your actual Measurement ID from analytics.google.com -->
-<!--
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!-- ── GOOGLE ANALYTICS ── -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0TP5BM3F4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
+  gtag('config', 'G-Z0TP5BM3F4');
 </script>
--->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -922,6 +919,7 @@ function setLang(lang){
 function renderBlogCards(){
   var grid = document.getElementById('mainBlogGrid');
   if(!grid) return;
+  if(typeof blogData === 'undefined') return;
   var isMr = document.body.classList.contains('marathi');
   var html = '';
   for(var i = 0; i < 6; i++){
@@ -1149,6 +1147,7 @@ function setLang(lang){
 function renderBlogCards(){
   var grid = document.getElementById('mainBlogGrid');
   if(!grid) return;
+  if(typeof blogData === 'undefined') return;
   var isMr = document.body.classList.contains('marathi');
   var html = '';
   for(var i = 0; i < 6; i++){
@@ -1815,12 +1814,6 @@ function showMoreArticles(){
   setTimeout(function(){ grid.scrollIntoView({behavior:'smooth', block:'start'}); }, 150);
 }
 
-// ── INIT: runs after all code including blogData is parsed ──
-(function(){
-  var saved = localStorage.getItem('disha-lang');
-  if(saved === 'mr'){ setLang('mr'); } else { renderBlogCards(); renderFAQ(); }
-})();
-
 // ── FAQ DATA & RENDERING ──
 var faqData = [
   {
@@ -1888,6 +1881,7 @@ var faqData = [
 function renderFAQ(){
   var list = document.getElementById('faqList');
   if(!list) return;
+  if(typeof faqData === 'undefined') return;
   var isMr = document.body.classList.contains('marathi');
   var html = '';
   faqData.forEach(function(f, i){
@@ -1920,6 +1914,13 @@ function toggleFAQ(idx){
   }
 }
 
+
+
+// ── INIT: runs after all code including blogData is parsed ──
+(function(){
+  var saved = localStorage.getItem('disha-lang');
+  if(saved === 'mr'){ setLang('mr'); } else { renderBlogCards(); renderFAQ(); }
+})();
 
 </script>
 
