@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://dishanumerovaastu.com/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dishanumerovaastu.com/"/>
+    <xhtml:link rel="alternate" hreflang="mr" href="https://dishanumerovaastu.com/"/>
+  </url>
+
+  <!-- Thank You page -->
+  <url>
+    <loc>https://dishanumerovaastu.com/thank-you.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
