@@ -74,6 +74,222 @@
     ]
   }
 }
+
+// ── NUMEROLOGY CALCULATOR ──
+
+// Number meanings data
+var numData = {
+  1: {
+    en_name: "The Leader",    mr_name: "नेता",
+    en_desc: "You are a natural-born leader — independent, original, and driven by a deep desire to achieve. You are at your best when pioneering new ideas, taking initiative, and standing on your own feet. Your greatest strength is your courage and self-reliance.",
+    mr_desc: "तुम्ही एक नैसर्गिक नेता आहात — स्वतंत्र, मूळ आणि यश मिळवण्याच्या खोल इच्छेने प्रेरित. नवीन कल्पना, पुढाकार घेणे आणि स्वतःच्या पायावर उभे राहणे यात तुम्ही सर्वोत्तम आहात.",
+    en_traits: ["Independent", "Ambitious", "Original", "Courageous", "Determined"],
+    mr_traits: ["स्वतंत्र", "महत्त्वाकांक्षी", "मूळ", "धाडसी", "निश्चयी"]
+  },
+  2: {
+    en_name: "The Diplomat",  mr_name: "राजनयिक",
+    en_desc: "You are a natural peacemaker — sensitive, cooperative, and deeply intuitive. You thrive in partnerships and have a gift for bringing harmony to relationships. Your greatest strength is your empathy, patience, and ability to see all sides of a situation.",
+    mr_desc: "तुम्ही एक नैसर्गिक शांतता दूत आहात — संवेदनशील, सहकारी आणि गहन अंतर्ज्ञानी. तुम्ही भागीदारीत उत्तम कामगिरी करता आणि नातेसंबंधांमध्ये सुसंवाद आणण्याची देणगी तुमच्याकडे आहे.",
+    en_traits: ["Cooperative", "Sensitive", "Diplomatic", "Patient", "Intuitive"],
+    mr_traits: ["सहकारी", "संवेदनशील", "राजनयिक", "संयमी", "अंतर्ज्ञानी"]
+  },
+  3: {
+    en_name: "The Creator",   mr_name: "निर्माता",
+    en_desc: "You are a natural communicator and creative spirit — expressive, joyful, and inspiring. You have a gift for words, art, and bringing beauty into the world. Your greatest strength is your ability to uplift others and express yourself with authenticity.",
+    mr_desc: "तुम्ही एक नैसर्गिक संवादक आणि सर्जनशील आत्मा आहात — अभिव्यक्तिशील, आनंदी आणि प्रेरणादायी. शब्द, कला आणि जगात सौंदर्य आणण्याची देणगी तुमच्याकडे आहे.",
+    en_traits: ["Creative", "Expressive", "Joyful", "Social", "Inspiring"],
+    mr_traits: ["सर्जनशील", "अभिव्यक्तिशील", "आनंदी", "सामाजिक", "प्रेरणादायी"]
+  },
+  4: {
+    en_name: "The Builder",   mr_name: "बांधणारा",
+    en_desc: "You are a natural organiser and builder — disciplined, reliable, and hardworking. You excel at creating solid foundations and bringing order to chaos. Your greatest strength is your patience, loyalty, and extraordinary capacity for sustained effort.",
+    mr_desc: "तुम्ही एक नैसर्गिक व्यवस्थापक आणि बांधणारे आहात — शिस्तबद्ध, विश्वासार्ह आणि कठोर परिश्रमी. ठोस पाया उभारण्यात आणि अव्यवस्थेत सुव्यवस्था आणण्यात तुम्ही उत्कृष्ट आहात.",
+    en_traits: ["Disciplined", "Reliable", "Hardworking", "Loyal", "Practical"],
+    mr_traits: ["शिस्तबद्ध", "विश्वासार्ह", "कठोर परिश्रमी", "निष्ठावान", "व्यावहारिक"]
+  },
+  5: {
+    en_name: "The Explorer",  mr_name: "अन्वेषक",
+    en_desc: "You are a natural adventurer — free-spirited, adaptable, and drawn to variety and change. You thrive when you have freedom to explore, experience, and evolve. Your greatest strength is your versatility, curiosity, and ability to embrace life fully.",
+    mr_desc: "तुम्ही एक नैसर्गिक साहसी आहात — मुक्त-उत्साही, जुळवून घेणारे आणि विविधता व बदलाकडे आकर्षित. स्वातंत्र्य, अनुभव आणि उत्क्रांत होताना तुम्ही उत्तम कामगिरी करता.",
+    en_traits: ["Adventurous", "Adaptable", "Curious", "Free-spirited", "Versatile"],
+    mr_traits: ["साहसी", "जुळवून घेणारे", "जिज्ञासू", "मुक्त-उत्साही", "बहुमुखी"]
+  },
+  6: {
+    en_name: "The Nurturer",  mr_name: "पालनकर्ता",
+    en_desc: "You are a natural caregiver — responsible, compassionate, and devoted to family and community. You have an extraordinary gift for creating harmony and beauty in your environment. Your greatest strength is your warmth, reliability, and deep sense of responsibility.",
+    mr_desc: "तुम्ही एक नैसर्गिक काळजी घेणारे आहात — जबाबदार, दयाळू आणि कुटुंब व समुदायासाठी समर्पित. तुमच्या वातावरणात सुसंवाद आणि सौंदर्य निर्माण करण्याची असाधारण देणगी तुमच्याकडे आहे.",
+    en_traits: ["Nurturing", "Responsible", "Compassionate", "Devoted", "Harmonious"],
+    mr_traits: ["पालन करणारे", "जबाबदार", "दयाळू", "समर्पित", "सुसंवादी"]
+  },
+  7: {
+    en_name: "The Seeker",    mr_name: "शोधक",
+    en_desc: "You are a natural philosopher and seeker of truth — analytical, introspective, and deeply spiritual. You thrive when given time for solitude, study, and contemplation. Your greatest strength is your wisdom, perceptiveness, and relentless search for deeper meaning.",
+    mr_desc: "तुम्ही एक नैसर्गिक तत्त्वज्ञ आणि सत्याचे शोधक आहात — विश्लेषणात्मक, आत्ममग्न आणि गहन आध्यात्मिक. एकांत, अभ्यास आणि चिंतनासाठी वेळ मिळाल्यावर तुम्ही उत्तम कामगिरी करता.",
+    en_traits: ["Analytical", "Spiritual", "Wise", "Introspective", "Perceptive"],
+    mr_traits: ["विश्लेषणात्मक", "आध्यात्मिक", "शहाणे", "आत्ममग्न", "अंतर्ज्ञानी"]
+  },
+  8: {
+    en_name: "The Achiever",  mr_name: "साधक",
+    en_desc: "You are a natural achiever — ambitious, authoritative, and built for material success. You have a powerful capacity for leadership, business, and turning vision into reality. Your greatest strength is your determination, executive ability, and magnetic presence.",
+    mr_desc: "तुम्ही एक नैसर्गिक साधक आहात — महत्त्वाकांक्षी, अधिकारी आणि भौतिक यशासाठी बनलेले. नेतृत्व, व्यवसाय आणि दृष्टी वास्तवात रूपांतरित करण्याची शक्तिशाली क्षमता तुमच्याकडे आहे.",
+    en_traits: ["Ambitious", "Powerful", "Executive", "Determined", "Magnetic"],
+    mr_traits: ["महत्त्वाकांक्षी", "शक्तिशाली", "कार्यकारी", "निश्चयी", "आकर्षक"]
+  },
+  9: {
+    en_name: "The Humanitarian", mr_name: "मानवतावादी",
+    en_desc: "You are a natural humanitarian — compassionate, wise, and here to serve the greater good. You have a deep understanding of the full spectrum of human experience. Your greatest strength is your generosity, universal love, and extraordinary capacity for forgiveness and healing.",
+    mr_desc: "तुम्ही एक नैसर्गिक मानवतावादी आहात — दयाळू, शहाणे आणि मोठ्या भल्यासाठी सेवा करण्यासाठी येथे आहात. मानवी अनुभवाच्या संपूर्ण स्पेक्ट्रमची गहन समज तुमच्याकडे आहे.",
+    en_traits: ["Compassionate", "Generous", "Wise", "Universal", "Healing"],
+    mr_traits: ["दयाळू", "उदार", "शहाणे", "सार्वत्रिक", "उपचारक"]
+  },
+  11: {
+    en_name: "Master Number 11 — The Visionary", mr_name: "मास्टर नंबर ११ — दूरदर्शी",
+    en_desc: "You carry a Master Number — a rare and powerful vibration. You are here to inspire, illuminate, and elevate others through your heightened intuition and spiritual insight. You are exceptionally sensitive, idealistic, and capable of profound creative and spiritual achievement.",
+    mr_desc: "तुम्ही मास्टर नंबर वाहतात — एक दुर्मिळ आणि शक्तिशाली कंपन. तुमच्या उच्च अंतर्ज्ञान आणि आध्यात्मिक अंतर्दृष्टीद्वारे इतरांना प्रेरित, प्रकाशित आणि उन्नत करण्यासाठी तुम्ही येथे आहात.",
+    en_traits: ["Visionary", "Intuitive", "Inspiring", "Spiritual", "Sensitive"],
+    mr_traits: ["दूरदर्शी", "अंतर्ज्ञानी", "प्रेरणादायी", "आध्यात्मिक", "संवेदनशील"]
+  },
+  22: {
+    en_name: "Master Number 22 — The Master Builder", mr_name: "मास्टर नंबर २२ — मास्टर बिल्डर",
+    en_desc: "You carry Master Number 22 — the most powerful number in Numerology. You have the vision of the 11 and the practical ability of the 4, giving you the rare capacity to turn extraordinary dreams into tangible reality on a large scale.",
+    mr_desc: "तुम्ही मास्टर नंबर २२ वाहतात — न्यूमेरॉलॉजीतील सर्वात शक्तिशाली अंक. तुमच्याकडे ११ ची दृष्टी आणि ४ ची व्यावहारिक क्षमता आहे, ज्यामुळे तुम्हाला असाधारण स्वप्ने मोठ्या प्रमाणावर प्रत्यक्षात आणण्याची दुर्मिळ क्षमता मिळते.",
+    en_traits: ["Visionary", "Powerful", "Practical", "Builder", "Transformative"],
+    mr_traits: ["दूरदर्शी", "शक्तिशाली", "व्यावहारिक", "बांधणारा", "परिवर्तनकारी"]
+  },
+  33: {
+    en_name: "Master Number 33 — The Master Teacher", mr_name: "मास्टर नंबर ३३ — मास्टर शिक्षक",
+    en_desc: "You carry Master Number 33 — the number of the Master Teacher. You are here to uplift humanity through compassion, healing, and devoted service. Your life is characterised by self-sacrifice, unconditional love, and extraordinary creative expression.",
+    mr_desc: "तुम्ही मास्टर नंबर ३३ वाहतात — मास्टर शिक्षकाचा अंक. करुणा, उपचार आणि समर्पित सेवेद्वारे मानवतेला उन्नत करण्यासाठी तुम्ही येथे आहात.",
+    en_traits: ["Nurturing", "Healing", "Compassionate", "Creative", "Devoted"],
+    mr_traits: ["पालन करणारे", "उपचारक", "दयाळू", "सर्जनशील", "समर्पित"]
+  }
+};
+
+// Pythagorean letter values
+var letterVals = {A:1,B:2,C:3,D:4,E:5,F:6,G:7,H:8,I:9,J:1,K:2,L:3,M:4,N:5,O:6,P:7,Q:8,R:9,S:1,T:2,U:3,V:4,W:5,X:6,Y:7,Z:8};
+
+function reduceNum(n) {
+  if(n === 11 || n === 22 || n === 33) return n;
+  while(n > 9) {
+    var s = 0;
+    String(n).split('').forEach(function(d){ s += parseInt(d); });
+    if(s === 11 || s === 22 || s === 33) return s;
+    n = s;
+  }
+  return n;
+}
+
+function showResult(num, prefix) {
+  var isMr = document.body.classList.contains('marathi');
+  var d = numData[num];
+  if(!d) return;
+  document.getElementById(prefix+'-num').textContent = num;
+  if(prefix === 'lp') {
+    document.getElementById('lp-name').textContent = isMr ? d.mr_name : d.en_name;
+    document.getElementById('lp-desc').textContent = isMr ? d.mr_desc : d.en_desc;
+    var traits = isMr ? d.mr_traits : d.en_traits;
+    document.getElementById('lp-traits').innerHTML = traits.map(function(t){ return '<span class="result-trait">'+t+'</span>'; }).join('');
+  } else if(prefix === 'dn') {
+    document.getElementById('dn-name-result').textContent = isMr ? d.mr_name : d.en_name;
+    document.getElementById('dn-desc').textContent = isMr ? d.mr_desc : d.en_desc;
+    var traits = isMr ? d.mr_traits : d.en_traits;
+    document.getElementById('dn-traits').innerHTML = traits.map(function(t){ return '<span class="result-trait">'+t+'</span>'; }).join('');
+  } else if(prefix === 'mob') {
+    document.getElementById('mob-num-result').textContent = num;
+    document.getElementById('mob-name').textContent = isMr ? d.mr_name : d.en_name;
+    document.getElementById('mob-desc').textContent = isMr ? d.mr_desc : d.en_desc;
+    var traits = isMr ? d.mr_traits : d.en_traits;
+    document.getElementById('mob-traits').innerHTML = traits.map(function(t){ return '<span class="result-trait">'+t+'</span>'; }).join('');
+  }
+  var resultEl = document.getElementById(prefix+'-result');
+  resultEl.classList.add('show');
+  setTimeout(function(){ resultEl.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 100);
+}
+
+function calcLifePath() {
+  var dob = document.getElementById('lp-dob').value;
+  var err = document.getElementById('lp-error');
+  if(!dob) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('lp-result').classList.remove('show');
+  var parts = dob.split('-');
+  var y = parts[0], m = parts[1], d = parts[2];
+  var digits = (y+m+d).split('').map(Number);
+  var sum = digits.reduce(function(a,b){return a+b;}, 0);
+  var num = reduceNum(sum);
+  showResult(num, 'lp');
+}
+
+function calcDestiny() {
+  var name = document.getElementById('dn-name').value.trim().toUpperCase();
+  var err = document.getElementById('dn-error');
+  if(!name) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('dn-result').classList.remove('show');
+  var sum = 0;
+  name.split('').forEach(function(c){ if(letterVals[c]) sum += letterVals[c]; });
+  var num = reduceNum(sum);
+  showResult(num, 'dn');
+}
+
+function calcMobile() {
+  var mob = document.getElementById('mob-num').value.trim().replace(/\D/g,'');
+  var err = document.getElementById('mob-error');
+  if(mob.length !== 10) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('mob-result').classList.remove('show');
+  var sum = mob.split('').map(Number).reduce(function(a,b){return a+b;},0);
+  var num = reduceNum(sum);
+  // Mobile number uses single digit only (no master numbers)
+  while(num > 9) { var s=0; String(num).split('').forEach(function(d){s+=parseInt(d);}); num=s; }
+  showResult(num, 'mob');
+}
+
+function switchCalc(type, btn) {
+  document.querySelectorAll('.calc-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.calc-panel').forEach(function(p){ p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('panel-'+type).classList.add('active');
+  // Clear results
+  document.querySelectorAll('.calc-result').forEach(function(r){ r.classList.remove('show'); });
+}
+
+
+function calcDestiny() {
+  var name = document.getElementById('dn-name').value.trim().toUpperCase();
+  var err = document.getElementById('dn-error');
+  if(!name) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('dn-result').classList.remove('show');
+  var sum = 0;
+  name.split('').forEach(function(c){ if(letterVals[c]) sum += letterVals[c]; });
+  var num = reduceNum(sum);
+  showResult(num, 'dn');
+}
+
+function calcMobile() {
+  var mob = document.getElementById('mob-num').value.trim().replace(/\D/g,'');
+  var err = document.getElementById('mob-error');
+  if(mob.length !== 10) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('mob-result').classList.remove('show');
+  var sum = mob.split('').map(Number).reduce(function(a,b){return a+b;},0);
+  var num = reduceNum(sum);
+  // Mobile number uses single digit only (no master numbers)
+  while(num > 9) { var s=0; String(num).split('').forEach(function(d){s+=parseInt(d);}); num=s; }
+  showResult(num, 'mob');
+}
+
+function switchCalc(type, btn) {
+  document.querySelectorAll('.calc-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.calc-panel').forEach(function(p){ p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('panel-'+type).classList.add('active');
+  // Clear results
+  document.querySelectorAll('.calc-result').forEach(function(r){ r.classList.remove('show'); });
+}
+
+
 </script>
 
 <!-- ── FAQ SCHEMA ── -->
@@ -607,6 +823,127 @@ body.marathi span.en { display: none; }
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s cubic-bezier(0.16,1,0.3,1)}
 .faq-a.open{max-height:400px}
 .faq-a p{padding:0 24px 20px;font-size:15px;color:var(--text2);line-height:1.85;border-top:1px solid var(--border4)}
+
+/* ── NUMEROLOGY CALCULATOR ── */
+#calculator { background: linear-gradient(160deg, var(--bg2) 0%, var(--bg) 100%); }
+.calc-wrap { max-width: 720px; margin: 0 auto; }
+.calc-card {
+  background: var(--bg-card); border: 1.5px solid var(--border);
+  border-radius: 16px; padding: 40px; box-shadow: var(--shadow2);
+}
+.calc-tabs { display: flex; gap: 0; margin-bottom: 32px; border: 1.5px solid var(--border2); border-radius: 8px; overflow: hidden; }
+.calc-tab {
+  flex: 1; padding: 12px 16px; text-align: center; cursor: pointer;
+  font-size: 13px; font-weight: 600; color: var(--text3);
+  background: transparent; border: none; font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s; letter-spacing: 0.5px;
+}
+.calc-tab.active { background: var(--saffron); color: #fff; }
+.calc-tab:hover:not(.active) { color: var(--saffron3); background: var(--saffron5); }
+
+.calc-panel { display: none; }
+.calc-panel.active { display: block; }
+
+.calc-field { margin-bottom: 20px; }
+.calc-field label {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--text3); font-weight: 600; display: block; margin-bottom: 8px;
+}
+.calc-field input {
+  width: 100%; background: var(--bg-input); border: 1.5px solid var(--border);
+  border-radius: 8px; padding: 13px 16px; font-size: 15px; color: var(--text1);
+  font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.2s;
+}
+.calc-field input:focus { border-color: var(--saffron); }
+.calc-field input::placeholder { color: var(--text4); }
+
+.calc-btn {
+  width: 100%; background: var(--saffron); color: #fff;
+  border: none; border-radius: 8px; padding: 15px;
+  font-size: 14px; font-weight: 600; font-family: 'DM Sans', sans-serif;
+  cursor: pointer; letter-spacing: 0.5px;
+  transition: all 0.22s; box-shadow: 0 4px 16px rgba(240,145,42,0.35);
+  margin-top: 8px;
+}
+.calc-btn:hover { background: var(--saffron2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(240,145,42,0.45); }
+
+.calc-result {
+  display: none; margin-top: 28px;
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1.5px solid var(--border2); border-radius: 12px; overflow: hidden;
+}
+.calc-result.show { display: block; animation: result-in 0.4s cubic-bezier(.16,1,.3,1); }
+@keyframes result-in { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
+.result-header {
+  background: linear-gradient(135deg, var(--saffron), var(--saffron2));
+  padding: 24px 28px; text-align: center;
+}
+.result-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px; font-weight: 700; color: #fff; line-height: 1;
+}
+.result-label {
+  font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,0.8); margin-top: 6px; font-weight: 500;
+}
+.result-body { padding: 24px 28px; }
+.result-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; font-weight: 600; color: var(--saffron3);
+  margin-bottom: 10px;
+}
+.result-desc { font-size: 15px; color: var(--text2); line-height: 1.85; margin-bottom: 20px; }
+.result-traits { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.result-trait {
+  font-size: 12px; color: var(--saffron3); font-weight: 500;
+  background: var(--saffron5); border: 1px solid var(--border2);
+  padding: 5px 14px; border-radius: 100px;
+}
+.result-cta {
+  background: var(--saffron5); border: 1px solid var(--border2);
+  border-radius: 8px; padding: 16px 20px; text-align: center;
+}
+.result-cta p { font-size: 14px; color: var(--text2); margin-bottom: 12px; line-height: 1.7; }
+.calc-error {
+  color: #E8738A; font-size: 13px; margin-top: 8px;
+  display: none; font-weight: 500;
+}
+.calc-note {
+  font-size: 12px; color: var(--text4); text-align: center;
+  margin-top: 16px; line-height: 1.7;
+}
+
+/* ── NUMEROLOGY CALCULATOR ── */
+.calc-wrap{max-width:700px;margin:0 auto;}
+.calc-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;}
+.calc-input-area{padding:36px 40px 28px;}
+.calc-input-area label{display:block;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:10px;}
+.calc-dob{display:flex;gap:12px;flex-wrap:wrap;}
+.calc-dob select, .calc-dob input{flex:1;min-width:80px;background:var(--bg2);border:1.5px solid var(--border2);border-radius:8px;padding:13px 14px;color:var(--text1);font-size:15px;font-family:"DM Sans",sans-serif;outline:none;cursor:pointer;transition:border-color 0.2s;}
+.calc-dob select:hover,.calc-dob input:hover,.calc-dob select:focus,.calc-dob input:focus{border-color:var(--saffron);}
+.calc-btn{width:100%;margin-top:20px;padding:15px;background:linear-gradient(135deg,var(--saffron),var(--gold));border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:700;font-family:"DM Sans",sans-serif;cursor:pointer;letter-spacing:0.5px;transition:opacity 0.2s;}
+.calc-btn:hover{opacity:0.9;}
+.calc-result{display:none;border-top:1.5px solid var(--border);padding:36px 40px;}
+.calc-result.show{display:block;}
+.result-top{display:flex;align-items:center;gap:24px;margin-bottom:28px;}
+.result-number{width:90px;height:90px;min-width:90px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--gold));display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:700;color:#fff;box-shadow:0 8px 24px rgba(240,145,42,0.35);}
+.result-meta{}
+.result-name{font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:600;color:var(--text1);margin-bottom:4px;}
+.result-keyword{font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--saffron3);}
+.result-desc{font-size:15px;color:var(--text2);line-height:1.85;margin-bottom:20px;}
+.result-traits{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
+.result-trait{padding:6px 14px;background:var(--saffron5);border:1px solid var(--border2);border-radius:100px;font-size:12px;font-weight:600;color:var(--saffron3);letter-spacing:0.5px;}
+.result-cta{background:linear-gradient(135deg,rgba(240,145,42,0.08),rgba(212,168,67,0.08));border:1.5px solid var(--border2);border-radius:12px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.result-cta p{font-size:14px;color:var(--text2);margin:0;line-height:1.6;}
+.result-cta strong{color:var(--text1);}
+.result-cta a{white-space:nowrap;background:linear-gradient(135deg,var(--saffron),var(--gold));color:#fff;font-size:13px;font-weight:700;padding:11px 22px;border-radius:8px;text-decoration:none;letter-spacing:0.3px;}
+.calc-steps{display:flex;gap:8px;align-items:center;margin-top:16px;font-size:12px;color:var(--text3);flex-wrap:wrap;}
+.calc-step-num{width:22px;height:22px;min-width:22px;border-radius:50%;background:var(--saffron5);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--saffron3);}
+@media(max-width:600px){
+  .calc-input-area,.calc-result{padding:24px 20px;}
+  .result-top{flex-direction:column;text-align:center;}
+  .result-cta{flex-direction:column;text-align:center;}
+}
 </style>
 </head>
 <body>
@@ -650,6 +987,8 @@ body.marathi span.en { display: none; }
     <a onclick="goTo('process')"><span class="en">Process</span><span class="mr">प्रक्रिया</span></a>
     <a onclick="goTo('blog')"><span class="en">Blog</span><span class="mr">लेख</span></a>
     <a onclick="goTo('testimonials')"><span class="en">Testimonials</span><span class="mr">प्रशंसापत्रे</span></a>
+    <a onclick="goTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
+    <a onclick="goTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
     <a onclick="goTo('faq')"><span class="en">FAQ</span><span class="mr">प्रश्न</span></a>
     <a class="nav-book" onclick="goTo('contact')"><span class="en">Book a Session</span><span class="mr">सत्र बुक करा</span></a>
   </div>
@@ -662,6 +1001,8 @@ body.marathi span.en { display: none; }
   <a onclick="mobileGoTo('process')"><span class="en">How It Works</span><span class="mr">कसे कार्य करते</span></a>
   <a onclick="goTo('blog')"><span class="en">Blog & Articles</span><span class="mr">लेख</span></a>
   <a onclick="mobileGoTo('testimonials')"><span class="en">Testimonials</span><span class="mr">प्रशंसापत्रे</span></a>
+  <a onclick="mobileGoTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
+  <a onclick="mobileGoTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
   <a onclick="mobileGoTo('faq')"><span class="en">FAQ</span><span class="mr">वारंवार प्रश्न</span></a>
   <a onclick="mobileGoTo('contact')"><span class="en">Contact Us</span><span class="mr">संपर्क करा</span></a>
   <a class="mob-book" onclick="mobileGoTo('contact')">🙏 <span class="en">Book a Session</span><span class="mr">सत्र बुक करा</span></a>
@@ -847,6 +1188,198 @@ body.marathi span.en { display: none; }
 </section>
 
 
+
+<!-- ══ NUMEROLOGY CALCULATOR ══ -->
+<section id="calculator">
+  <div class="sh">
+    <span class="stag"><span class="en">Free Tool</span><span class="mr">मोफत साधन</span></span>
+    <h2><span class="en">Free Numerology <em>Calculator</em></span><span class="mr">मोफत न्यूमेरॉलॉजी <em>कॅल्क्युलेटर</em></span></h2>
+    <p><span class="en">Discover your Life Path Number or Destiny Number instantly. For a complete personalised reading, book a consultation.</span>
+    <span class="mr">तुमचा लाइफ पाथ नंबर किंवा डेस्टिनी नंबर त्वरित शोधा. संपूर्ण वैयक्तिक वाचनासाठी, सल्लामसलत बुक करा.</span></p>
+  </div>
+  <div class="calc-wrap">
+    <div class="calc-card">
+
+      <!-- TABS -->
+      <div class="calc-tabs">
+        <button class="calc-tab active" onclick="switchCalc('lifepath',this)">
+          <span class="en">🔢 Life Path Number</span><span class="mr">🔢 लाइफ पाथ नंबर</span>
+        </button>
+        <button class="calc-tab" onclick="switchCalc('destiny',this)">
+          <span class="en">✨ Destiny Number</span><span class="mr">✨ डेस्टिनी नंबर</span>
+        </button>
+        <button class="calc-tab" onclick="switchCalc('mobile',this)">
+          <span class="en">📱 Mobile Number</span><span class="mr">📱 मोबाइल नंबर</span>
+        </button>
+      </div>
+
+      <!-- LIFE PATH PANEL -->
+      <div class="calc-panel active" id="panel-lifepath">
+        <div class="calc-field">
+          <label><span class="en">Your Date of Birth</span><span class="mr">तुमची जन्मतारीख</span></label>
+          <input type="date" id="lp-dob" max="2010-12-31"/>
+        </div>
+        <div class="calc-error" id="lp-error">
+          <span class="en">Please enter your date of birth</span>
+          <span class="mr">कृपया जन्मतारीख टाका</span>
+        </div>
+        <button class="calc-btn" onclick="calcLifePath()">
+          <span class="en">Calculate My Life Path Number →</span>
+          <span class="mr">माझा लाइफ पाथ नंबर शोधा →</span>
+        </button>
+        <div class="calc-result" id="lp-result">
+          <div class="result-header">
+            <div class="result-number" id="lp-num">7</div>
+            <div class="result-label"><span class="en">Your Life Path Number</span><span class="mr">तुमचा लाइफ पाथ नंबर</span></div>
+          </div>
+          <div class="result-body">
+            <div class="result-name" id="lp-name"></div>
+            <div class="result-desc" id="lp-desc"></div>
+            <div class="result-traits" id="lp-traits"></div>
+            <div class="result-cta">
+              <p><span class="en">This is just a glimpse. A full consultation reveals your Destiny Number, Soul Urge, Personal Year cycle, and personalised guidance for your life.</span>
+              <span class="mr">हे फक्त एक झलक आहे. पूर्ण सल्लामसलत तुमचा डेस्टिनी नंबर, सोल अर्ज, वैयक्तिक वर्ष चक्र आणि वैयक्तिक मार्गदर्शन प्रकट करते.</span></p>
+              <button class="calc-btn" style="max-width:280px;margin:0 auto;display:block;" onclick="goTo('contact')">
+                <span class="en">🙏 Book a Full Reading</span><span class="mr">🙏 पूर्ण वाचन बुक करा</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="calc-note"><span class="en">Your data is not stored. This calculator is for general guidance only.</span><span class="mr">तुमचा डेटा साठवला जात नाही. हे कॅल्क्युलेटर सामान्य मार्गदर्शनासाठी आहे.</span></p>
+      </div>
+
+      <!-- DESTINY PANEL -->
+      <div class="calc-panel" id="panel-destiny">
+        <div class="calc-field">
+          <label><span class="en">Your Full Birth Name (as on birth certificate)</span><span class="mr">तुमचे पूर्ण जन्म नाव (जन्म दाखल्यावर असलेले)</span></label>
+          <input type="text" id="dn-name" placeholder="e.g. Rahul Sharma"/>
+        </div>
+        <div class="calc-error" id="dn-error">
+          <span class="en">Please enter your full birth name</span>
+          <span class="mr">कृपया पूर्ण जन्म नाव टाका</span>
+        </div>
+        <button class="calc-btn" onclick="calcDestiny()">
+          <span class="en">Calculate My Destiny Number →</span>
+          <span class="mr">माझा डेस्टिनी नंबर शोधा →</span>
+        </button>
+        <div class="calc-result" id="dn-result">
+          <div class="result-header">
+            <div class="result-number" id="dn-num">3</div>
+            <div class="result-label"><span class="en">Your Destiny Number</span><span class="mr">तुमचा डेस्टिनी नंबर</span></div>
+          </div>
+          <div class="result-body">
+            <div class="result-name" id="dn-name-result"></div>
+            <div class="result-desc" id="dn-desc"></div>
+            <div class="result-traits" id="dn-traits"></div>
+            <div class="result-cta">
+              <p><span class="en">Want to know if your name is aligned with your destiny? A Name Correction consultation analyses the harmony between your name and Life Path Number.</span>
+              <span class="mr">तुमचे नाव तुमच्या नशिबाशी जुळलेले आहे का हे जाणून घ्यायचे आहे? नाव सुधारणा सल्लामसलत तुमचे नाव आणि लाइफ पाथ नंबर यांच्यातील सुसंवाद विश्लेषण करते.</span></p>
+              <button class="calc-btn" style="max-width:280px;margin:0 auto;display:block;" onclick="goTo('contact')">
+                <span class="en">🙏 Book a Name Correction</span><span class="mr">🙏 नाव सुधारणा बुक करा</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="calc-note"><span class="en">Your data is not stored. This calculator is for general guidance only.</span><span class="mr">तुमचा डेटा साठवला जात नाही. हे कॅल्क्युलेटर सामान्य मार्गदर्शनासाठी आहे.</span></p>
+      </div>
+
+      <!-- MOBILE NUMBER PANEL -->
+      <div class="calc-panel" id="panel-mobile">
+        <div class="calc-field">
+          <label><span class="en">Your 10-digit Mobile Number</span><span class="mr">तुमचा १०-अंकी मोबाइल नंबर</span></label>
+          <input type="tel" id="mob-num" placeholder="e.g. 9876543210" maxlength="10"/>
+        </div>
+        <div class="calc-error" id="mob-error">
+          <span class="en">Please enter a valid 10-digit mobile number</span>
+          <span class="mr">कृपया वैध १०-अंकी मोबाइल नंबर टाका</span>
+        </div>
+        <button class="calc-btn" onclick="calcMobile()">
+          <span class="en">Analyse My Mobile Number →</span>
+          <span class="mr">माझा मोबाइल नंबर विश्लेषण करा →</span>
+        </button>
+        <div class="calc-result" id="mob-result">
+          <div class="result-header">
+            <div class="result-number" id="mob-num-result">8</div>
+            <div class="result-label"><span class="en">Your Mobile Number Value</span><span class="mr">तुमच्या मोबाइल नंबरचे मूल्य</span></div>
+          </div>
+          <div class="result-body">
+            <div class="result-name" id="mob-name"></div>
+            <div class="result-desc" id="mob-desc"></div>
+            <div class="result-traits" id="mob-traits"></div>
+            <div class="result-cta">
+              <p><span class="en">Is your mobile number truly aligned with your Life Path? A personalised Number Analysis consultation reveals the full picture and suggests better alternatives if needed.</span>
+              <span class="mr">तुमचा मोबाइल नंबर खरोखर तुमच्या लाइफ पाथशी जुळलेला आहे का? वैयक्तिक नंबर विश्लेषण सल्लामसलत पूर्ण चित्र प्रकट करते.</span></p>
+              <button class="calc-btn" style="max-width:280px;margin:0 auto;display:block;" onclick="goTo('contact')">
+                <span class="en">🙏 Book a Number Analysis</span><span class="mr">🙏 नंबर विश्लेषण बुक करा</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="calc-note"><span class="en">Your data is not stored. This calculator is for general guidance only.</span><span class="mr">तुमचा डेटा साठवला जात नाही. हे कॅल्क्युलेटर सामान्य मार्गदर्शनासाठी आहे.</span></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ LIFE PATH CALCULATOR ══ -->
+<section id="calculator">
+  <div class="sh">
+    <span class="stag"><span class="en">Free Tool</span><span class="mr">मोफत साधन</span></span>
+    <h2><span class="en">Life Path Number <em>Calculator</em></span><span class="mr">लाइफ पाथ नंबर <em>कॅल्क्युलेटर</em></span></h2>
+    <p><span class="en">Discover your Life Path Number instantly — the most important number in your numerology chart.</span><span class="mr">तुमचा लाइफ पाथ नंबर तत्काळ शोधा — तुमच्या न्यूमेरॉलॉजी चार्टमधील सर्वात महत्त्वाचा अंक.</span></p>
+  </div>
+  <div class="calc-wrap">
+    <div class="calc-card">
+      <div class="calc-input-area">
+        <label><span class="en">Enter Your Date of Birth</span><span class="mr">तुमची जन्मतारीख टाका</span></label>
+        <div class="calc-dob">
+          <select id="calc-day">
+            <option value="">Day</option>
+          </select>
+          <select id="calc-month">
+            <option value="">Month</option>
+            <option value="1">January</option><option value="2">February</option>
+            <option value="3">March</option><option value="4">April</option>
+            <option value="5">May</option><option value="6">June</option>
+            <option value="7">July</option><option value="8">August</option>
+            <option value="9">September</option><option value="10">October</option>
+            <option value="11">November</option><option value="12">December</option>
+          </select>
+          <input type="number" id="calc-year" placeholder="Year (e.g. 1990)" min="1900" max="2024" style="min-width:140px;"/>
+        </div>
+        <div class="calc-steps">
+          <div class="calc-step-num">1</div>
+          <span><span class="en">Select day, month and enter birth year</span><span class="mr">दिवस, महिना निवडा आणि जन्म वर्ष टाका</span></span>
+          <span style="margin:0 4px;color:var(--border2)">·</span>
+          <div class="calc-step-num">2</div>
+          <span><span class="en">Click Calculate</span><span class="mr">कॅल्क्युलेट क्लिक करा</span></span>
+        </div>
+        <button class="calc-btn" onclick="calcLifePath()">
+          <span class="en">🔢 Calculate My Life Path Number</span>
+          <span class="mr">🔢 माझा लाइफ पाथ नंबर शोधा</span>
+        </button>
+      </div>
+      <div class="calc-result" id="calc-result">
+        <div class="result-top">
+          <div class="result-number" id="result-num">7</div>
+          <div class="result-meta">
+            <div class="result-name" id="result-name">The Seeker</div>
+            <div class="result-keyword" id="result-keyword">WISDOM · ANALYSIS · SPIRITUALITY</div>
+          </div>
+        </div>
+        <div class="result-desc" id="result-desc"></div>
+        <div class="result-traits" id="result-traits"></div>
+        <div class="result-cta">
+          <p><span class="en"><strong>Want a deeper reading?</strong> Your Life Path Number is just the beginning. A full consultation reveals your Destiny, Soul Urge, and Personal Year cycles.</span><span class="mr"><strong>सखोल वाचन हवे आहे का?</strong> तुमचा लाइफ पाथ नंबर फक्त सुरुवात आहे. संपूर्ण सल्लामसलत तुमचे डेस्टिनी, सोल अर्ज आणि वैयक्तिक वर्ष चक्र उघड करते.</span></p>
+          <a onclick="goTo('contact')" style="cursor:pointer;"><span class="en">Book a Consultation</span><span class="mr">सल्लामसलत बुक करा</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ FAQ ══ -->
 <section id="faq" class="bg-alt">
   <div class="sh">
@@ -875,6 +1408,8 @@ body.marathi span.en { display: none; }
     </div>
     <div class="fcol"><h5><span class="en">Services</span><span class="mr">सेवा</span></h5><a onclick="goTo('services')">Numerology Reading</a><a onclick="goTo('services')">Vastu Consultation</a><a onclick="goTo('services')">Name Correction</a><a onclick="goTo('services')">Number Analysis</a></div>
     <div class="fcol"><h5><span class="en">Quick Links</span><span class="mr">द्रुत दुवे</span></h5><a onclick="goTo('about')"><span class="en">About Us</span><span class="mr">आमच्याबद्दल</span></a><a onclick="goTo('process')"><span class="en">How It Works</span><span class="mr">कसे कार्य करते</span></a><a onclick="goTo('blog')"><span class="en">Articles & Blog</span><span class="mr">लेख</span></a><a onclick="goTo('testimonials')"><span class="en">Testimonials</span><span class="mr">प्रशंसापत्रे</span></a>
+    <a onclick="goTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
+    <a onclick="goTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
     <a onclick="goTo('faq')"><span class="en">FAQ</span><span class="mr">प्रश्न</span></a></div>
     <div class="fcol"><h5><span class="en">Contact</span><span class="mr">संपर्क</span></h5><a href="mailto:dishanumerovaastu@gmail.com"><span class="en">Email Us</span><span class="mr">ईमेल करा</span></a><a href="https://wa.me/917219612011" target="_blank"><span class="en">WhatsApp Us</span><span class="mr">WhatsApp करा</span></a><a onclick="goTo('contact')"><span class="en">Book a Session</span><span class="mr">सत्र बुक करा</span></a></div>
   </div>
@@ -1580,22 +2115,49 @@ const blogData=[
    content:`<p>While your Life Path Number describes the journey, your Destiny Number — also called the Expression Number — reveals the destination. It is calculated from your full birth name and describes the gifts, talents, and purpose that your soul brought into this lifetime to develop and express.</p>
    <div class="hl">"Your Destiny Number is not what life hands you. It is what you are here to become — the highest expression of your unique gifts."</div>
    <h2>How to Calculate Your <em>Destiny Number</em></h2>
-   <p>Assign numerical values to every letter in your full birth name (as written on your birth certificate) using the Pythagorean system: A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, L=3, M=4, N=5, O=6, P=7, Q=8, R=9, S=1, T=2, U=3, V=4, W=5, X=6, Y=7, Z=8. Add all values and reduce to a single digit.</p>
+   <p>Assign a numerical value to every letter in your full birth name (as written on your birth certificate) using the Chaldean system:</p>
+   <div style="background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;padding:16px 20px;margin:12px 0;font-size:14px;line-height:2;letter-spacing:0.5px;font-family:'DM Sans',sans-serif;">
+     <strong style="color:var(--saffron3)">A=1 &nbsp;B=2 &nbsp;C=3 &nbsp;D=4 &nbsp;E=5 &nbsp;F=8 &nbsp;G=3 &nbsp;H=5 &nbsp;I=1 &nbsp;J=1</strong><br/>
+     <strong style="color:var(--saffron3)">K=2 &nbsp;L=3 &nbsp;M=4 &nbsp;N=5 &nbsp;O=7 &nbsp;P=8 &nbsp;Q=1 &nbsp;R=2 &nbsp;S=3 &nbsp;T=4</strong><br/>
+     <strong style="color:var(--saffron3)">U=6 &nbsp;V=6 &nbsp;W=6 &nbsp;X=5 &nbsp;Y=1 &nbsp;Z=7</strong>
+   </div>
+   <p>Add all the values together and reduce to a single digit (or Master Number 11, 22, 33). For example, for the name <strong>RAHUL</strong> — R(2)+A(1)+H(5)+U(6)+L(3) = 17 → 1+7 = <strong>8</strong>.</p>
    <h2>What Each Destiny Number <em>Reveals</em></h2>
    <p><strong>Destiny 1:</strong> You are here to lead, innovate, and blaze trails. Your purpose is to develop independence, courage, and originality — and to inspire others to do the same.</p>
    <p><strong>Destiny 2:</strong> You are here to unite, mediate, and bring harmony. Your gifts lie in sensitivity, diplomacy, and the ability to see all sides of a situation.</p>
    <p><strong>Destiny 3:</strong> You are here to create, communicate, and inspire joy. Whether through art, words, performance, or teaching — your purpose is to uplift and bring beauty to the world.</p>
    <p><strong>Destiny 4:</strong> You are here to build, organise, and create lasting systems. Your gifts are practicality, reliability, and the patience to construct what others only dream about.</p>
    <p><strong>Destiny 5:</strong> You are here to experience, adapt, and embrace freedom. You teach others that life is meant to be lived fully and that change is not to be feared but celebrated.</p>
-   <p><strong>Destiny 6:</strong> You are here to nurture, heal, and serve. Your gifts are compassion, responsibility, and the ability to create beauty and harmony in your environment and relationships.</p>
+   <p><strong>Destiny 6:</strong> You are here to nurture, heal, and serve. Your gifts are compassion, responsibility, and the ability to create harmony in your environment and relationships.</p>
    <p><strong>Destiny 7:</strong> You are here to seek, analyse, and illuminate truth. Whether through science, philosophy, or spirituality — you are a seeker whose discoveries benefit all of humanity.</p>
-   <p><strong>Destiny 8:</strong> You are here to master the material world with wisdom and integrity. Your gifts are vision, authority, and the capacity to achieve at the highest levels while inspiring others.</p>
-   <p><strong>Destiny 9:</strong> You are here to serve, heal, and complete. Your gifts are wisdom, compassion, and an understanding of the full spectrum of human experience — which you use in service to the greater good.</p>
+   <p><strong>Destiny 8:</strong> You are here to master the material world with wisdom and integrity. Your gifts are vision, authority, and the capacity to achieve at the highest levels.</p>
+   <p><strong>Destiny 9:</strong> You are here to serve, heal, and complete. Your gifts are wisdom, compassion, and an understanding of the full spectrum of human experience — used in service to the greater good.</p>
    <h2>When Life Path and Destiny <em>Align</em></h2>
-   <p>The most fulfilled people are those whose Life Path and Destiny Numbers are in harmony or complement each other. When these two numbers are in conflict, a person often feels torn between who they are naturally and who they feel they are meant to become. A full numerological reading at Disha Consultancy explores this dynamic in depth and provides practical guidance on how to bridge the gap.</p>`,
+   <p>The most fulfilled people are those whose Life Path and Destiny Numbers are in harmony or complement each other. When these two numbers are in conflict, a person often feels torn between who they are naturally and who they feel they are meant to become. A full numerological reading at Disha Consultancy explores this in depth and provides practical guidance on how to bridge the gap.</p>`,
    tag_mr:"अंकशास्त्र",
    title_mr:"डेस्टिनी नंबर: तुमच्या आत्म्याचा खरा उद्देश उघड करणे",
-   content_mr:`<p>लाइफ पाथ नंबर प्रवास वर्णन करतो, तर डेस्टिनी नंबर मंजिल प्रकट करतो. तो पूर्ण जन्म नावावरून मोजला जातो आणि या जन्मात आणलेल्या देणग्या व उद्देश वर्णन करतो.</p><div class="hl">"तुमचा डेस्टिनी नंबर जीवन तुम्हाला काय देते ते नाही. तुम्ही काय बनण्यासाठी येथे आहात ते आहे."</div><h2>प्रत्येक डेस्टिनी नंबर <em>काय प्रकट करतो</em></h2><p><strong>डेस्टिनी १:</strong> नेतृत्व आणि नवोन्मेषासाठी.</p><p><strong>डेस्टिनी ३:</strong> सर्जनशीलता आणि प्रेरणेसाठी.</p><p><strong>डेस्टिनी ६:</strong> पालन आणि सेवेसाठी.</p><p><strong>डेस्टिनी ८:</strong> शहाणपण आणि सचोटीने भौतिक यशासाठी.</p><p><strong>डेस्टिनी ९:</strong> सेवा, बरे करणे आणि पूर्णतेसाठी.</p>`},
+   content_mr:`<p>लाइफ पाथ नंबर प्रवास वर्णन करतो, तर डेस्टिनी नंबर — ज्याला एक्स्प्रेशन नंबर देखील म्हणतात — मंजिल प्रकट करतो. तो तुमच्या पूर्ण जन्म नावावरून मोजला जातो आणि या जन्मात विकसित करण्यासाठी आणि व्यक्त करण्यासाठी आणलेल्या देणग्या, प्रतिभा आणि उद्देश वर्णन करतो.</p>
+   <div class="hl">"तुमचा डेस्टिनी नंबर जीवन तुम्हाला काय देते ते नाही. तुम्ही काय बनण्यासाठी येथे आहात ते आहे — तुमच्या अनोख्या देणग्यांचे सर्वोच्च अभिव्यक्ती."</div>
+   <h2>तुमचा <em>डेस्टिनी नंबर</em> कसा मोजाल</h2>
+   <p>तुमच्या पूर्ण जन्म नावातील प्रत्येक अक्षराला चालडियन पद्धतीनुसार खालील संख्यात्मक मूल्य द्या:</p>
+   <div style="background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;padding:16px 20px;margin:12px 0;font-size:14px;line-height:2;letter-spacing:0.5px;font-family:'DM Sans',sans-serif;">
+     <strong style="color:var(--saffron3)">A=1 &nbsp;B=2 &nbsp;C=3 &nbsp;D=4 &nbsp;E=5 &nbsp;F=8 &nbsp;G=3 &nbsp;H=5 &nbsp;I=1 &nbsp;J=1</strong><br/>
+     <strong style="color:var(--saffron3)">K=2 &nbsp;L=3 &nbsp;M=4 &nbsp;N=5 &nbsp;O=7 &nbsp;P=8 &nbsp;Q=1 &nbsp;R=2 &nbsp;S=3 &nbsp;T=4</strong><br/>
+     <strong style="color:var(--saffron3)">U=6 &nbsp;V=6 &nbsp;W=6 &nbsp;X=5 &nbsp;Y=1 &nbsp;Z=7</strong>
+   </div>
+   <p>सर्व मूल्ये एकत्र जोडा आणि एकल अंकापर्यंत कमी करा (किंवा मास्टर नंबर ११, २२, ३३). उदाहरण: <strong>RAHUL</strong> नावासाठी — R(2)+A(1)+H(5)+U(6)+L(3) = 17 → 1+7 = <strong>8</strong>.</p>
+   <h2>प्रत्येक डेस्टिनी नंबर <em>काय प्रकट करतो</em></h2>
+   <p><strong>डेस्टिनी १:</strong> तुम्ही नेतृत्व, नवोन्मेष आणि मार्ग काढण्यासाठी येथे आहात. स्वातंत्र्य, धैर्य आणि मौलिकता विकसित करणे हा तुमचा उद्देश आहे.</p>
+   <p><strong>डेस्टिनी २:</strong> तुम्ही एकत्र आणण्यासाठी, मध्यस्थी करण्यासाठी आणि सुसंवाद आणण्यासाठी येथे आहात. संवेदनशीलता आणि मुत्सद्देगिरी तुमच्या देणग्या आहेत.</p>
+   <p><strong>डेस्टिनी ३:</strong> तुम्ही तयार करण्यासाठी, संवाद साधण्यासाठी आणि आनंद प्रेरित करण्यासाठी येथे आहात. कला, शब्द, अभिनय किंवा शिकवणी — तुमचा उद्देश जगाला उत्थान आणि सौंदर्य देणे आहे.</p>
+   <p><strong>डेस्टिनी ४:</strong> तुम्ही बांधण्यासाठी, आयोजित करण्यासाठी आणि टिकाऊ प्रणाली तयार करण्यासाठी येथे आहात. व्यावहारिकता, विश्वसनीयता आणि संयम तुमच्या देणग्या आहेत.</p>
+   <p><strong>डेस्टिनी ५:</strong> तुम्ही अनुभव घेण्यासाठी, जुळवून घेण्यासाठी आणि स्वातंत्र्य स्वीकारण्यासाठी येथे आहात. जीवन पूर्णपणे जगायचे आहे आणि बदलाचे स्वागत करायचे आहे हे तुम्ही इतरांना शिकवता.</p>
+   <p><strong>डेस्टिनी ६:</strong> तुम्ही पालन करण्यासाठी, बरे करण्यासाठी आणि सेवा करण्यासाठी येथे आहात. करुणा, जबाबदारी आणि तुमच्या वातावरणात सुसंवाद निर्माण करण्याची क्षमता तुमच्या देणग्या आहेत.</p>
+   <p><strong>डेस्टिनी ७:</strong> तुम्ही शोधण्यासाठी, विश्लेषण करण्यासाठी आणि सत्य प्रकाशित करण्यासाठी येथे आहात. विज्ञान, तत्त्वज्ञान किंवा आध्यात्म — तुम्ही एक शोधक आहात ज्याचे शोध सर्व मानवजातीला फायदा देतात.</p>
+   <p><strong>डेस्टिनी ८:</strong> तुम्ही शहाणपण आणि सचोटीने भौतिक जगावर प्रभुत्व मिळवण्यासाठी येथे आहात. दृष्टी, अधिकार आणि उच्च पातळीवर साध्य करण्याची क्षमता तुमच्या देणग्या आहेत.</p>
+   <p><strong>डेस्टिनी ९:</strong> तुम्ही सेवा करण्यासाठी, बरे करण्यासाठी आणि पूर्ण करण्यासाठी येथे आहात. ज्ञान, करुणा आणि मानवी अनुभवाच्या संपूर्ण स्पेक्ट्रमची समज — मोठ्या भल्यासाठी सेवेत वापरलेली — तुमच्या देणग्या आहेत.</p>
+   <h2>लाइफ पाथ आणि डेस्टिनी <em>जेव्हा जुळतात</em></h2>
+   <p>सर्वात परिपूर्ण लोक ते आहेत ज्यांचे लाइफ पाथ आणि डेस्टिनी नंबर सुसंवादात असतात. जेव्हा हे दोन अंक संघर्षात असतात, तेव्हा व्यक्ती अनेकदा ती नैसर्गिकरित्या कोण आहे आणि ती काय बनायला हवी असे वाटते यामध्ये अडकल्यासारखी वाटते. दिशा कन्सल्टन्सीमधील संपूर्ण न्यूमेरॉलॉजी वाचन हे सखोलपणे शोधते आणि अंतर कसे भरायचे यावर व्यावहारिक मार्गदर्शन देते.</p>`},
 
   {tag:"Vastu Shastra",date:"November 2025 · 6 min read",title:"The Main Entrance in Vastu: Your Home's Gateway to Fortune",
    bg:"linear-gradient(135deg,#B7770D,#8A5A0A)",emoji:"🚪",
@@ -1916,11 +2478,194 @@ function toggleFAQ(idx){
 
 
 
+// ── LIFE PATH CALCULATOR ──
+
+// Populate day dropdown
+(function(){
+  var sel = document.getElementById('calc-day');
+  if(!sel) return;
+  for(var i=1; i<=31; i++){
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = i;
+    sel.appendChild(opt);
+  }
+})();
+
+// Number data EN + MR
+var numData = {
+  1: {
+    name_en:"The Leader", name_mr:"नेता",
+    keyword_en:"INDEPENDENCE · AMBITION · ORIGINALITY",
+    keyword_mr:"स्वातंत्र्य · महत्त्वाकांक्षा · मौलिकता",
+    desc_en:"You are a natural born leader with a strong drive to forge your own path. Independent, ambitious, and original — you thrive when you are in charge and create rather than follow. Your greatest lesson is learning to collaborate while honouring your individuality.",
+    desc_mr:"तुम्ही एक नैसर्गिक नेता आहात ज्याला स्वतःचा मार्ग निर्माण करण्याची तीव्र इच्छा आहे. स्वतंत्र, महत्त्वाकांक्षी आणि मौलिक — तुम्ही तेव्हा भरभराट करता जेव्हा तुम्ही नेतृत्व करता आणि निर्माण करता. तुमचा सर्वात मोठा धडा म्हणजे तुमची वैयक्तिकता जपत सहकार्य करायला शिकणे.",
+    traits_en:["Natural Leader","Self-Reliant","Innovative","Ambitious","Pioneering"],
+    traits_mr:["नैसर्गिक नेता","स्वावलंबी","नाविन्यपूर्ण","महत्त्वाकांक्षी","अग्रगामी"]
+  },
+  2: {
+    name_en:"The Diplomat", name_mr:"राजनयिक",
+    keyword_en:"HARMONY · COOPERATION · INTUITION",
+    keyword_mr:"सुसंवाद · सहकार्य · अंतर्ज्ञान",
+    desc_en:"You are a peacemaker and a natural mediator with extraordinary sensitivity and intuition. You thrive in partnership and bring people together effortlessly. Your superpower is your ability to feel the emotional undercurrents in any situation and find common ground.",
+    desc_mr:"तुम्ही एक शांतीदूत आणि नैसर्गिक मध्यस्थ आहात ज्याला असाधारण संवेदनशीलता आणि अंतर्ज्ञान आहे. तुम्ही भागीदारीत भरभराट करता आणि लोकांना सहजपणे एकत्र आणता. तुमची महाशक्ती म्हणजे कोणत्याही परिस्थितीत भावनिक प्रवाह जाणण्याची क्षमता.",
+    traits_en:["Empathetic","Diplomatic","Cooperative","Intuitive","Patient"],
+    traits_mr:["सहानुभूतीशील","मुत्सद्दी","सहकारी","अंतर्ज्ञानी","संयमी"]
+  },
+  3: {
+    name_en:"The Creator", name_mr:"निर्माता",
+    keyword_en:"CREATIVITY · EXPRESSION · JOY",
+    keyword_mr:"सर्जनशीलता · अभिव्यक्ती · आनंद",
+    desc_en:"You are a natural communicator, artist, and inspirer. Joyful, expressive, and imaginative — you have a gift for uplifting others and bringing beauty into the world. You thrive when given creative freedom and when you can share your authentic voice with the world.",
+    desc_mr:"तुम्ही एक नैसर्गिक संवादक, कलाकार आणि प्रेरक आहात. आनंदी, अभिव्यक्तिशील आणि कल्पनाशील — तुम्हाला इतरांना उत्थान देण्याची आणि जगात सौंदर्य आणण्याची देणगी आहे.",
+    traits_en:["Creative","Expressive","Optimistic","Charming","Artistic"],
+    traits_mr:["सर्जनशील","अभिव्यक्तिशील","आशावादी","आकर्षक","कलात्मक"]
+  },
+  4: {
+    name_en:"The Builder", name_mr:"बांधणारा",
+    keyword_en:"STABILITY · DISCIPLINE · HARD WORK",
+    keyword_mr:"स्थिरता · शिस्त · कठोर परिश्रम",
+    desc_en:"You are the foundation builder — disciplined, reliable, and hardworking. You excel at creating lasting structures in life, whether in business, relationships, or personal goals. Your greatest strength is your extraordinary capacity for sustained effort and attention to detail.",
+    desc_mr:"तुम्ही पायाभूत बांधणारे आहात — शिस्तबद्ध, विश्वासार्ह आणि कठोर परिश्रमी. तुम्ही जीवनात टिकाऊ संरचना तयार करण्यात उत्कृष्ट आहात. तुमची सर्वात मोठी शक्ती म्हणजे सततच्या प्रयत्नाची असाधारण क्षमता.",
+    traits_en:["Disciplined","Reliable","Hardworking","Practical","Patient"],
+    traits_mr:["शिस्तबद्ध","विश्वासार्ह","कठोर परिश्रमी","व्यावहारिक","संयमी"]
+  },
+  5: {
+    name_en:"The Explorer", name_mr:"अन्वेषक",
+    keyword_en:"FREEDOM · CHANGE · ADVENTURE",
+    keyword_mr:"स्वातंत्र्य · बदल · साहस",
+    desc_en:"You are a freedom-seeker born to experience the full breadth of life. Adaptable, adventurous, and magnetic — you thrive on variety and change. Your gift is your ability to embrace the new, inspire others with your boldness, and find opportunity where others see only uncertainty.",
+    desc_mr:"तुम्ही स्वातंत्र्य शोधणारे आहात जे जीवनाची पूर्ण व्याप्ती अनुभवण्यासाठी जन्मलेले आहेत. जुळवून घेणारे, साहसी आणि आकर्षक — तुम्ही विविधता आणि बदलात भरभराट करता.",
+    traits_en:["Adventurous","Adaptable","Magnetic","Curious","Dynamic"],
+    traits_mr:["साहसी","जुळवून घेणारे","आकर्षक","जिज्ञासू","गतिशील"]
+  },
+  6: {
+    name_en:"The Nurturer", name_mr:"पालनकर्ता",
+    keyword_en:"LOVE · RESPONSIBILITY · HEALING",
+    keyword_mr:"प्रेम · जबाबदारी · उपचार",
+    desc_en:"You are a natural caregiver with a deep sense of responsibility and a loving heart. Family, community, and harmony are central to your life's purpose. You have a remarkable ability to heal, counsel, and create beauty — and people naturally seek your warmth and guidance.",
+    desc_mr:"तुम्ही एक नैसर्गिक काळजी घेणारे आहात ज्याला जबाबदारीची खोल भावना आणि प्रेमळ हृदय आहे. कुटुंब, समुदाय आणि सुसंवाद हे तुमच्या जीवनाच्या उद्देशाच्या केंद्रस्थानी आहेत.",
+    traits_en:["Caring","Responsible","Harmonious","Protective","Compassionate"],
+    traits_mr:["काळजी घेणारे","जबाबदार","सुसंवादी","संरक्षक","दयाळू"]
+  },
+  7: {
+    name_en:"The Seeker", name_mr:"शोधक",
+    keyword_en:"WISDOM · ANALYSIS · SPIRITUALITY",
+    keyword_mr:"ज्ञान · विश्लेषण · आध्यात्म",
+    desc_en:"You are a truth-seeker and a natural philosopher with a deeply analytical and spiritual mind. You thrive in solitude, research, and introspection. Your path is one of continual deepening — the more you honour your need for inner stillness and knowledge, the more wisdom you gain to share with the world.",
+    desc_mr:"तुम्ही एक सत्य शोधणारे आणि नैसर्गिक तत्त्वज्ञ आहात ज्याला खोलवर विश्लेषणात्मक आणि आध्यात्मिक मन आहे. तुम्ही एकांत, संशोधन आणि आत्मपरीक्षणात भरभराट करता.",
+    traits_en:["Analytical","Spiritual","Introspective","Wise","Perceptive"],
+    traits_mr:["विश्लेषणात्मक","आध्यात्मिक","आत्मपरीक्षणशील","शहाणे","तीव्र दृष्टी"]
+  },
+  8: {
+    name_en:"The Achiever", name_mr:"साधक",
+    keyword_en:"POWER · ABUNDANCE · KARMA",
+    keyword_mr:"शक्ती · विपुलता · कर्म",
+    desc_en:"You are a powerhouse born with the potential for extraordinary material and professional success. Ambitious, authoritative, and business-minded — you have an innate understanding of how power and resources flow in the world. Your greatest lesson is using your power with integrity and generosity.",
+    desc_mr:"तुम्ही असाधारण भौतिक आणि व्यावसायिक यशाच्या क्षमतेसह जन्मलेले एक शक्तिशाली व्यक्ती आहात. महत्त्वाकांक्षी, अधिकारी आणि व्यवसाय-मनाचे — तुम्हाला जगात शक्ती आणि संसाधने कसे वाहतात याची जन्मजात समज आहे.",
+    traits_en:["Ambitious","Authoritative","Business-minded","Resilient","Strategic"],
+    traits_mr:["महत्त्वाकांक्षी","अधिकारी","व्यवसाय-मनाचे","लवचिक","धोरणात्मक"]
+  },
+  9: {
+    name_en:"The Humanitarian", name_mr:"मानवतावादी",
+    keyword_en:"COMPASSION · SERVICE · WISDOM",
+    keyword_mr:"करुणा · सेवा · ज्ञान",
+    desc_en:"You are the old soul of numerology — compassionate, wise, and deeply connected to the greater good. Your purpose is one of service, healing, and inspiration. You have walked many paths and carry a wisdom that others sense and are drawn to. Your greatest fulfilment comes from giving generously without expectation.",
+    desc_mr:"तुम्ही न्यूमेरॉलॉजीचे जुने आत्मे आहात — दयाळू, शहाणे आणि मोठ्या भल्याशी खोलवर जोडलेले. तुमचा उद्देश सेवा, उपचार आणि प्रेरणा आहे.",
+    traits_en:["Compassionate","Wise","Selfless","Inspiring","Universal"],
+    traits_mr:["दयाळू","शहाणे","निःस्वार्थी","प्रेरणादायी","सार्वत्रिक"]
+  },
+  11: {
+    name_en:"The Visionary", name_mr:"दूरदर्शी",
+    keyword_en:"INSPIRATION · INTUITION · ILLUMINATION",
+    keyword_mr:"प्रेरणा · अंतर्ज्ञान · प्रकाशन",
+    desc_en:"You carry one of the three Master Numbers — a number of extraordinary spiritual potential and heightened sensitivity. You are here to inspire, illuminate, and uplift humanity. Your intuition borders on psychic and your ideas, when trusted and acted upon, have the power to change lives.",
+    desc_mr:"तुम्ही तीन मास्टर नंबरपैकी एक वाहता — असाधारण आध्यात्मिक क्षमता आणि वाढीव संवेदनशीलतेचा अंक. तुम्ही मानवतेला प्रेरित, प्रकाशित आणि उत्थान करण्यासाठी येथे आहात.",
+    traits_en:["Highly Intuitive","Inspirational","Idealistic","Sensitive","Master Number"],
+    traits_mr:["अत्यंत अंतर्ज्ञानी","प्रेरणादायी","आदर्शवादी","संवेदनशील","मास्टर नंबर"]
+  },
+  22: {
+    name_en:"The Master Builder", name_mr:"मास्टर बांधणारा",
+    keyword_en:"VISION · MASTERY · TRANSFORMATION",
+    keyword_mr:"दृष्टी · प्रभुत्व · परिवर्तन",
+    desc_en:"You carry the most powerful Master Number — the number of the Master Builder. You have the rare ability to turn the greatest dreams into reality. You are here to build something lasting that serves humanity on a large scale. With great power comes great responsibility — and that is your path.",
+    desc_mr:"तुम्ही सर्वात शक्तिशाली मास्टर नंबर वाहता — मास्टर बांधणाऱ्याचा अंक. तुमच्याकडे सर्वात मोठी स्वप्ने वास्तवात बदलण्याची दुर्मिळ क्षमता आहे.",
+    traits_en:["Visionary","Powerful","Master Builder","Transformative","Master Number"],
+    traits_mr:["दूरदर्शी","शक्तिशाली","मास्टर बांधणारा","परिवर्तनशील","मास्टर नंबर"]
+  },
+  33: {
+    name_en:"The Master Teacher", name_mr:"मास्टर शिक्षक",
+    keyword_en:"HEALING · TEACHING · COMPASSION",
+    keyword_mr:"उपचार · शिक्षण · करुणा",
+    desc_en:"You carry the rarest Master Number — the number of the Master Teacher. Your life is dedicated to the upliftment and healing of others. You embody the highest expression of love and compassion, and your purpose is to nurture, guide, and inspire humanity through your own example.",
+    desc_mr:"तुम्ही सर्वात दुर्मिळ मास्टर नंबर वाहता — मास्टर शिक्षकाचा अंक. तुमचे जीवन इतरांच्या उत्थान आणि उपचारासाठी समर्पित आहे.",
+    traits_en:["Master Healer","Nurturing","Selfless Teacher","Compassionate","Master Number"],
+    traits_mr:["मास्टर उपचारक","पालन करणारे","निःस्वार्थ शिक्षक","दयाळू","मास्टर नंबर"]
+  }
+};
+
+function reduceNum(n){
+  // Keep master numbers 11, 22, 33
+  if(n === 11 || n === 22 || n === 33) return n;
+  while(n > 9){
+    var s = 0;
+    while(n > 0){ s += n % 10; n = Math.floor(n/10); }
+    n = s;
+    if(n === 11 || n === 22 || n === 33) return n;
+  }
+  return n;
+}
+
+function calcLifePath(){
+  var day   = parseInt(document.getElementById('calc-day').value);
+  var month = parseInt(document.getElementById('calc-month').value);
+  var year  = parseInt(document.getElementById('calc-year').value);
+
+  if(!day || !month || !year || year < 1900 || year > 2025){
+    var yrEl = document.getElementById('calc-year');
+    yrEl.style.borderColor = 'var(--lotus)';
+    yrEl.focus();
+    setTimeout(function(){ yrEl.style.borderColor = ''; }, 2000);
+    return;
+  }
+
+  // Sum all digits of day + month + year separately then reduce
+  function digitSum(n){
+    var s = 0;
+    String(n).split('').forEach(function(d){ s += parseInt(d); });
+    return s;
+  }
+
+  var total = digitSum(day) + digitSum(month) + digitSum(year);
+  var lp = reduceNum(total);
+
+  // Show result
+  var isMr = document.body.classList.contains('marathi');
+  var data = numData[lp];
+  if(!data) return;
+
+  document.getElementById('result-num').textContent   = lp;
+  document.getElementById('result-name').textContent  = isMr ? data.name_mr : data.name_en;
+  document.getElementById('result-keyword').textContent = isMr ? data.keyword_mr : data.keyword_en;
+  document.getElementById('result-desc').textContent  = isMr ? data.desc_mr : data.desc_en;
+
+  var traitsEl = document.getElementById('result-traits');
+  var traits = isMr ? data.traits_mr : data.traits_en;
+  traitsEl.innerHTML = traits.map(function(t){
+    return '<span class="result-trait">'+t+'</span>';
+  }).join('');
+
+  var resultEl = document.getElementById('calc-result');
+  resultEl.classList.add('show');
+  setTimeout(function(){ resultEl.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 100);
+}
 // ── INIT: runs after all code including blogData is parsed ──
 (function(){
   var saved = localStorage.getItem('disha-lang');
   if(saved === 'mr'){ setLang('mr'); } else { renderBlogCards(); renderFAQ(); }
 })();
+
+
 
 </script>
 
