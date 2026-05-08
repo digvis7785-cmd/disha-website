@@ -988,7 +988,6 @@ body.marathi span.en { display: none; }
     <a onclick="goTo('blog')"><span class="en">Blog</span><span class="mr">लेख</span></a>
     <a onclick="goTo('testimonials')"><span class="en">Testimonials</span><span class="mr">प्रशंसापत्रे</span></a>
     <a onclick="goTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
-    <a onclick="goTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
     <a onclick="goTo('faq')"><span class="en">FAQ</span><span class="mr">प्रश्न</span></a>
     <a class="nav-book" onclick="goTo('contact')"><span class="en">Book a Session</span><span class="mr">सत्र बुक करा</span></a>
   </div>
@@ -1001,7 +1000,6 @@ body.marathi span.en { display: none; }
   <a onclick="mobileGoTo('process')"><span class="en">How It Works</span><span class="mr">कसे कार्य करते</span></a>
   <a onclick="goTo('blog')"><span class="en">Blog & Articles</span><span class="mr">लेख</span></a>
   <a onclick="mobileGoTo('testimonials')"><span class="en">Testimonials</span><span class="mr">प्रशंसापत्रे</span></a>
-  <a onclick="mobileGoTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
   <a onclick="mobileGoTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
   <a onclick="mobileGoTo('faq')"><span class="en">FAQ</span><span class="mr">वारंवार प्रश्न</span></a>
   <a onclick="mobileGoTo('contact')"><span class="en">Contact Us</span><span class="mr">संपर्क करा</span></a>
@@ -1189,140 +1187,6 @@ body.marathi span.en { display: none; }
 
 
 
-<!-- ══ NUMEROLOGY CALCULATOR ══ -->
-<section id="calculator">
-  <div class="sh">
-    <span class="stag"><span class="en">Free Tool</span><span class="mr">मोफत साधन</span></span>
-    <h2><span class="en">Free Numerology <em>Calculator</em></span><span class="mr">मोफत न्यूमेरॉलॉजी <em>कॅल्क्युलेटर</em></span></h2>
-    <p><span class="en">Discover your Life Path Number or Destiny Number instantly. For a complete personalised reading, book a consultation.</span>
-    <span class="mr">तुमचा लाइफ पाथ नंबर किंवा डेस्टिनी नंबर त्वरित शोधा. संपूर्ण वैयक्तिक वाचनासाठी, सल्लामसलत बुक करा.</span></p>
-  </div>
-  <div class="calc-wrap">
-    <div class="calc-card">
-
-      <!-- TABS -->
-      <div class="calc-tabs">
-        <button class="calc-tab active" onclick="switchCalc('lifepath',this)">
-          <span class="en">🔢 Life Path Number</span><span class="mr">🔢 लाइफ पाथ नंबर</span>
-        </button>
-        <button class="calc-tab" onclick="switchCalc('destiny',this)">
-          <span class="en">✨ Destiny Number</span><span class="mr">✨ डेस्टिनी नंबर</span>
-        </button>
-        <button class="calc-tab" onclick="switchCalc('mobile',this)">
-          <span class="en">📱 Mobile Number</span><span class="mr">📱 मोबाइल नंबर</span>
-        </button>
-      </div>
-
-      <!-- LIFE PATH PANEL -->
-      <div class="calc-panel active" id="panel-lifepath">
-        <div class="calc-field">
-          <label><span class="en">Your Date of Birth</span><span class="mr">तुमची जन्मतारीख</span></label>
-          <input type="date" id="lp-dob" max="2010-12-31"/>
-        </div>
-        <div class="calc-error" id="lp-error">
-          <span class="en">Please enter your date of birth</span>
-          <span class="mr">कृपया जन्मतारीख टाका</span>
-        </div>
-        <button class="calc-btn" onclick="calcLifePath()">
-          <span class="en">Calculate My Life Path Number →</span>
-          <span class="mr">माझा लाइफ पाथ नंबर शोधा →</span>
-        </button>
-        <div class="calc-result" id="lp-result">
-          <div class="result-header">
-            <div class="result-number" id="lp-num">7</div>
-            <div class="result-label"><span class="en">Your Life Path Number</span><span class="mr">तुमचा लाइफ पाथ नंबर</span></div>
-          </div>
-          <div class="result-body">
-            <div class="result-name" id="lp-name"></div>
-            <div class="result-desc" id="lp-desc"></div>
-            <div class="result-traits" id="lp-traits"></div>
-            <div class="result-cta">
-              <p><span class="en">This is just a glimpse. A full consultation reveals your Destiny Number, Soul Urge, Personal Year cycle, and personalised guidance for your life.</span>
-              <span class="mr">हे फक्त एक झलक आहे. पूर्ण सल्लामसलत तुमचा डेस्टिनी नंबर, सोल अर्ज, वैयक्तिक वर्ष चक्र आणि वैयक्तिक मार्गदर्शन प्रकट करते.</span></p>
-              <button class="calc-btn" style="max-width:280px;margin:0 auto;display:block;" onclick="goTo('contact')">
-                <span class="en">🙏 Book a Full Reading</span><span class="mr">🙏 पूर्ण वाचन बुक करा</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <p class="calc-note"><span class="en">Your data is not stored. This calculator is for general guidance only.</span><span class="mr">तुमचा डेटा साठवला जात नाही. हे कॅल्क्युलेटर सामान्य मार्गदर्शनासाठी आहे.</span></p>
-      </div>
-
-      <!-- DESTINY PANEL -->
-      <div class="calc-panel" id="panel-destiny">
-        <div class="calc-field">
-          <label><span class="en">Your Full Birth Name (as on birth certificate)</span><span class="mr">तुमचे पूर्ण जन्म नाव (जन्म दाखल्यावर असलेले)</span></label>
-          <input type="text" id="dn-name" placeholder="e.g. Rahul Sharma"/>
-        </div>
-        <div class="calc-error" id="dn-error">
-          <span class="en">Please enter your full birth name</span>
-          <span class="mr">कृपया पूर्ण जन्म नाव टाका</span>
-        </div>
-        <button class="calc-btn" onclick="calcDestiny()">
-          <span class="en">Calculate My Destiny Number →</span>
-          <span class="mr">माझा डेस्टिनी नंबर शोधा →</span>
-        </button>
-        <div class="calc-result" id="dn-result">
-          <div class="result-header">
-            <div class="result-number" id="dn-num">3</div>
-            <div class="result-label"><span class="en">Your Destiny Number</span><span class="mr">तुमचा डेस्टिनी नंबर</span></div>
-          </div>
-          <div class="result-body">
-            <div class="result-name" id="dn-name-result"></div>
-            <div class="result-desc" id="dn-desc"></div>
-            <div class="result-traits" id="dn-traits"></div>
-            <div class="result-cta">
-              <p><span class="en">Want to know if your name is aligned with your destiny? A Name Correction consultation analyses the harmony between your name and Life Path Number.</span>
-              <span class="mr">तुमचे नाव तुमच्या नशिबाशी जुळलेले आहे का हे जाणून घ्यायचे आहे? नाव सुधारणा सल्लामसलत तुमचे नाव आणि लाइफ पाथ नंबर यांच्यातील सुसंवाद विश्लेषण करते.</span></p>
-              <button class="calc-btn" style="max-width:280px;margin:0 auto;display:block;" onclick="goTo('contact')">
-                <span class="en">🙏 Book a Name Correction</span><span class="mr">🙏 नाव सुधारणा बुक करा</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <p class="calc-note"><span class="en">Your data is not stored. This calculator is for general guidance only.</span><span class="mr">तुमचा डेटा साठवला जात नाही. हे कॅल्क्युलेटर सामान्य मार्गदर्शनासाठी आहे.</span></p>
-      </div>
-
-      <!-- MOBILE NUMBER PANEL -->
-      <div class="calc-panel" id="panel-mobile">
-        <div class="calc-field">
-          <label><span class="en">Your 10-digit Mobile Number</span><span class="mr">तुमचा १०-अंकी मोबाइल नंबर</span></label>
-          <input type="tel" id="mob-num" placeholder="e.g. 9876543210" maxlength="10"/>
-        </div>
-        <div class="calc-error" id="mob-error">
-          <span class="en">Please enter a valid 10-digit mobile number</span>
-          <span class="mr">कृपया वैध १०-अंकी मोबाइल नंबर टाका</span>
-        </div>
-        <button class="calc-btn" onclick="calcMobile()">
-          <span class="en">Analyse My Mobile Number →</span>
-          <span class="mr">माझा मोबाइल नंबर विश्लेषण करा →</span>
-        </button>
-        <div class="calc-result" id="mob-result">
-          <div class="result-header">
-            <div class="result-number" id="mob-num-result">8</div>
-            <div class="result-label"><span class="en">Your Mobile Number Value</span><span class="mr">तुमच्या मोबाइल नंबरचे मूल्य</span></div>
-          </div>
-          <div class="result-body">
-            <div class="result-name" id="mob-name"></div>
-            <div class="result-desc" id="mob-desc"></div>
-            <div class="result-traits" id="mob-traits"></div>
-            <div class="result-cta">
-              <p><span class="en">Is your mobile number truly aligned with your Life Path? A personalised Number Analysis consultation reveals the full picture and suggests better alternatives if needed.</span>
-              <span class="mr">तुमचा मोबाइल नंबर खरोखर तुमच्या लाइफ पाथशी जुळलेला आहे का? वैयक्तिक नंबर विश्लेषण सल्लामसलत पूर्ण चित्र प्रकट करते.</span></p>
-              <button class="calc-btn" style="max-width:280px;margin:0 auto;display:block;" onclick="goTo('contact')">
-                <span class="en">🙏 Book a Number Analysis</span><span class="mr">🙏 नंबर विश्लेषण बुक करा</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <p class="calc-note"><span class="en">Your data is not stored. This calculator is for general guidance only.</span><span class="mr">तुमचा डेटा साठवला जात नाही. हे कॅल्क्युलेटर सामान्य मार्गदर्शनासाठी आहे.</span></p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
 <!-- ══ LIFE PATH CALCULATOR ══ -->
 <section id="calculator">
   <div class="sh">
@@ -1408,7 +1272,6 @@ body.marathi span.en { display: none; }
     </div>
     <div class="fcol"><h5><span class="en">Services</span><span class="mr">सेवा</span></h5><a onclick="goTo('services')">Numerology Reading</a><a onclick="goTo('services')">Vastu Consultation</a><a onclick="goTo('services')">Name Correction</a><a onclick="goTo('services')">Number Analysis</a></div>
     <div class="fcol"><h5><span class="en">Quick Links</span><span class="mr">द्रुत दुवे</span></h5><a onclick="goTo('about')"><span class="en">About Us</span><span class="mr">आमच्याबद्दल</span></a><a onclick="goTo('process')"><span class="en">How It Works</span><span class="mr">कसे कार्य करते</span></a><a onclick="goTo('blog')"><span class="en">Articles & Blog</span><span class="mr">लेख</span></a><a onclick="goTo('testimonials')"><span class="en">Testimonials</span><span class="mr">प्रशंसापत्रे</span></a>
-    <a onclick="goTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
     <a onclick="goTo('calculator')"><span class="en">Calculator</span><span class="mr">कॅल्क्युलेटर</span></a>
     <a onclick="goTo('faq')"><span class="en">FAQ</span><span class="mr">प्रश्न</span></a></div>
     <div class="fcol"><h5><span class="en">Contact</span><span class="mr">संपर्क</span></h5><a href="mailto:dishanumerovaastu@gmail.com"><span class="en">Email Us</span><span class="mr">ईमेल करा</span></a><a href="https://wa.me/917219612011" target="_blank"><span class="en">WhatsApp Us</span><span class="mr">WhatsApp करा</span></a><a onclick="goTo('contact')"><span class="en">Book a Session</span><span class="mr">सत्र बुक करा</span></a></div>
