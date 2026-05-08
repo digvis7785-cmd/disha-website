@@ -290,6 +290,156 @@ function switchCalc(type, btn) {
 }
 
 
+
+function calcLifePath() {
+  var dob = document.getElementById('lp-dob').value;
+  var err = document.getElementById('lp-error');
+  if(!dob) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('lp-result').classList.remove('show');
+  var parts = dob.split('-');
+  var y = parts[0], m = parts[1], d = parts[2];
+  var digits = (y+m+d).split('').map(Number);
+  var sum = digits.reduce(function(a,b){return a+b;}, 0);
+  var num = reduceNum(sum);
+  showResult(num, 'lp');
+}
+
+function calcDestiny() {
+  var name = document.getElementById('dn-name').value.trim().toUpperCase();
+  var err = document.getElementById('dn-error');
+  if(!name) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('dn-result').classList.remove('show');
+  var sum = 0;
+  name.split('').forEach(function(c){ if(letterVals[c]) sum += letterVals[c]; });
+  var num = reduceNum(sum);
+  showResult(num, 'dn');
+}
+
+function calcMobile() {
+  var mob = document.getElementById('mob-num').value.trim().replace(/\D/g,'');
+  var err = document.getElementById('mob-error');
+  if(mob.length !== 10) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('mob-result').classList.remove('show');
+  var sum = mob.split('').map(Number).reduce(function(a,b){return a+b;},0);
+  var num = reduceNum(sum);
+  // Mobile number uses single digit only (no master numbers)
+  while(num > 9) { var s=0; String(num).split('').forEach(function(d){s+=parseInt(d);}); num=s; }
+  showResult(num, 'mob');
+}
+
+function switchCalc(type, btn) {
+  document.querySelectorAll('.calc-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.calc-panel').forEach(function(p){ p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('panel-'+type).classList.add('active');
+  // Clear results
+  document.querySelectorAll('.calc-result').forEach(function(r){ r.classList.remove('show'); });
+}
+
+
+function calcDestiny() {
+  var name = document.getElementById('dn-name').value.trim().toUpperCase();
+  var err = document.getElementById('dn-error');
+  if(!name) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('dn-result').classList.remove('show');
+  var sum = 0;
+  name.split('').forEach(function(c){ if(letterVals[c]) sum += letterVals[c]; });
+  var num = reduceNum(sum);
+  showResult(num, 'dn');
+}
+
+function calcMobile() {
+  var mob = document.getElementById('mob-num').value.trim().replace(/\D/g,'');
+  var err = document.getElementById('mob-error');
+  if(mob.length !== 10) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('mob-result').classList.remove('show');
+  var sum = mob.split('').map(Number).reduce(function(a,b){return a+b;},0);
+  var num = reduceNum(sum);
+  // Mobile number uses single digit only (no master numbers)
+  while(num > 9) { var s=0; String(num).split('').forEach(function(d){s+=parseInt(d);}); num=s; }
+  showResult(num, 'mob');
+}
+
+function switchCalc(type, btn) {
+  document.querySelectorAll('.calc-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.calc-panel').forEach(function(p){ p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('panel-'+type).classList.add('active');
+  // Clear results
+  document.querySelectorAll('.calc-result').forEach(function(r){ r.classList.remove('show'); });
+}
+
+
+
+// ── CALCULATOR TAB SWITCHER ──
+function switchTab(tab){
+  var tabs = ['lp','dn'];
+  tabs.forEach(function(t){
+    var btn = document.getElementById('tab-'+t);
+    var panel = document.getElementById('panel-'+t);
+    if(t === tab){
+      btn.classList.add('active');
+      panel.style.display = 'block';
+    } else {
+      btn.classList.remove('active');
+      panel.style.display = 'none';
+    }
+  });
+}
+
+// ── DESTINY NUMBER CALCULATOR (Chaldean) ──
+var chaldean = {
+  A:1,B:2,C:3,D:4,E:5,F:8,G:3,H:5,I:1,J:1,
+  K:2,L:3,M:4,N:5,O:7,P:8,Q:1,R:2,S:3,T:4,
+  U:6,V:6,W:6,X:5,Y:1,Z:7
+};
+
+function calcDestiny(){
+  var nameEl = document.getElementById('calc-name');
+  var name = nameEl.value.trim().toUpperCase();
+  if(!name){
+    nameEl.style.borderColor = 'var(--lotus)';
+    nameEl.focus();
+    setTimeout(function(){ nameEl.style.borderColor = ''; }, 2000);
+    return;
+  }
+
+  var total = 0;
+  var letters = name.replace(/[^A-Z]/g, '');
+  for(var i = 0; i < letters.length; i++){
+    total += chaldean[letters[i]] || 0;
+  }
+  var dn = reduceNum(total);
+  showResult('dn', dn);
+}
+
+// ── SHOW RESULT (shared for both calculators) ──
+function showResult(type, num){
+  var isMr = document.body.classList.contains('marathi');
+  var data = numData[num];
+  if(!data) return;
+
+  document.getElementById(type+'-num').textContent     = num;
+  document.getElementById(type+'-name').textContent    = isMr ? data.name_mr : data.name_en;
+  document.getElementById(type+'-keyword').textContent = isMr ? data.keyword_mr : data.keyword_en;
+  document.getElementById(type+'-desc').textContent    = isMr ? data.desc_mr : data.desc_en;
+
+  var traitsEl = document.getElementById(type+'-traits');
+  var traits = isMr ? data.traits_mr : data.traits_en;
+  traitsEl.innerHTML = traits.map(function(t){
+    return '<span class="result-trait">'+t+'</span>';
+  }).join('');
+
+  var resultEl = document.getElementById(type+'-result');
+  resultEl.classList.add('show');
+  setTimeout(function(){ resultEl.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 100);
+}
+
 </script>
 
 <!-- ── FAQ SCHEMA ── -->
@@ -944,7 +1094,15 @@ body.marathi span.en { display: none; }
   .result-top{flex-direction:column;text-align:center;}
   .result-cta{flex-direction:column;text-align:center;}
 }
-</style>
+
+.calc-tabs{display:flex;border-bottom:1.5px solid var(--border);}
+.calc-tab{flex:1;padding:16px 12px;border:none;background:transparent;color:var(--text3);font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all 0.2s;border-bottom:2px solid transparent;margin-bottom:-1.5px;}
+.calc-tab.active{color:var(--saffron);border-bottom-color:var(--saffron);background:rgba(240,145,42,0.04);}
+.calc-tab:hover:not(.active){color:var(--text1);}
+.calc-panel{padding:0;}
+.result-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:100px;background:rgba(240,145,42,0.1);color:var(--saffron3);border:1px solid var(--border2);margin-bottom:20px;}
+.calc-desc{background:rgba(240,145,42,0.06);border:1.5px solid rgba(240,145,42,0.2);border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:14px;color:var(--text2);line-height:1.75;}
+.calc-desc strong{color:var(--text1);}</style>
 </head>
 <body>
 
@@ -1187,62 +1345,133 @@ body.marathi span.en { display: none; }
 
 
 
-<!-- ══ LIFE PATH CALCULATOR ══ -->
+<!-- ══ NUMEROLOGY CALCULATOR ══ -->
 <section id="calculator">
   <div class="sh">
     <span class="stag"><span class="en">Free Tool</span><span class="mr">मोफत साधन</span></span>
-    <h2><span class="en">Life Path Number <em>Calculator</em></span><span class="mr">लाइफ पाथ नंबर <em>कॅल्क्युलेटर</em></span></h2>
-    <p><span class="en">Discover your Life Path Number instantly — the most important number in your numerology chart.</span><span class="mr">तुमचा लाइफ पाथ नंबर तत्काळ शोधा — तुमच्या न्यूमेरॉलॉजी चार्टमधील सर्वात महत्त्वाचा अंक.</span></p>
+    <h2><span class="en">Numerology <em>Calculator</em></span><span class="mr">न्यूमेरॉलॉजी <em>कॅल्क्युलेटर</em></span></h2>
+    <p><span class="en">Discover your Life Path and Destiny Numbers instantly — two of the most important numbers in your chart.</span><span class="mr">तुमचे लाइफ पाथ आणि डेस्टिनी नंबर तत्काळ शोधा — तुमच्या चार्टमधील दोन सर्वात महत्त्वाचे अंक.</span></p>
   </div>
   <div class="calc-wrap">
     <div class="calc-card">
-      <div class="calc-input-area">
-        <label><span class="en">Enter Your Date of Birth</span><span class="mr">तुमची जन्मतारीख टाका</span></label>
-        <div class="calc-dob">
-          <select id="calc-day">
-            <option value="">Day</option>
-          </select>
-          <select id="calc-month">
-            <option value="">Month</option>
-            <option value="1">January</option><option value="2">February</option>
-            <option value="3">March</option><option value="4">April</option>
-            <option value="5">May</option><option value="6">June</option>
-            <option value="7">July</option><option value="8">August</option>
-            <option value="9">September</option><option value="10">October</option>
-            <option value="11">November</option><option value="12">December</option>
-          </select>
-          <input type="number" id="calc-year" placeholder="Year (e.g. 1990)" min="1900" max="2024" style="min-width:140px;"/>
-        </div>
-        <div class="calc-steps">
-          <div class="calc-step-num">1</div>
-          <span><span class="en">Select day, month and enter birth year</span><span class="mr">दिवस, महिना निवडा आणि जन्म वर्ष टाका</span></span>
-          <span style="margin:0 4px;color:var(--border2)">·</span>
-          <div class="calc-step-num">2</div>
-          <span><span class="en">Click Calculate</span><span class="mr">कॅल्क्युलेट क्लिक करा</span></span>
-        </div>
-        <button class="calc-btn" onclick="calcLifePath()">
-          <span class="en">🔢 Calculate My Life Path Number</span>
-          <span class="mr">🔢 माझा लाइफ पाथ नंबर शोधा</span>
+
+      <!-- TABS -->
+      <div class="calc-tabs">
+        <button class="calc-tab active" id="tab-lp" onclick="switchTab('lp')">
+          <span class="en">🔢 Life Path Number</span><span class="mr">🔢 लाइफ पाथ नंबर</span>
+        </button>
+        <button class="calc-tab" id="tab-dn" onclick="switchTab('dn')">
+          <span class="en">✨ Destiny Number</span><span class="mr">✨ डेस्टिनी नंबर</span>
         </button>
       </div>
-      <div class="calc-result" id="calc-result">
-        <div class="result-top">
-          <div class="result-number" id="result-num">7</div>
-          <div class="result-meta">
-            <div class="result-name" id="result-name">The Seeker</div>
-            <div class="result-keyword" id="result-keyword">WISDOM · ANALYSIS · SPIRITUALITY</div>
+
+      <!-- LIFE PATH PANEL -->
+      <div class="calc-panel" id="panel-lp">
+        <div class="calc-input-area">
+          <div class="calc-desc">
+            <span class="en">📅 <strong>Life Path Number</strong> is calculated from your <strong>date of birth</strong>. It is the most important number in numerology — revealing your core purpose, natural strengths, and the path your soul chose for this lifetime.</span>
+            <span class="mr">📅 <strong>लाइफ पाथ नंबर</strong> तुमच्या <strong>जन्मतारखेवरून</strong> मोजला जातो. हा न्यूमेरॉलॉजीतील सर्वात महत्त्वाचा अंक आहे — तुमचा मूळ उद्देश, नैसर्गिक शक्ती आणि तुमच्या आत्म्याने या जीवनासाठी निवडलेला मार्ग प्रकट करतो.</span>
+          </div>
+          <label><span class="en">Enter Your Date of Birth</span><span class="mr">तुमची जन्मतारीख टाका</span></label>
+          <div class="calc-dob">
+            <select id="calc-day"><option value="">Day / दिवस</option></select>
+            <select id="calc-month">
+              <option value="">Month / महिना</option>
+              <option value="1">January / जानेवारी</option>
+              <option value="2">February / फेब्रुवारी</option>
+              <option value="3">March / मार्च</option>
+              <option value="4">April / एप्रिल</option>
+              <option value="5">May / मे</option>
+              <option value="6">June / जून</option>
+              <option value="7">July / जुलै</option>
+              <option value="8">August / ऑगस्ट</option>
+              <option value="9">September / सप्टेंबर</option>
+              <option value="10">October / ऑक्टोबर</option>
+              <option value="11">November / नोव्हेंबर</option>
+              <option value="12">December / डिसेंबर</option>
+            </select>
+            <input type="number" id="calc-year" placeholder="Year e.g. 1990" min="1900" max="2024" style="min-width:130px;"/>
+          </div>
+          <div class="calc-steps">
+            <div class="calc-step-num">1</div>
+            <span><span class="en">Select day, month and enter birth year</span><span class="mr">दिवस, महिना निवडा व जन्म वर्ष टाका</span></span>
+            <span style="margin:0 4px;color:var(--border2)">·</span>
+            <div class="calc-step-num">2</div>
+            <span><span class="en">Click Calculate</span><span class="mr">कॅल्क्युलेट क्लिक करा</span></span>
+          </div>
+          <button class="calc-btn" onclick="calcLifePath()">
+            <span class="en">🔢 Calculate My Life Path Number</span>
+            <span class="mr">🔢 माझा लाइफ पाथ नंबर शोधा</span>
+          </button>
+        </div>
+        <div class="calc-result" id="lp-result">
+          <div class="result-badge"><span class="en">Life Path Number</span><span class="mr">लाइफ पाथ नंबर</span></div>
+          <div class="result-top">
+            <div class="result-number" id="lp-num">—</div>
+            <div class="result-meta">
+              <div class="result-name" id="lp-name"></div>
+              <div class="result-keyword" id="lp-keyword"></div>
+            </div>
+          </div>
+          <div class="result-desc" id="lp-desc"></div>
+          <div class="result-traits" id="lp-traits"></div>
+          <div class="result-cta">
+            <p><span class="en"><strong>Want a deeper reading?</strong> A full consultation reveals your complete chart — Destiny, Soul Urge, and Personal Year cycles.</span><span class="mr"><strong>सखोल वाचन हवे का?</strong> संपूर्ण सल्लामसलत तुमचा संपूर्ण चार्ट उघड करते.</span></p>
+            <a onclick="goTo('contact')" style="cursor:pointer"><span class="en">Book a Consultation</span><span class="mr">सल्लामसलत बुक करा</span></a>
           </div>
         </div>
-        <div class="result-desc" id="result-desc"></div>
-        <div class="result-traits" id="result-traits"></div>
-        <div class="result-cta">
-          <p><span class="en"><strong>Want a deeper reading?</strong> Your Life Path Number is just the beginning. A full consultation reveals your Destiny, Soul Urge, and Personal Year cycles.</span><span class="mr"><strong>सखोल वाचन हवे आहे का?</strong> तुमचा लाइफ पाथ नंबर फक्त सुरुवात आहे. संपूर्ण सल्लामसलत तुमचे डेस्टिनी, सोल अर्ज आणि वैयक्तिक वर्ष चक्र उघड करते.</span></p>
-          <a onclick="goTo('contact')" style="cursor:pointer;"><span class="en">Book a Consultation</span><span class="mr">सल्लामसलत बुक करा</span></a>
+      </div>
+
+      <!-- DESTINY NUMBER PANEL -->
+      <div class="calc-panel" id="panel-dn" style="display:none">
+        <div class="calc-input-area">
+          <div class="calc-desc">
+            <span class="en">✍️ <strong>Destiny Number</strong> is calculated from your <strong>full birth name</strong> (exactly as written on your birth certificate). It reveals the talents, gifts, and life purpose your soul came to express — what you are here to become.</span>
+            <span class="mr">✍️ <strong>डेस्टिनी नंबर</strong> तुमच्या <strong>पूर्ण जन्म नावावरून</strong> मोजला जातो (जन्म प्रमाणपत्रावर जसे लिहिले आहे तसे). तुमचा आत्मा व्यक्त करण्यासाठी आलेल्या प्रतिभा, देणग्या आणि जीवन उद्देश प्रकट करतो — तुम्ही काय बनण्यासाठी येथे आहात.</span>
+          </div>
+          <label><span class="en">Enter Your Full Birth Name</span><span class="mr">तुमचे पूर्ण जन्म नाव टाका</span></label>
+          <input type="text" id="calc-name" placeholder="e.g. Rahul Sharma" style="width:100%;background:var(--bg2);border:1.5px solid var(--border2);border-radius:8px;padding:13px 16px;color:var(--text1);font-size:15px;font-family:'DM Sans',sans-serif;outline:none;box-sizing:border-box;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--saffron)'" onblur="this.style.borderColor=''"/>
+          <div style="margin-top:14px;background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;padding:14px 18px;font-size:12px;line-height:2;letter-spacing:0.3px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--text3);text-transform:uppercase;margin-bottom:6px;">Chaldean System</div>
+            <strong style="color:var(--saffron3)">A=1 &nbsp;B=2 &nbsp;C=3 &nbsp;D=4 &nbsp;E=5 &nbsp;F=8 &nbsp;G=3 &nbsp;H=5 &nbsp;I=1 &nbsp;J=1</strong><br/>
+            <strong style="color:var(--saffron3)">K=2 &nbsp;L=3 &nbsp;M=4 &nbsp;N=5 &nbsp;O=7 &nbsp;P=8 &nbsp;Q=1 &nbsp;R=2 &nbsp;S=3 &nbsp;T=4</strong><br/>
+            <strong style="color:var(--saffron3)">U=6 &nbsp;V=6 &nbsp;W=6 &nbsp;X=5 &nbsp;Y=1 &nbsp;Z=7</strong>
+          </div>
+          <div class="calc-steps" style="margin-top:12px">
+            <div class="calc-step-num">1</div>
+            <span><span class="en">Enter your full birth name (as on birth certificate)</span><span class="mr">जन्म प्रमाणपत्रावरील पूर्ण नाव टाका</span></span>
+          </div>
+          <button class="calc-btn" onclick="calcDestiny()">
+            <span class="en">✨ Calculate My Destiny Number</span>
+            <span class="mr">✨ माझा डेस्टिनी नंबर शोधा</span>
+          </button>
+        </div>
+        <div class="calc-result" id="dn-result">
+          <div class="result-badge"><span class="en">Destiny Number</span><span class="mr">डेस्टिनी नंबर</span></div>
+          <div class="result-top">
+            <div class="result-number" id="dn-num" style="background:linear-gradient(135deg,#7B4FD4,#5B3FA4)">—</div>
+            <div class="result-meta">
+              <div class="result-name" id="dn-name"></div>
+              <div class="result-keyword" id="dn-keyword"></div>
+            </div>
+          </div>
+          <div class="result-desc" id="dn-desc"></div>
+          <div class="result-traits" id="dn-traits"></div>
+          <div style="background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;padding:14px 18px;margin-top:8px;font-size:13px;color:var(--text2);">
+            <span class="en">⚠️ <strong style="color:var(--text1)">Note:</strong> This is a simplified reading. A full consultation includes your complete name analysis, Soul Urge, and Personality numbers for deeper insight.</span>
+            <span class="mr">⚠️ <strong style="color:var(--text1)">टीप:</strong> हे एक सरलीकृत वाचन आहे. संपूर्ण सल्लामसलतीत तुमचे पूर्ण नाव विश्लेषण, सोल अर्ज आणि व्यक्तिमत्त्व अंक समाविष्ट आहेत.</span>
+          </div>
+          <div class="result-cta" style="margin-top:16px">
+            <p><span class="en"><strong>Want your complete reading?</strong> Book a personal consultation for a full numerological analysis of your name and birth date.</span><span class="mr"><strong>संपूर्ण वाचन हवे का?</strong> तुमच्या नाव आणि जन्मतारखेच्या संपूर्ण न्यूमेरॉलॉजी विश्लेषणासाठी वैयक्तिक सल्लामसलत बुक करा.</span></p>
+            <a onclick="goTo('contact')" style="cursor:pointer"><span class="en">Book a Consultation</span><span class="mr">सल्लामसलत बुक करा</span></a>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- ══ FAQ ══ -->
 <section id="faq" class="bg-alt">
@@ -2492,7 +2721,6 @@ function calcLifePath(){
     return;
   }
 
-  // Sum all digits of day + month + year separately then reduce
   function digitSum(n){
     var s = 0;
     String(n).split('').forEach(function(d){ s += parseInt(d); });
@@ -2501,27 +2729,47 @@ function calcLifePath(){
 
   var total = digitSum(day) + digitSum(month) + digitSum(year);
   var lp = reduceNum(total);
+  showResult('lp', lp);
+}
 
-  // Show result
+// ── DESTINY NUMBER CALCULATOR (Chaldean) ──
+var chaldean = {A:1,B:2,C:3,D:4,E:5,F:8,G:3,H:5,I:1,J:1,K:2,L:3,M:4,N:5,O:7,P:8,Q:1,R:2,S:3,T:4,U:6,V:6,W:6,X:5,Y:1,Z:7};
+
+function calcDestiny(){
+  var nameEl = document.getElementById('calc-name');
+  var name = nameEl.value.trim().toUpperCase();
+  if(!name){
+    nameEl.style.borderColor = 'var(--lotus)';
+    nameEl.focus();
+    setTimeout(function(){ nameEl.style.borderColor = ''; }, 2000);
+    return;
+  }
+  var total = 0;
+  var letters = name.replace(/[^A-Z]/g, '');
+  for(var i = 0; i < letters.length; i++){
+    total += chaldean[letters[i]] || 0;
+  }
+  var dn = reduceNum(total);
+  showResult('dn', dn);
+}
+
+// ── SHOW RESULT (shared) ──
+function showResult(type, num){
   var isMr = document.body.classList.contains('marathi');
-  var data = numData[lp];
+  var data = numData[num];
   if(!data) return;
-
-  document.getElementById('result-num').textContent   = lp;
-  document.getElementById('result-name').textContent  = isMr ? data.name_mr : data.name_en;
-  document.getElementById('result-keyword').textContent = isMr ? data.keyword_mr : data.keyword_en;
-  document.getElementById('result-desc').textContent  = isMr ? data.desc_mr : data.desc_en;
-
-  var traitsEl = document.getElementById('result-traits');
+  document.getElementById(type+'-num').textContent     = num;
+  document.getElementById(type+'-name').textContent    = isMr ? data.name_mr : data.name_en;
+  document.getElementById(type+'-keyword').textContent = isMr ? data.keyword_mr : data.keyword_en;
+  document.getElementById(type+'-desc').textContent    = isMr ? data.desc_mr : data.desc_en;
+  var traitsEl = document.getElementById(type+'-traits');
   var traits = isMr ? data.traits_mr : data.traits_en;
-  traitsEl.innerHTML = traits.map(function(t){
-    return '<span class="result-trait">'+t+'</span>';
-  }).join('');
-
-  var resultEl = document.getElementById('calc-result');
+  traitsEl.innerHTML = traits.map(function(t){ return '<span class="result-trait">'+t+'</span>'; }).join('');
+  var resultEl = document.getElementById(type+'-result');
   resultEl.classList.add('show');
   setTimeout(function(){ resultEl.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 100);
 }
+
 // ── INIT: runs after all code including blogData is parsed ──
 (function(){
   var saved = localStorage.getItem('disha-lang');
@@ -2530,6 +2778,22 @@ function calcLifePath(){
 
 
 
+
+// ── CALCULATOR TAB SWITCHER ──
+function switchTab(tab){
+  var tabs = ['lp','dn'];
+  tabs.forEach(function(t){
+    var btn = document.getElementById('tab-'+t);
+    var panel = document.getElementById('panel-'+t);
+    if(t === tab){
+      btn.classList.add('active');
+      panel.style.display = 'block';
+    } else {
+      btn.classList.remove('active');
+      panel.style.display = 'none';
+    }
+  });
+}
 </script>
 
 <!-- ══ BLOG MODAL ══ -->
